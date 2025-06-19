@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="stylesheet" href="./assets/css/swiper.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+	<header class="header">
+<div class="header__promo">
+	<div class="container">
+		<div class="header__promo__container">
+			<span>Внезапная весна </span>
+			<div class="countdown-timer" data-timer="15.04.2025 01:30">
+				<div class="countdown-item">
+					<div class="countdown-digits">
+						<span class="countdown-digit" data-days-1>0</span>
+						<span class="countdown-digit" data-days-2>1</span>
+					</div>
+					<span class="countdown-label">Дней</span>
+				</div>
+				<span class="countdown-separator">:</span>
+				<div class="countdown-item">
+					<div class="countdown-digits">
+						<span class="countdown-digit" data-hours-1>0</span>
+						<span class="countdown-digit" data-hours-2>0</span>
+					</div>
+					<span class="countdown-label">Часов</span>
+				</div>
+				<span class="countdown-separator">:</span>
+				<div class="countdown-item">
+					<div class="countdown-digits">
+						<span class="countdown-digit" data-minutes-1>0</span>
+						<span class="countdown-digit" data-minutes-2>0</span>
+					</div>
+					<span class="countdown-label">Минут</span>
+				</div>
+				<span class="countdown-separator">:</span>
+				<div class="countdown-item">
+					<div class="countdown-digits">
+						<span class="countdown-digit" data-seconds-1>0</span>
+						<span class="countdown-digit" data-seconds-2>0</span>
+					</div>
+					<span class="countdown-label">Секунд</span>
+				</div>
+			</div>
+			<span>Скидки до 70%</span>
+		</div>
+	</div>
+</div>
+<!-- начало header-top -->
+<div class="header__top">
+	<!-- начало меню для декстопа -->
+	<div class="header__top__wrap">
+	<div class="container">
+		<div class="header__top__container">			
+			<div class="header__top__btns">
+				<button class="header__top__btns__local" data-open="popup__local">
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+						<path d="M9.00044 1.50024C5.69204 1.50024 3.00104 4.19124 3.00104 7.49605C2.97854 12.3299 8.77274 16.3385 9.00044 16.5005C9.00044 16.5005 15.0223 12.3299 15.0007 7.50054C14.9991 5.90968 14.3664 4.38445 13.2415 3.25953C12.1165 2.13462 10.5913 1.50191 9.00044 1.50024ZM9.00044 10.5002C8.60646 10.5002 8.21633 10.4226 7.85233 10.2719C7.48834 10.1211 7.15761 9.90011 6.87902 9.62152C6.60043 9.34293 6.37944 9.0122 6.22866 8.6482C6.07789 8.28421 6.00029 7.89408 6.00029 7.50009C6.00029 7.10611 6.07789 6.71598 6.22866 6.35199C6.37944 5.98799 6.60043 5.65726 6.87902 5.37867C7.15761 5.10008 7.48834 4.87909 7.85233 4.72832C8.21633 4.57755 8.60646 4.49994 9.00044 4.49994C9.39443 4.49994 9.78455 4.57755 10.1485 4.72832C10.5125 4.87909 10.8433 5.10008 11.1219 5.37867C11.4005 5.65726 11.6214 5.98799 11.7722 6.35199C11.923 6.71598 12.0006 7.10611 12.0006 7.50009C12.0006 7.89408 11.923 8.28421 11.7722 8.6482C11.6214 9.0122 11.4005 9.34293 11.1219 9.62152C10.8433 9.90011 10.5125 10.1211 10.1485 10.2719C9.78455 10.4226 9.39443 10.5002 9.00044 10.5002Z" fill="#003944"/>
+						</svg>
+							Алматы
+				</button>
+				<div class="header__top__btns__contact">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+						<path d="M18.3328 14.1V16.6C18.3338 16.832 18.2863 17.0618 18.1934 17.2744C18.1005 17.4871 17.9642 17.678 17.7932 17.835C17.6222 17.9919 17.4203 18.1114 17.2005 18.1857C16.9806 18.2601 16.7477 18.2877 16.5165 18.2668C13.9522 17.9883 11.4889 17.1121 9.32465 15.7087C7.31118 14.4293 5.6041 12.7222 4.32465 10.7087C2.91638 8.53469 2.04001 6.05951 1.76653 3.4837C1.74571 3.25327 1.77309 3.02102 1.84693 2.80174C1.92077 2.58247 2.03945 2.38096 2.19542 2.21006C2.35139 2.03916 2.54123 1.9026 2.75286 1.80907C2.96449 1.71555 3.19328 1.66711 3.42465 1.66683H5.92465C6.32907 1.66284 6.72114 1.80601 7.02781 2.06968C7.33448 2.33334 7.53483 2.69951 7.59153 3.09995C7.69715 3.89995 7.89278 4.68558 8.17465 5.44183C8.28678 5.74006 8.31105 6.06419 8.24459 6.3758C8.17812 6.68741 8.02371 6.97343 7.79965 7.19995L6.74153 8.2587C7.92787 10.345 9.65527 12.0724 11.7415 13.2587L12.7997 12.2C13.0262 11.9759 13.3122 11.8215 13.6238 11.755C13.9354 11.6886 14.2595 11.7128 14.5578 11.825C15.314 12.1075 16.0997 12.3031 16.8997 12.4087C17.3044 12.4659 17.6741 12.6699 17.9383 12.9818C18.2025 13.2937 18.3429 13.6919 18.3328 14.1006V14.1Z" fill="#003944"/>
+						</svg>
+						<div class="header__top__btns__contact__wrap">
+							<a href="tel:+7 (707) 357-09-17">+7 (707) 357-09-17</a>
+							<span>заказать звонок</span>
+						</div>
+				</div>
+			
+			</div>
+			<div class="header__top__nav">
+				<div class="lang">
+					<span>Русский</span>
+					<img src="./assets/images/wpml-img.svg" alt="Русский">
+				</div>
+				<nav>
+					<ul>
+						<li><a href="#">Доставка и оплата</a>
+						</li>
+						<li><a href="#">Контакты</a></li>
+						<li>
+							<a href="#">Покупателям</a>
+							<ul class="sub-menu">
+								<li><a href="#">Доставка и оплата</a>
+									<ul class="sub-menu">
+										<li><a href="#">Доставка и оплата</a></li>
+										<li><a href="#">Доставка и оплата</a></li>
+										<li><a href="#">Доставка и оплата</a></li>
+										<li><a href="#">Доставка и оплата</a></li>
+										<li><a href="#">Доставка и оплата</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Доставка и оплата</a></li>
+								<li><a href="#">Доставка и оплата</a></li>
+								<li><a href="#">Доставка и оплата</a></li>
+								<li><a href="#">Доставка и оплата</a></li>
+								<li><a href="#">Доставка и оплата</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Новости и Акции</a>
+							<ul class="sub-menu">
+								<li><a href="#">Новости и Акции</a></li>
+								<li><a href="#">Новости и Акции</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- конец меню для декстопа -->
+ <!-- начало мобильного меню -->
+	<div class="header__top__mobile">
+		<div class="header__top__mobile__wrap">
+		<div class="header__top__form header__form">
+			<form action="">
+				<div class="input__search">
+				<input type="search" name="header_search" placeholder="Поиск...">
+			</div>
+			</form>
+			<div class="header__search-results">
+				<div class="header__search-results__title">Результат поиска</div>
+				<div class="search__error">
+					<span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M16.4879 1.50146C8.49429 1.50146 2.00488 7.99087 2.00488 15.9845C2.00488 23.9782 8.49429 30.4676 16.4879 30.4676C24.4816 30.4676 30.971 23.9782 30.971 15.9845C30.971 7.99087 24.4816 1.50146 16.4879 1.50146ZM16.4879 2.5003C23.9303 2.5003 29.9722 8.54218 29.9722 15.9845C29.9722 23.4269 23.9303 29.4687 16.4879 29.4687C9.0456 29.4687 3.00371 23.4269 3.00371 15.9845C3.00371 8.54218 9.0456 2.5003 16.4879 2.5003ZM11.355 24.8721C11.355 24.8721 12.3953 21.9785 16.4879 21.9775C20.5806 21.9766 21.6209 24.8721 21.6209 24.8721C21.6639 24.9974 21.7549 25.1004 21.8738 25.1586C21.9928 25.2167 22.13 25.2253 22.2553 25.1823C22.3805 25.1391 22.4834 25.048 22.5416 24.929C22.5997 24.81 22.6082 24.6728 22.5653 24.5475C22.5653 24.5475 21.3827 20.9777 16.4879 20.9787C11.5931 20.9796 10.4106 24.5475 10.4106 24.5475C10.3677 24.6727 10.3762 24.8098 10.4342 24.9288C10.4922 25.0478 10.595 25.139 10.7201 25.1823C10.8455 25.2253 10.9827 25.2168 11.1018 25.1586C11.2208 25.1004 11.3119 24.9974 11.355 24.8721ZM19.7451 15.9975C19.7047 15.3427 19.9424 14.6656 20.4528 14.1551C21.3697 13.2388 22.831 13.1987 23.715 14.0823C24.1999 14.5672 24.4067 15.2289 24.3422 15.8767C24.3294 16.0084 24.3693 16.1399 24.4533 16.2422C24.5373 16.3445 24.6585 16.4094 24.7902 16.4225C24.8554 16.4289 24.9213 16.4225 24.984 16.4035C25.0468 16.3846 25.1052 16.3534 25.1559 16.3119C25.2066 16.2703 25.2486 16.2192 25.2795 16.1614C25.3104 16.1036 25.3297 16.0403 25.3361 15.9751C25.4295 15.0361 25.1243 14.0793 24.4212 13.3761C23.1551 12.11 21.0601 12.1355 19.7467 13.449C19.024 14.1717 18.6903 15.1325 18.7483 16.0599C18.7598 16.1897 18.8215 16.3098 18.9203 16.3947C19.019 16.4796 19.1471 16.5226 19.2771 16.5145C19.4071 16.5064 19.5288 16.4478 19.6162 16.3512C19.7036 16.2546 19.7499 16.1276 19.7451 15.9975ZM8.12719 15.9975C8.08632 15.3427 8.32446 14.6656 8.83491 14.1551C9.75128 13.2388 11.2131 13.1987 12.0966 14.0823C12.582 14.5672 12.7882 15.2289 12.7243 15.8767C12.7178 15.9419 12.7243 16.0077 12.7432 16.0705C12.7622 16.1332 12.7934 16.1916 12.835 16.2423C12.8765 16.293 12.9277 16.335 12.9855 16.3659C13.0433 16.3968 13.1066 16.416 13.1718 16.4225C13.2371 16.429 13.303 16.4226 13.3658 16.4037C13.4286 16.3847 13.487 16.3536 13.5377 16.312C13.5885 16.2705 13.6305 16.2193 13.6615 16.1615C13.6925 16.1037 13.7117 16.0403 13.7182 15.9751C13.8111 15.0361 13.5064 14.0793 12.8028 13.3761C11.5367 12.11 9.44219 12.1355 8.12863 13.449C7.40557 14.1717 7.07251 15.1325 7.13028 16.0599C7.14175 16.1897 7.20345 16.3098 7.30222 16.3947C7.401 16.4796 7.52904 16.5226 7.65904 16.5145C7.78905 16.5064 7.91074 16.4478 7.99817 16.3512C8.0856 16.2546 8.13185 16.1278 8.12707 15.9976L8.12719 15.9975Z" fill="#003944"/>
+						</svg>
+					</span>
+					<span>По вашему запросу ничего не найдено.</span>
+				</div>
+				<a href="#" class="search-product">
+					<div class="product-thumb">
+						<img src="./assets/images/popular-cat.png" alt="Диван">
+					</div>
+					<div class="product-content">
+						<span>Диван Нумо Мини Textile Silver</span>
+						<span>314 530₸</span>
+					</div>
+				</a>
+				<a href="#" class="search-product">
+					<div class="product-thumb">
+						<img src="./assets/images/popular-cat.png" alt="Диван">
+					</div>
+					<div class="product-content">
+						<span>Диван Нумо Мини Textile Silver</span>
+						<span>314 530₸</span>
+					</div>
+				</a>
+				<a href="#" class="search-product">
+					<div class="product-thumb">
+						<img src="./assets/images/popular-cat.png" alt="Диван">
+					</div>
+					<div class="product-content">
+						<span>Диван Нумо Мини Textile Silver</span>
+						<span>314 530₸</span>
+					</div>
+				</a>
+				<a href="#" class="search-product">
+					<div class="product-thumb">
+						<img src="./assets/images/popular-cat.png" alt="Диван">
+					</div>
+					<div class="product-content">
+						<span>Диван Нумо Мини Textile Silver</span>
+						<span>314 530₸</span>
+					</div>
+				</a>
+				<a href="#" class="search-product">
+					<div class="product-thumb">
+						<img src="./assets/images/popular-cat.png" alt="Диван">
+					</div>
+					<div class="product-content">
+						<span>Диван Нумо Мини Textile Silver</span>
+						<span>314 530₸</span>
+					</div>
+				</a>
+				<a href="#" class="search-product">
+					<div class="product-thumb">
+						<img src="./assets/images/popular-cat.png" alt="Диван">
+					</div>
+					<div class="product-content">
+						<span>Диван Нумо Мини Textile Silver</span>
+						<span>314 530₸</span>
+					</div>
+				</a>
+				<a href="#" class="search-product">
+					<div class="product-thumb">
+						<img src="./assets/images/popular-cat.png" alt="Диван">
+					</div>
+					<div class="product-content">
+						<span>Диван Нумо Мини Textile Silver</span>
+						<span>314 530₸</span>
+					</div>
+				</a>
+				<a href="#" class="search-product">
+					<div class="product-thumb">
+						<img src="./assets/images/popular-cat.png" alt="Диван">
+					</div>
+					<div class="product-content">
+						<span>Диван Нумо Мини Textile Silver</span>
+						<span>314 530₸</span>
+					</div>
+				</a>
+				<a href="#" class="search-product">
+					<div class="product-thumb">
+						<img src="./assets/images/popular-cat.png" alt="Диван">
+					</div>
+					<div class="product-content">
+						<span>Диван Нумо Мини Textile Silver</span>
+						<span>314 530₸</span>
+					</div>
+				</a>
+				<a href="#" class="search-product">
+					<div class="product-thumb">
+						<img src="./assets/images/popular-cat.png" alt="Диван">
+					</div>
+					<div class="product-content">
+						<span>Диван Нумо Мини Textile Silver</span>
+						<span>314 530₸</span>
+					</div>
+				</a>
+				<a href="#" class="search-product">
+					<div class="product-thumb">
+						<img src="./assets/images/popular-cat.png" alt="Диван">
+					</div>
+					<div class="product-content">
+						<span>Диван Нумо Мини Textile Silver</span>
+						<span>314 530₸</span>
+					</div>
+				</a>
+				<a href="#" class="search-product">
+					<div class="product-thumb">
+						<img src="./assets/images/popular-cat.png" alt="Диван">
+					</div>
+					<div class="product-content">
+						<span>Диван Нумо Мини Textile Silver</span>
+						<span>314 530₸</span>
+					</div>
+				</a>
+			</div>
+			<div class="search-bg"></div>
+		</div>
+		<div class="header__top__nav__mobile">
+			<nav>
+				<ul>
+					<li><a href="#">Доставка и оплата</a>
+					</li>
+					<li><a href="#">Контакты</a></li>
+					<li>
+						<a href="#">Покупателям</a>
+						<ul class="sub-menu">
+							<li><a href="#">Доставка и оплата</a>
+								<ul class="sub-menu">
+									<li><a href="#">Доставка и оплата</a></li>
+									<li><a href="#">Доставка и оплата</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Доставка и оплата</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Новости и Акции</a>
+						<ul class="sub-menu">
+							<li><a href="#">Новости и Акции</a></li>
+							<li><a href="#">Новости и Акции</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		</div>
+		<div class="header__top__btns-mobile">
+			<div class="header__top__btns__item"> 
+				<span>Телефон</span>
+				<div class="header__top__btns__contact">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+						<path d="M18.3328 14.1V16.6C18.3338 16.832 18.2863 17.0618 18.1934 17.2744C18.1005 17.4871 17.9642 17.678 17.7932 17.835C17.6222 17.9919 17.4203 18.1114 17.2005 18.1857C16.9806 18.2601 16.7477 18.2877 16.5165 18.2668C13.9522 17.9883 11.4889 17.1121 9.32465 15.7087C7.31118 14.4293 5.6041 12.7222 4.32465 10.7087C2.91638 8.53469 2.04001 6.05951 1.76653 3.4837C1.74571 3.25327 1.77309 3.02102 1.84693 2.80174C1.92077 2.58247 2.03945 2.38096 2.19542 2.21006C2.35139 2.03916 2.54123 1.9026 2.75286 1.80907C2.96449 1.71555 3.19328 1.66711 3.42465 1.66683H5.92465C6.32907 1.66284 6.72114 1.80601 7.02781 2.06968C7.33448 2.33334 7.53483 2.69951 7.59153 3.09995C7.69715 3.89995 7.89278 4.68558 8.17465 5.44183C8.28678 5.74006 8.31105 6.06419 8.24459 6.3758C8.17812 6.68741 8.02371 6.97343 7.79965 7.19995L6.74153 8.2587C7.92787 10.345 9.65527 12.0724 11.7415 13.2587L12.7997 12.2C13.0262 11.9759 13.3122 11.8215 13.6238 11.755C13.9354 11.6886 14.2595 11.7128 14.5578 11.825C15.314 12.1075 16.0997 12.3031 16.8997 12.4087C17.3044 12.4659 17.6741 12.6699 17.9383 12.9818C18.2025 13.2937 18.3429 13.6919 18.3328 14.1006V14.1Z" fill="#003944"/>
+						</svg>
+						<div class="header__top__btns__contact__wrap">
+							<a href="tel:+7 (707) 357-09-17">+7 (707) 357-09-17</a>
+							<span>заказать звонок</span>
+						</div>
+				</div>
+			</div>
+			<div class="header__top__btns__item"> 
+				<span>Язык</span>
+				<div class="lang">
+					<span>Русский</span>
+					<img src="./assets/images/wpml-img.svg" alt="Русский">
+				</div>
+			</div>
+			<div class="header__top__btns__item"> 
+				<span> Ваш город</span>
+				<button class="header__top__btns__local" data-open="popup__local">
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+						<path d="M9.00044 1.50024C5.69204 1.50024 3.00104 4.19124 3.00104 7.49605C2.97854 12.3299 8.77274 16.3385 9.00044 16.5005C9.00044 16.5005 15.0223 12.3299 15.0007 7.50054C14.9991 5.90968 14.3664 4.38445 13.2415 3.25953C12.1165 2.13462 10.5913 1.50191 9.00044 1.50024ZM9.00044 10.5002C8.60646 10.5002 8.21633 10.4226 7.85233 10.2719C7.48834 10.1211 7.15761 9.90011 6.87902 9.62152C6.60043 9.34293 6.37944 9.0122 6.22866 8.6482C6.07789 8.28421 6.00029 7.89408 6.00029 7.50009C6.00029 7.10611 6.07789 6.71598 6.22866 6.35199C6.37944 5.98799 6.60043 5.65726 6.87902 5.37867C7.15761 5.10008 7.48834 4.87909 7.85233 4.72832C8.21633 4.57755 8.60646 4.49994 9.00044 4.49994C9.39443 4.49994 9.78455 4.57755 10.1485 4.72832C10.5125 4.87909 10.8433 5.10008 11.1219 5.37867C11.4005 5.65726 11.6214 5.98799 11.7722 6.35199C11.923 6.71598 12.0006 7.10611 12.0006 7.50009C12.0006 7.89408 11.923 8.28421 11.7722 8.6482C11.6214 9.0122 11.4005 9.34293 11.1219 9.62152C10.8433 9.90011 10.5125 10.1211 10.1485 10.2719C9.78455 10.4226 9.39443 10.5002 9.00044 10.5002Z" fill="#003944"/>
+						</svg>
+							Алматы
+				</button>
+			</div>
+		</div>
+	</div>
+<!-- конец мобильного меню -->
+</div>
+<!-- конец header-top -->
+<div class="header__bottom">
+	<div class="container">
+		<div class="header__bottom__container">
+			<div class="burger">
+				<span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+			</div>
+			<a href="./index.html" class="logo">
+				<img src="./assets/images/logo-footer.svg" alt="Mebelka">
+			</a>
+			<div class="header__bottom__form header__form">
+				<!-- форма такая же как и в топе -->
+				<form action="">
+					<div class="input__search">
+					<input type="search" name="header_search" placeholder="Поиск...">
+				</div>
+				</form>
+				
+				<div class="header__search-results">
+					<div class="header__search-results__title">Результат поиска</div>
+					<div class="search__error">
+						<span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M16.4879 1.50146C8.49429 1.50146 2.00488 7.99087 2.00488 15.9845C2.00488 23.9782 8.49429 30.4676 16.4879 30.4676C24.4816 30.4676 30.971 23.9782 30.971 15.9845C30.971 7.99087 24.4816 1.50146 16.4879 1.50146ZM16.4879 2.5003C23.9303 2.5003 29.9722 8.54218 29.9722 15.9845C29.9722 23.4269 23.9303 29.4687 16.4879 29.4687C9.0456 29.4687 3.00371 23.4269 3.00371 15.9845C3.00371 8.54218 9.0456 2.5003 16.4879 2.5003ZM11.355 24.8721C11.355 24.8721 12.3953 21.9785 16.4879 21.9775C20.5806 21.9766 21.6209 24.8721 21.6209 24.8721C21.6639 24.9974 21.7549 25.1004 21.8738 25.1586C21.9928 25.2167 22.13 25.2253 22.2553 25.1823C22.3805 25.1391 22.4834 25.048 22.5416 24.929C22.5997 24.81 22.6082 24.6728 22.5653 24.5475C22.5653 24.5475 21.3827 20.9777 16.4879 20.9787C11.5931 20.9796 10.4106 24.5475 10.4106 24.5475C10.3677 24.6727 10.3762 24.8098 10.4342 24.9288C10.4922 25.0478 10.595 25.139 10.7201 25.1823C10.8455 25.2253 10.9827 25.2168 11.1018 25.1586C11.2208 25.1004 11.3119 24.9974 11.355 24.8721ZM19.7451 15.9975C19.7047 15.3427 19.9424 14.6656 20.4528 14.1551C21.3697 13.2388 22.831 13.1987 23.715 14.0823C24.1999 14.5672 24.4067 15.2289 24.3422 15.8767C24.3294 16.0084 24.3693 16.1399 24.4533 16.2422C24.5373 16.3445 24.6585 16.4094 24.7902 16.4225C24.8554 16.4289 24.9213 16.4225 24.984 16.4035C25.0468 16.3846 25.1052 16.3534 25.1559 16.3119C25.2066 16.2703 25.2486 16.2192 25.2795 16.1614C25.3104 16.1036 25.3297 16.0403 25.3361 15.9751C25.4295 15.0361 25.1243 14.0793 24.4212 13.3761C23.1551 12.11 21.0601 12.1355 19.7467 13.449C19.024 14.1717 18.6903 15.1325 18.7483 16.0599C18.7598 16.1897 18.8215 16.3098 18.9203 16.3947C19.019 16.4796 19.1471 16.5226 19.2771 16.5145C19.4071 16.5064 19.5288 16.4478 19.6162 16.3512C19.7036 16.2546 19.7499 16.1276 19.7451 15.9975ZM8.12719 15.9975C8.08632 15.3427 8.32446 14.6656 8.83491 14.1551C9.75128 13.2388 11.2131 13.1987 12.0966 14.0823C12.582 14.5672 12.7882 15.2289 12.7243 15.8767C12.7178 15.9419 12.7243 16.0077 12.7432 16.0705C12.7622 16.1332 12.7934 16.1916 12.835 16.2423C12.8765 16.293 12.9277 16.335 12.9855 16.3659C13.0433 16.3968 13.1066 16.416 13.1718 16.4225C13.2371 16.429 13.303 16.4226 13.3658 16.4037C13.4286 16.3847 13.487 16.3536 13.5377 16.312C13.5885 16.2705 13.6305 16.2193 13.6615 16.1615C13.6925 16.1037 13.7117 16.0403 13.7182 15.9751C13.8111 15.0361 13.5064 14.0793 12.8028 13.3761C11.5367 12.11 9.44219 12.1355 8.12863 13.449C7.40557 14.1717 7.07251 15.1325 7.13028 16.0599C7.14175 16.1897 7.20345 16.3098 7.30222 16.3947C7.401 16.4796 7.52904 16.5226 7.65904 16.5145C7.78905 16.5064 7.91074 16.4478 7.99817 16.3512C8.0856 16.2546 8.13185 16.1278 8.12707 15.9976L8.12719 15.9975Z" fill="#003944"/>
+							</svg>
+						</span>
+						<span>По вашему запросу ничего не найдено.</span>
+					</div>
+					<a href="#" class="search-product">
+						<div class="product-thumb">
+							<img src="./assets/images/popular-cat.png" alt="Диван">
+						</div>
+						<div class="product-content">
+							<span>Диван Нумо Мини Textile Silver Диван Нумо Мини Textile SilverДиван Нумо Мини Textile Silver</span>
+							<span>314 530₸</span>
+						</div>
+					</a>
+					<a href="#" class="search-product">
+						<div class="product-thumb">
+							<img src="./assets/images/popular-cat.png" alt="Диван">
+						</div>
+						<div class="product-content">
+							<span>Диван Нумо Мини Textile Silver</span>
+							<span>314 530₸</span>
+						</div>
+					</a>
+					<a href="#" class="search-product">
+						<div class="product-thumb">
+							<img src="./assets/images/popular-cat.png" alt="Диван">
+						</div>
+						<div class="product-content">
+							<span>Диван Нумо Мини Textile Silver</span>
+							<span>314 530₸</span>
+						</div>
+					</a>
+					<a href="#" class="search-product">
+						<div class="product-thumb">
+							<img src="./assets/images/popular-cat.png" alt="Диван">
+						</div>
+						<div class="product-content">
+							<span>Диван Нумо Мини Textile Silver</span>
+							<span>314 530₸</span>
+						</div>
+					</a>
+					<a href="#" class="search-product">
+						<div class="product-thumb">
+							<img src="./assets/images/popular-cat.png" alt="Диван">
+						</div>
+						<div class="product-content">
+							<span>Диван Нумо Мини Textile Silver</span>
+							<span>314 530₸</span>
+						</div>
+					</a>
+					<a href="#" class="search-product">
+						<div class="product-thumb">
+							<img src="./assets/images/popular-cat.png" alt="Диван">
+						</div>
+						<div class="product-content">
+							<span>Диван Нумо Мини Textile Silver</span>
+							<span>314 530₸</span>
+						</div>
+					</a>
+					<a href="#" class="search-product">
+						<div class="product-thumb">
+							<img src="./assets/images/popular-cat.png" alt="Диван">
+						</div>
+						<div class="product-content">
+							<span>Диван Нумо Мини Textile Silver</span>
+							<span>314 530₸</span>
+						</div>
+					</a>
+					<a href="#" class="search-product">
+						<div class="product-thumb">
+							<img src="./assets/images/popular-cat.png" alt="Диван">
+						</div>
+						<div class="product-content">
+							<span>Диван Нумо Мини Textile Silver</span>
+							<span>314 530₸</span>
+						</div>
+					</a>
+					<a href="#" class="search-product">
+						<div class="product-thumb">
+							<img src="./assets/images/popular-cat.png" alt="Диван">
+						</div>
+						<div class="product-content">
+							<span>Диван Нумо Мини Textile Silver</span>
+							<span>314 530₸</span>
+						</div>
+					</a>
+					<a href="#" class="search-product">
+						<div class="product-thumb">
+							<img src="./assets/images/popular-cat.png" alt="Диван">
+						</div>
+						<div class="product-content">
+							<span>Диван Нумо Мини Textile Silver</span>
+							<span>314 530₸</span>
+						</div>
+					</a>
+					<a href="#" class="search-product">
+						<div class="product-thumb">
+							<img src="./assets/images/popular-cat.png" alt="Диван">
+						</div>
+						<div class="product-content">
+							<span>Диван Нумо Мини Textile Silver</span>
+							<span>314 530₸</span>
+						</div>
+					</a>
+					<a href="#" class="search-product">
+						<div class="product-thumb">
+							<img src="./assets/images/popular-cat.png" alt="Диван">
+						</div>
+						<div class="product-content">
+							<span>Диван Нумо Мини Textile Silver</span>
+							<span>314 530₸</span>
+						</div>
+					</a>
+					<a href="#" class="search-product">
+						<div class="product-thumb">
+							<img src="./assets/images/popular-cat.png" alt="Диван">
+						</div>
+						<div class="product-content">
+							<span>Диван Нумо Мини Textile Silver</span>
+							<span>314 530₸</span>
+						</div>
+					</a>
+					<a href="#" class="search-product">
+						<div class="product-thumb">
+							<img src="./assets/images/popular-cat.png" alt="Диван">
+						</div>
+						<div class="product-content">
+							<span>Диван Нумо Мини Textile Silver</span>
+							<span>314 530₸</span>
+						</div>
+					</a>
+					<a href="#" class="search-product">
+						<div class="product-thumb">
+							<img src="./assets/images/popular-cat.png" alt="Диван">
+						</div>
+						<div class="product-content">
+							<span>Диван Нумо Мини Textile Silver</span>
+							<span>314 530₸</span>
+						</div>
+					</a>
+					<a href="#" class="search-product">
+						<div class="product-thumb">
+							<img src="./assets/images/popular-cat.png" alt="Диван">
+						</div>
+						<div class="product-content">
+							<span>Диван Нумо Мини Textile Silver</span>
+							<span>314 530₸</span>
+						</div>
+					</a>
+					<a href="#" class="search-product">
+						<div class="product-thumb">
+							<img src="./assets/images/popular-cat.png" alt="Диван">
+						</div>
+						<div class="product-content">
+							<span>Диван Нумо Мини Textile Silver</span>
+							<span>314 530₸</span>
+						</div>
+					</a>
+					<a href="#" class="search-product">
+						<div class="product-thumb">
+							<img src="./assets/images/popular-cat.png" alt="Диван">
+						</div>
+						<div class="product-content">
+							<span>Диван Нумо Мини Textile Silver</span>
+							<span>314 530₸</span>
+						</div>
+					</a>
+				</div>
+				<div class="search-bg"></div>
+				
+			</div>
+			<div class="header__bottom__icons">
+				<a href="#" class="header__bottom__icons__item">
+					<svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+					<path d="M17.256 2.556C17.7622 3.04632 18.1658 3.63247 18.4433 4.28032C18.7208 4.92816 18.8666 5.62474 18.8722 6.32948C18.8778 7.03422 18.7431 7.73303 18.4759 8.3852C18.2088 9.03737 17.8145 9.62986 17.3161 10.1282C16.8178 10.6265 16.2252 11.0206 15.573 11.2876C14.9208 11.5546 14.2219 11.6892 13.5172 11.6835C12.8125 11.6778 12.1159 11.5319 11.4681 11.2543C10.8203 10.9767 10.2342 10.573 9.744 10.0667C8.76257 9.06747 8.21547 7.7211 8.22176 6.32054C8.22804 4.91998 8.7872 3.57857 9.77755 2.58822C10.7679 1.59787 12.1093 1.03871 13.5099 1.03242C14.9104 1.02614 16.2568 1.57457 17.256 2.556ZM13.5 15.6773C19.572 15.6773 25.5 18.3 25.5 22.3333V23.6667C25.5 24.0203 25.3595 24.3594 25.1095 24.6095C24.8594 24.8595 24.5203 25 24.1667 25H2.83333C2.47971 25 2.14057 24.8595 1.89052 24.6095C1.64048 24.3594 1.5 24.0203 1.5 23.6667V22.3333C1.5 18.2987 7.428 15.6773 13.5 15.6773Z" stroke="white" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+					<span>Аккаунт</span>
+				</a>
+				<a href="#" class="header__bottom__icons__item">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="21" viewBox="0 0 24 21" fill="none">
+						<path d="M16.5222 1C20.3967 1 23 4.53875 23 7.84C23 14.5256 12.1956 20 12 20C11.8044 20 1 14.5256 1 7.84C1 4.53875 3.60333 1 7.47778 1C9.70222 1 11.1567 2.08063 12 3.03063C12.8433 2.08063 14.2978 1 16.5222 1Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+						<div class="header__bottom__icons__item__count">0</div>
+					<span>Избранное</span>
+				</a>
+				<a href="#" class="header__bottom__icons__item">
+					<svg xmlns="http://www.w3.org/2000/svg" width="23" height="20" viewBox="0 0 23 20" fill="none">
+						<g clip-path="url(#clip0_810_18540)">
+						<path d="M22.53 0.38C22.477 0.286556 22.4056 0.204893 22.32 0.14C22.2256 0.0691226 22.1161 0.0211901 22 0L0 0V1.6H2.58L6.49 12.35C6.70686 12.958 7.1047 13.4849 7.63 13.86C8.15702 14.2308 8.78563 14.4298 9.43 14.43H19.09V12.85H9.43C9.11201 12.8478 8.80199 12.7502 8.54 12.57C8.28865 12.3843 8.1002 12.126 8 11.83L7.27 9.77H18.62C19.0459 9.76571 19.4593 9.62558 19.8 9.37C20.1364 9.12221 20.3823 8.77093 20.5 8.37L22.6 1C22.6245 0.891364 22.6245 0.778636 22.6 0.67C22.5931 0.570083 22.5695 0.47204 22.53 0.38ZM18.87 8.18H6.66L4.26 1.6H20.74L18.87 8.18ZM10.52 16.75C10.26 16.4941 9.90981 16.3507 9.545 16.3507C9.18019 16.3507 8.83001 16.4941 8.57 16.75C8.31052 17.0179 8.16684 17.3771 8.17 17.75C8.16566 17.9351 8.19886 18.1191 8.26761 18.291C8.33636 18.4628 8.43923 18.619 8.57 18.75C8.83244 19.0012 9.18171 19.1414 9.545 19.1414C9.90829 19.1414 10.2576 19.0012 10.52 18.75C10.6508 18.619 10.7536 18.4628 10.8224 18.291C10.8911 18.1191 10.9243 17.9351 10.92 17.75C10.9232 17.3771 10.7795 17.0179 10.52 16.75ZM17.52 16.75C17.389 16.6192 17.2328 16.5164 17.061 16.4476C16.8891 16.3789 16.7051 16.3457 16.52 16.35C16.3384 16.3487 16.1584 16.3835 15.9903 16.4523C15.8223 16.5212 15.6696 16.6228 15.5412 16.7512C15.4128 16.8796 15.3112 17.0323 15.2423 17.2003C15.1735 17.3684 15.1387 17.5484 15.14 17.73C15.1357 17.9151 15.1689 18.0991 15.2376 18.271C15.3064 18.4428 15.4092 18.599 15.54 18.73C15.8047 18.9767 16.1531 19.1139 16.515 19.1139C16.8769 19.1139 17.2253 18.9767 17.49 18.73C17.6208 18.599 17.7236 18.4428 17.7924 18.271C17.8611 18.0991 17.8943 17.9151 17.89 17.73C17.8961 17.3681 17.7637 17.0176 17.52 16.75Z" fill="white"/>
+						</g>
+						<defs>
+						<clipPath id="clip0_810_18540">
+						<rect width="22.64" height="19.09" fill="white"/>
+						</clipPath>
+						</defs>
+						</svg>
+						<div class="header__bottom__icons__item__count">0</div>
+					<span>Корзина</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+	</header>
+	<div class="preloader" id="preloader">
+		<div class="container">
+			<div class="preloader__wrap">
+				<img src="./assets/images/preloader-img.svg"	alt="We need a couple second"/>
+			</div>
+		</div>
+	</div>
+	<main>
+		<div class="container">
+				<div class="page-main">
+				<aside class="aside">
+					<div class="aside__content">
+						<div>Каталог меблей</div>
+						<nav class="aside-nav">
+							<ul class="aside-nav-list top-menu">
+									<li class="aside-nav-list-item menu-item menu-item-has-children bed">
+											<a href="#">Кровати</a>
+									<ul class="sub-menu">
+											<li class="menu-item"><a href="#">Кровати </a>
+												<ul class="sub-menu">
+													<li class="menu-item"><a href="#">Кровати </a></li>
+													<li class="menu-item"><a href="#">Кровати</a></li>
+													<li class="menu-item"><a href="#">Кровати</a></li>
+											</ul>
+											</li>
+											<li class="menu-item"><a href="#">Кровати</a></li>
+											<li class="menu-item"><a href="#">Кровати</a></li>
+									</ul>
+									</li>
+									<li class="aside-nav-list-item menu-item menu-item-has-children">
+											<a href="#">Кровати</a>
+									<ul class="sub-menu">
+											<li class="menu-item"><a href="#">Кровати </a>
+												<ul class="sub-menu">
+													<li class="menu-item"><a href="#">Кровати </a></li>
+													<li class="menu-item"><a href="#">Кровати</a></li>
+													<li class="menu-item"><a href="#">Кровати</a></li>
+											</ul>
+											</li>
+											<li class="menu-item"><a href="#">Кровати</a></li>
+											<li class="menu-item"><a href="#">Кровати</a></li>
+									</ul>
+									</li>
+									<li class="aside-nav-list-item menu-item menu-item-has-children closet">
+											<a href="#">Шкафы</a>
+									<ul class="sub-menu">
+											<li class="menu-item"><a href="#">Шкафы</a></li>
+											<li class="menu-item"><a href="#">Шкафы</a></li>
+											<li class="menu-item"><a href="#">Шкафы</a></li>
+											<li class="menu-item"><a href="#">Шкафы</a></li>
+											<li class="menu-item"><a href="#">Шкафы</a></li>
+											<li class="menu-item"><a href="#">Шкафы</a></li>
+											<li class="menu-item"><a href="#">Шкафы</a></li>
+									</ul>
+									</li>
+									<li class="aside-nav-list-item menu-item menu-item-has-children stone">
+											<a href="#">Тумбы и комоды</a>
+									<ul class="sub-menu">
+											<li class="menu-item"><a href="#">Тумбы</a></li>
+											<li class="menu-item"><a href="#">Rомоды </a></li>
+									</ul>
+									</li>
+									<li class="aside-nav-list-item menu-item menu-item-has-children table">
+											<a href="#"> Столы</a>
+											<ul class="sub-menu">
+												<li class="menu-item"><a href="#">Столы</a></li>
+											</ul>
+									</li>
+							</ul>
+					</nav>
+					</div>
+				</aside>
+				<div class="main-content">
+					<div class="breadcrumbs">
+						<div class="container">
+								<div class="breadcrumbs__links">
+									<a href="./index.html">Главная</a>
+									<span>
+										>
+									</span>
+									<span>Избранное</span>
+								</div>
+								<h1>Политика конфиденциальности</h1>
+						</div>
+					</div>
+					<article class="article">
+						<table>
+							<tbody>
+									<tr>
+											<td>Груз</td>
+											<td>В пределах города</td>
+											<td>Подъем на этажи на грузовом лифте</td>
+											<td>Подъем на этажи ручной</td>
+									</tr>
+							
+									<tr>
+											<td>Модульные диваны, Наборы садовой мебели</td>
+											<td>5100 ₸</td>
+											<td>бесплатно</td>
+											<td>бесплатно</td>
+									</tr>
+									<tr>
+											<td>Угловые диваны</td>
+											<td>5100 ₸</td>
+											<td>бесплатно</td>
+											<td>бесплатно</td>
+									</tr>
+									<tr>
+											<td>Прямые диваны, кушетки, кухонные диваны и уголки</td>
+											<td>5100 ₸</td>
+											<td>бесплатно</td>
+											<td>бесплатно</td>
+									</tr>
+									<tr>
+											<td>Шкафы, стеллажи, гардеробные, прихожие, стенки, гостиные, спальни, детские комнаты, кухонные гарнитуры, обеденные группы</td>
+											<td>5100 ₸</td>
+											<td>бесплатно</td>
+											<td>бесплатно</td>
+									</tr>
+									<tr>
+											<td>Прихожие, обувницы, комоды, тумбы, столы, кровати</td>
+											<td>5100 ₸</td>
+											<td>бесплатно</td>
+											<td>бесплатно</td>
+									</tr>
+									<tr>
+											<td>Кресла, пуфы, бескаркасная мебель</td>
+											<td>5100 ₸</td>
+											<td>бесплатно</td>
+											<td>бесплатно</td>
+									</tr>
+							</tbody>
+					</table>
+					
+						<h2>1. Общие положения</h2>
+						<p>Настоящая Политика конфиденциальности (далее – Политика) описывает, как Mebelka (далее – Компания) собирает, использует и защищает персональные данные пользователей сайта www.mebelka.kz</p>
+						<h3>Используя сайт, вы соглашаетесь с условиями данной Политики.</h3>
+						<p>1.  Сбор и использование персональных данных Компания может собирать следующие данные:</p>
+						<ul>
+							<li>Имя, фамилия</li>
+							<li>Контактные данные (номер телефона, email)</li>
+							<li>Адрес доставки</li>
+							<li>История заказов</li>
+							<li>Другая информация, необходимая для выполнения заказа</li>
+						</ul>
+						<p>Данные используются для:</p>
+						<ul>
+							<li>Обработки и доставки заказов</li>
+							<li>Связи с клиентами по вопросам обслуживания</li>
+							<li>Улучшения работы сайта и сервиса</li>
+							<li>Проведения маркетинговых кампаний (с согласия пользователя)</li>
+							<li></li>
+						</ul>
+						<blockquote>Внимание: расписываясь в бланке приема при получении, вы соглашаетесь с тем, что товар поставлен в полном объеме и надлежащего качества. Далее претензии к внешнему виду и комплектации не могут быть приняты.</blockquote>
+						<h3>3. Защита данных</h3>
+						<ol>
+							<li>Отнеситесь ответственно к приему товара, не поручайте его детям или посторонним людям. Ориентировочное время доставки мы согласовываем накануне дня доставки;</li>
+							<li>Чтобы мы смогли беспрепятственно занести мебель в помещение, размеры проемов входной и межкомнатных дверей должны составлять не менее 75х190 см. Ширина прохода внутри помещения (коридора, тамбура) – не менее 105 см;</li>
+							<li>В стоимость доставки и подъема не включены: работы по демонтажу дверей, освобождению входных проемов, разбору, перемещению или утилизации другой мебели;</li>
+						</ol>
+						<p>Мы применяем современные технические и организационные меры для защиты персональной информации от несанкционированного доступа, потери или изменения.</p>
+						<h3>4. Передача данных третьим лицамМы не передаем ваши данные третьим лицам, за исключением случаев:</h3>
+						<ul>
+							<li>Обработки платежей (банковские системы)</li>
+							<li>Доставки заказов (курьерские службы)</li>
+							<li>Улучшения работы сайта и сервиса</li>
+							<li>Требований законодательства Во всех остальных случаях передача данных возможна только с вашего согласия.</li>
+							
+						</ul>
+					<h3>5. Файлы cookie</h3>
+					<p>Сайт использует файлы cookie для:</p>
+					<ul>
+						<li>Анализа поведения пользователей</li>
+						<li>Улучшения работы сайта</li>
+						<li>Персонализации предложений Вы можете отключить cookie в настройках браузера.</li>
+					</ul>
+					<h3>6. Права пользователей</h3>
+					<p>Вы имеете право:</p>
+					<ul>
+						<li>Запросить информацию о своих данных</li>
+						<li>Изменить или удалить личную информацию</li>
+						<li>Отозвать согласие на обработку данных Для этого свяжитесь с нами по email <a href="mailto:info@mebelka.kz">info@mebelka.kz</a></li>
+					</ul>
+					<h3>7. Контактная информация</h3>
+					<p>По вопросам защиты данных обращайтесь:</p>
+					<ul>
+						<li>Email: <a href="mailto:info@mebelka.kz">info@mebelka.kz</a></li>
+						<li>Телефон: <a href="tel:+7 (707) 357-09-17">+7 (707) 357-09-17</a></li>
+					</ul>
+					</article>
+					<div class="public mb-m">
+						<p>Обновлено</p>
+						<span>24.01.2025</span>
+					</div>
+				</div>
+				</div>
+		</div>
+</main>
+ <footer class="footer">
+
+	<div class="popup popup__local" data-popup="popup__local">
+		<div class="popup-bg" data-close="close"></div>
+			<div class="popup-wrapper">
+				<div class="popup-wrap">
+					<div class="popup__top">
+						<span>Выберите ваш город</span>
+						<button class="close popup-close" data-close="close">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+								<g opacity="0.8">
+								<circle cx="20" cy="20" r="19.5" stroke="#003944"/>
+								<path d="M26.7919 13.2081C26.7261 13.1421 26.6479 13.0898 26.5618 13.0541C26.4757 13.0184 26.3834 13 26.2902 13C26.197 13 26.1048 13.0184 26.0187 13.0541C25.9326 13.0898 25.8544 13.1421 25.7886 13.2081L19.9963 19.001L14.2111 13.2152C14.0781 13.0822 13.8976 13.0074 13.7095 13.0074C13.5213 13.0074 13.3408 13.0822 13.2078 13.2152C13.0747 13.3483 13 13.5288 13 13.717C13 13.9051 13.0747 14.0856 13.2078 14.2187L18.993 20.0044L13.2078 25.7902C13.1085 25.8896 13.041 26.0162 13.0138 26.1541C12.9866 26.2919 13.001 26.4347 13.0551 26.5644C13.1093 26.694 13.2007 26.8046 13.3179 26.8822C13.435 26.9598 13.5725 27.0008 13.713 27C13.898 27 14.0759 26.9288 14.2182 26.7936L19.9963 21.0079L25.7815 26.7936C25.9238 26.9359 26.1017 27 26.2867 27C26.4717 27 26.6496 26.9288 26.7919 26.7936C26.8579 26.7278 26.9102 26.6496 26.9459 26.5635C26.9816 26.4774 27 26.3851 27 26.2919C27 26.1987 26.9816 26.1064 26.9459 26.0203C26.9102 25.9342 26.8579 25.856 26.7919 25.7902L20.9996 20.0044L26.7848 14.2187C27.0694 13.9411 27.0694 13.4857 26.7919 13.2081Z" fill="#003944"/>
+								</g>
+								</svg>
+						</button>
+					</div>
+				<ul class="local__list">
+					<li class="active"><a href="#">Алматы</a></li>
+					<li><a href="#">Астана</a></li>
+					<li><a href="#">Шымкент</a></li>
+					<li><a href="#">Актобе</a></li>
+					<li><a href="#">Караганда</a></li>
+					<li><a href="#">Тараз</a></li>
+					<li><a href="#">Костанай</a></li>
+					<li><a href="#">Уральск</a></li>
+					<li><a href="#">Туркестан</a></li>
+					<li><a href="#">Петропавловск</a></li>
+					<li><a href="#">Кокшетау</a></li>
+					<li><a href="#">Темиртау</a></li>
+					<li><a href="#">Талдыкорган</a></li>
+					<li><a href="#">Экибастуз</a></li>
+					<li><a href="#">Рудный</a></li>
+					<li><a href="#">Темиртау</a></li>
+				</ul>
+				<p><strong>Выберите свой вариант,</strong> чтобы получить актуальную информацию о наличии товара, его цены и способов доставки в вашу страну! Это позволит сэкономить больше времени для вас!</p>
+				</div>
+		</div>
+	</div>
+	<div class="footer__promo">
+		<div class="container">
+			<div class="footer__promo__container">
+				<div class="footer__promo__content">
+					<div>Бесплатная доставка</div>
+					<p>Чтобы заказать товар в магазине, свяжитесь с нашим менеджером по телефону <a href="tel:+7 (707) 357-09-17"> +7 (707) 357-09-17</a></p>
+					<a href="#">Подробнее</a>
+				</div>
+				<div class="footer__promo__images">
+					<img src="./assets/images/footer__promo1.svg" alt="Бесплатная доставка">
+					<img src="./assets/images/footer__promo2.svg" alt="Бесплатная доставка">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="footer__container">
+			<div class="footer__top">
+				<div class="footer__nav">
+					<nav>
+						<ul>
+							<li>
+								<a href="#">Все о Mebelka</a>
+								<ul class="sub-menu">
+									<li><a href="#"> Контакты</a></li>
+									<li><a href="#"> Гарантии</a></li>
+									<li><a href="#"> О компании</a></li>
+									<li><a href="#"> Отзывы</a></li>
+									<li><a href="#"> Вопросы/ответы</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Полезное от Mebelka</a>
+								<ul class="sub-menu">
+									<li><a href="#"> Новости</a></li>
+									<li><a href="#"> Каталог</a></li>
+									<li><a href="#"> Акции</a></li>
+									<li><a href="#"> Доставка и оплата</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Каталог</a>
+								<ul class="sub-menu">
+									<li><a href="#"> Шкафы</a></li>
+									<li><a href="#"> Кровати</a></li>
+									<li><a href="#"> Столы</a></li>
+									<li><a href="#"> Тумбы и комоды</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="footer__block">
+					<div class="footer__block__title">
+						Свяжитесь с нами
+					</div>
+					<div class="footer__contact contacts">
+						<a href="tel:+7 (707) 357-09-17">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+								<g opacity="0.8">
+								<path opacity="0.8" d="M14.6666 11.2796V13.2796C14.6674 13.4652 14.6295 13.649 14.5551 13.8192C14.4808 13.9893 14.3717 14.142 14.235 14.2676C14.0982 14.3931 13.9366 14.4887 13.7608 14.5482C13.5849 14.6077 13.3985 14.6298 13.2136 14.6131C11.1621 14.3902 9.19151 13.6893 7.46011 12.5666C5.84933 11.543 4.48367 10.1774 3.46011 8.56657C2.3335 6.82736 1.6324 4.84722 1.41361 2.78657C1.39696 2.60222 1.41886 2.41643 1.47793 2.241C1.53701 2.06558 1.63195 1.90438 1.75673 1.76766C1.8815 1.63094 2.03338 1.52169 2.20268 1.44687C2.37199 1.37205 2.55501 1.33329 2.74011 1.33307H4.74011C5.06365 1.32988 5.3773 1.44442 5.62264 1.65535C5.86798 1.86628 6.02826 2.15922 6.07361 2.47957C6.15811 3.11957 6.31461 3.74807 6.54011 4.35307C6.62982 4.59166 6.64923 4.85096 6.59606 5.10025C6.54289 5.34954 6.41936 5.57835 6.24011 5.75957L5.39361 6.60657C6.34268 8.27558 7.72461 9.6575 9.39361 10.6066L10.2401 9.75957C10.4213 9.58033 10.6502 9.4568 10.8994 9.40363C11.1487 9.35046 11.408 9.36987 11.6466 9.45957C12.2516 9.68557 12.8801 9.84207 13.5201 9.92657C13.8439 9.97233 14.1397 10.1355 14.351 10.3851C14.5624 10.6346 14.6747 10.9531 14.6666 11.2801V11.2796Z" fill="white"/>
+								</g>
+								</svg>
+							+7 (707) 357-09-17
+						</a>
+						<a href="mailto:info@mebelka.kz">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="11" viewBox="0 0 16 11" fill="none">
+								<path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M11.1691 6.3646L14.9389 10.8757C14.7317 10.9578 14.5098 11.0001 14.2857 11H1.71429C1.488 11 1.26629 10.9571 1.06114 10.8757L4.83086 6.3646C5.35592 6.86763 6.0666 7.15002 6.80743 7.15H9.19257C9.93338 7.1499 10.644 6.86752 11.1691 6.3646ZM0.209143 0.8602L4.08686 5.5L0.209143 10.1398C0.071952 9.89749 4.6953e-05 9.62595 0 9.35V1.65C0 1.3717 0.0731428 1.10055 0.209143 0.8602ZM15.7909 0.8602C15.9269 1.10055 16 1.3717 16 1.65V9.35C16 9.6283 15.9269 9.89945 15.7909 10.1398L11.9131 5.5L15.7909 0.8602ZM1.06114 0.1243C1.26832 0.0421543 1.49022 -7.63344e-05 1.71429 1.0358e-07H14.2857C14.512 1.0358e-07 14.7337 0.0429 14.9389 0.1243L10.4846 5.45435C10.3292 5.64034 10.1325 5.79041 9.9089 5.89349C9.68529 5.99658 9.44051 6.05007 9.19257 6.05H6.80743C6.5595 6.05007 6.31471 5.99658 6.0911 5.89349C5.8675 5.79041 5.67077 5.64034 5.51543 5.45435L1.06114 0.1243Z" fill="white"/>
+								</svg>
+							info@mebelka.kz
+						</a>
+						<div>
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+								<g opacity="0.8">
+								<path opacity="0.8" d="M7.99985 1.33398C5.05905 1.33398 2.66705 3.72599 2.66705 6.66359C2.64705 10.9604 7.79745 14.5236 7.99985 14.6676C7.99985 14.6676 13.3527 10.9604 13.3335 6.66758C13.332 5.25348 12.7696 3.89772 11.7696 2.8978C10.7697 1.89787 9.41395 1.33547 7.99985 1.33398ZM7.99985 9.33398C7.64964 9.33398 7.30286 9.26501 6.97931 9.13099C6.65576 8.99697 6.36177 8.80053 6.11414 8.5529C5.8665 8.30526 5.67007 8.01128 5.53605 7.68773C5.40203 7.36417 5.33305 7.01739 5.33305 6.66718C5.33305 6.31698 5.40203 5.97019 5.53605 5.64664C5.67007 5.32309 5.8665 5.02911 6.11414 4.78147C6.36177 4.53384 6.65576 4.3374 6.97931 4.20338C7.30286 4.06936 7.64964 4.00038 7.99985 4.00038C8.35006 4.00038 8.69684 4.06936 9.02039 4.20338C9.34394 4.3374 9.63793 4.53384 9.88556 4.78147C10.1332 5.02911 10.3296 5.32309 10.4637 5.64664C10.5977 5.97019 10.6667 6.31698 10.6667 6.66718C10.6667 7.01739 10.5977 7.36417 10.4637 7.68773C10.3296 8.01128 10.1332 8.30526 9.88556 8.5529C9.63793 8.80053 9.34394 8.99697 9.02039 9.13099C8.69684 9.26501 8.35006 9.33398 7.99985 9.33398Z" fill="white"/>
+								</g>
+								</svg>
+							Казахстан, Алматы
+						</div>
+					</div>
+				</div>
+				<div class="footer__block">
+					<div class="footer__block__title">
+					Режим работы 
+					</div>
+					<div class="footer__hours">
+						<span><strong> ПН-ПТ</strong> с 11:00 до 00:00</span>
+						<span><strong> СБ-ВС</strong> с 12:00 до 22:00</span>
+					</div>
+				</div>
+			</div>
+			<div class="footer__middle">
+				<a href="./index.html" class="logo">
+					<img src="./assets/images/logo-footer.svg" alt="Mebelka">
+				</a>
+				<div class="footer__socials">
+					<span>Мы в соц сетях </span>
+					<div class="footer__socials__wrap">
+						<a href="#" target="_blank" rel="nofollow">
+							<svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0.499172 8.03569C0.542805 8.01349 0.586459 7.9924 0.629001 7.97242C1.36858 7.62388 2.11798 7.29754 2.86629 6.9712C2.90665 6.9712 2.97427 6.92347 3.01245 6.90793C3.07026 6.8824 3.12808 6.85798 3.1859 6.83245L3.5186 6.68704C3.74113 6.59047 3.96256 6.4939 4.18509 6.39733C4.62905 6.2042 5.07302 6.01106 5.51698 5.81681C6.40492 5.43053 7.29396 5.04314 8.1819 4.65686C9.06983 4.27058 9.95885 3.88319 10.8468 3.49691C11.7347 3.11064 12.6237 2.72325 13.5117 2.33697C14.3996 1.95069 15.2886 1.5633 16.1766 1.17702C16.374 1.09044 16.5878 0.961683 16.7994 0.923943C16.9772 0.891753 17.1507 0.829594 17.3296 0.795184C17.6688 0.729694 18.043 0.703054 18.368 0.846243C18.4804 0.896193 18.584 0.966122 18.6702 1.05381C19.0825 1.46895 19.0247 2.15049 18.9374 2.73435C18.3299 6.80359 17.7223 10.874 17.1136 14.9432C17.0307 15.5015 16.9172 16.1142 16.4842 16.4672C16.1177 16.7658 15.5962 16.7991 15.1435 16.6726C14.6909 16.5449 14.2916 16.2774 13.9 16.0143C12.2758 14.9199 10.6504 13.8254 9.0262 12.731C8.64004 12.4712 8.21026 12.1316 8.21463 11.6598C8.21681 11.3757 8.38369 11.1226 8.55386 10.8973C9.96539 9.02359 12.002 7.73599 13.5171 5.9489C13.7309 5.69693 13.8989 5.24183 13.6055 5.09642C13.431 5.00984 13.2302 5.1275 13.071 5.23961C11.0682 6.65485 9.06656 8.07121 7.0638 9.48645C6.41039 9.94821 5.72535 10.4233 4.93777 10.5365C4.2331 10.6386 3.52406 10.4388 2.8423 10.2346C2.2707 10.0637 1.70018 9.88827 1.13186 9.70735C0.829699 9.61189 0.51772 9.50866 0.284282 9.29221C0.050845 9.07576 -0.0833088 8.71168 0.0574081 8.42308C0.145765 8.24215 0.317028 8.12782 0.497015 8.03458L0.499172 8.03569Z" fill="white"/>
+								</svg>								
+						</a>
+						<a href="#" target="_blank" rel="nofollow">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+								<path d="M20.9471 9.04666C20.937 8.28928 20.7952 7.53944 20.5281 6.83066C20.2964 6.23281 19.9426 5.68985 19.4892 5.23649C19.0359 4.78312 18.4929 4.42931 17.8951 4.19766C17.1954 3.93503 16.4562 3.79302 15.7091 3.77766C14.7471 3.73466 14.4421 3.72266 12.0001 3.72266C9.55807 3.72266 9.24507 3.72266 8.29007 3.77766C7.54323 3.79311 6.80442 3.93512 6.10507 4.19766C5.50713 4.42915 4.96409 4.7829 4.5107 5.23629C4.05732 5.68968 3.70356 6.23271 3.47207 6.83066C3.2089 7.52979 3.06719 8.26877 3.05307 9.01566C3.01007 9.97866 2.99707 10.2837 2.99707 12.7257C2.99707 15.1677 2.99707 15.4807 3.05307 16.4357C3.06807 17.1847 3.20907 17.9227 3.47307 18.6237C3.70495 19.2211 4.05887 19.7637 4.51223 20.2167C4.96558 20.6697 5.50842 21.0232 6.10607 21.2547C6.80351 21.5278 7.54245 21.68 8.29107 21.7047C9.25407 21.7487 9.55907 21.7607 12.0011 21.7607C14.4431 21.7607 14.7561 21.7607 15.7111 21.7047C16.4582 21.6903 17.1974 21.5489 17.8971 21.2867C18.4949 21.0546 19.0377 20.7006 19.4911 20.2471C19.9444 19.7935 20.2983 19.2505 20.5301 18.6527C20.7931 17.9527 20.9341 17.2147 20.9501 16.4657C20.9921 15.5037 21.0051 15.1987 21.0051 12.7557C21.0031 10.3137 21.0031 10.0037 20.9471 9.04666ZM11.9941 17.3447C11.3869 17.3448 10.7857 17.2253 10.2248 16.993C9.66382 16.7607 9.15413 16.4202 8.72482 15.9909C8.29551 15.5616 7.95499 15.0519 7.72271 14.491C7.49043 13.93 7.37094 13.3288 7.37107 12.7217C7.37127 11.8076 7.64249 10.9141 8.15043 10.1542C8.65838 9.39426 9.38025 8.802 10.2248 8.45229C11.0693 8.10259 11.9985 8.01114 12.895 8.18952C13.7915 8.36789 14.615 8.80807 15.2613 9.45441C15.9077 10.1007 16.3478 10.9242 16.5262 11.8207C16.7046 12.7172 16.6131 13.6464 16.2634 14.491C15.9137 15.3355 15.3215 16.0573 14.5615 16.5653C13.8016 17.0732 12.9081 17.3445 11.9941 17.3447ZM16.8011 9.00466C16.6559 9.01098 16.5109 8.98786 16.3749 8.93667C16.2388 8.88548 16.1146 8.80729 16.0096 8.70681C15.9046 8.60633 15.821 8.48563 15.7638 8.35198C15.7067 8.21834 15.6772 8.07452 15.6772 7.92918C15.6771 7.78384 15.7065 7.63999 15.7635 7.50629C15.8205 7.3726 15.9039 7.25182 16.0088 7.15124C16.1138 7.05066 16.2379 6.97235 16.3739 6.92104C16.5099 6.86972 16.6549 6.84646 16.8001 6.85266C17.0799 6.86092 17.3455 6.97783 17.5406 7.1786C17.7357 7.37937 17.845 7.64823 17.8453 7.92819C17.8455 8.20815 17.7368 8.4772 17.542 8.67834C17.3473 8.87947 17.0819 8.99687 16.8021 9.00566L16.8011 9.00466Z" fill="white"/>
+								<path d="M11.9941 15.7257C12.7905 15.7257 13.5544 15.4093 14.1175 14.8462C14.6807 14.283 14.9971 13.5192 14.9971 12.7227C14.9971 11.9263 14.6807 11.1625 14.1175 10.5993C13.5544 10.0361 12.7905 9.71973 11.9941 9.71973C11.1976 9.71973 10.4338 10.0361 9.87065 10.5993C9.30748 11.1625 8.99109 11.9263 8.99109 12.7227C8.99109 13.5192 9.30748 14.283 9.87065 14.8462C10.4338 15.4093 11.1976 15.7257 11.9941 15.7257Z" fill="white"/>
+								</svg>
+						</a>
+						<a href="#" target="_blank" rel="nofollow">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+								<path d="M13.397 21.7393V13.5433H16.162L16.573 10.3343H13.397V8.29034C13.397 7.36434 13.655 6.73034 14.984 6.73034H16.668V3.87034C15.848 3.78134 15.025 3.73934 14.201 3.74234C11.757 3.74234 10.079 5.23434 10.079 7.97334V10.3283H7.33197V13.5383H10.085V21.7393H13.397Z" fill="white"/>
+								</svg>
+						</a>
+						<a href="#" target="_blank" rel="nofollow">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+								<path d="M12.8777 18.0458C7.46669 18.0458 4.18269 14.2908 4.05469 8.05176H6.79469C6.88069 12.6348 8.96569 14.5798 10.5647 14.9768V8.05176H13.1917V12.0058C14.7337 11.8358 16.3467 10.0358 16.8897 8.05176H19.4737C19.0597 10.4928 17.3037 12.2918 16.0617 13.0348C17.3037 13.6348 19.3017 15.2048 20.0727 18.0448H17.2327C16.6327 16.1468 15.1627 14.6758 13.1927 14.4758V18.0458H12.8777Z" fill="white"/>
+								</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<div class="footer__buttons">
+					<button class="footer__buttons__local" data-open="popup__local">
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
+								<path d="M8.99947 1.98438C5.69107 1.98438 3.00007 4.67538 3.00007 7.98018C2.97757 12.8141 8.77177 16.8227 8.99947 16.9847C8.99947 16.9847 15.0214 12.8141 14.9998 7.98467C14.9981 6.39381 14.3654 4.86858 13.2405 3.74366C12.1156 2.61875 10.5903 1.98604 8.99947 1.98438ZM8.99947 10.9844C8.60548 10.9844 8.21535 10.9068 7.85136 10.756C7.48736 10.6052 7.15663 10.3842 6.87804 10.1057C6.59945 9.82706 6.37846 9.49633 6.22769 9.13233C6.07692 8.76834 5.99932 8.37821 5.99932 7.98423C5.99932 7.59024 6.07692 7.20011 6.22769 6.83612C6.37846 6.47212 6.59945 6.14139 6.87804 5.8628C7.15663 5.58421 7.48736 5.36322 7.85136 5.21245C8.21535 5.06168 8.60548 4.98408 8.99947 4.98408C9.39345 4.98408 9.78358 5.06168 10.1476 5.21245C10.5116 5.36322 10.8423 5.58421 11.1209 5.8628C11.3995 6.14139 11.6205 6.47212 11.7712 6.83612C11.922 7.20011 11.9996 7.59024 11.9996 7.98423C11.9996 8.37821 11.922 8.76834 11.7712 9.13233C11.6205 9.49633 11.3995 9.82706 11.1209 10.1057C10.8423 10.3842 10.5116 10.6052 10.1476 10.756C9.78358 10.9068 9.39345 10.9844 8.99947 10.9844Z" fill="white"/>
+								</svg>
+								Алматы
+					</button>
+					<div class="lang">
+						<span>Русский</span>
+						<img src="./assets/images/wpml-img.svg" alt="Русский">
+					</div>
+				</div>
+				<div class="footer__addons">
+					<nav>
+						<ul>
+							<li><a href="./page-privacy.html">Политика конфиденциальности</a></li>
+							<li><a href="./page-contract.html">Договор публичной оферты</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="lumios">
+					Разработан студией
+					<img src="./assets/images/lumios.svg" alt="Разработан студией Lumios">
+				</div>
+			</div>
+			<div class="footer__copy">
+				<p>© ТОО «Mebelka», 2025. Любой контент, размещенный на сайте www.mebelka.kz, является интеллектуальной собственностью и защищен законом. Копирование, распространение и использование материалов без разрешения правообладателя запрещено. Сайт работает исключительно в онлайн-формате.</p>
+			</div>
+		</div>
+	</div>
+ </footer> 
+ <script src="./assets/js/swiper.js"></script>
+ <script src="./assets/js/script.js"></script>  
+  
+</body>
+</html>

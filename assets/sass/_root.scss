@@ -1,0 +1,46 @@
+
+$--gold: #D7B47E;
+$--green: #003944;
+$--green-50: rgba($color: $--green, $alpha: 0.5);
+$--white: #ffffff;
+$--green-light:#27B4A0;
+$--silver:#EAEBED;
+$--silver-beige:#F5F3F1;
+$--yellow:#FFE34F;
+$--block-bg:#F5F3F1;
+$--body-bg:#FAFAFA; 
+$--header-bg:#E7E1D0;
+$--black:#454545;
+
+html.open-popup,
+html.open,
+html.search-active,
+html.open-filter{
+	overflow: hidden;
+}
+
+.container{
+	max-width: 1410px;
+	padding: 0 15px;
+	width:100%;
+	margin: 0 auto;
+}
+body{
+	font-family: sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	line-height: normal;
+}
+
+
+.btn{
+	display: flex;
+	
+}
+
+.scroll{
+	width: 100%;
+	overflow: hidden;
+	overflow-x: auto;
+}
+
