@@ -25,11 +25,11 @@ import concat from 'gulp-concat'
 
 function browsersync() {
     browserSync.init({
-        proxy: 'localhost/mebelka',
+        proxy: 'localhost/headgroup',
         ghostMode: { clicks: false },
         notify: false,
-        sharkscode: true,
-        open: false
+        headgroup: true,
+        open: true
             // tunnel: 'yousutename', // Attempt to use the URL https://yousutename.loca.lt
     })
 }
@@ -95,7 +95,7 @@ function styles() {
     return src([`assets/${preprocessor}/*.*`, `!assets/${preprocessor}/_*.*`])
 
     .pipe(eval(`${preprocessor}glob`)())
-        // .pipe(sass().on('error', sass.logError))
+        .pipe(sass().on('error', sass.logError))
         .pipe(eval(preprocessor)({ 'include css': true }))
         .pipe(postCss([
             autoprefixer({ grid: 'autoplace' }),
