@@ -71,3 +71,12 @@ color: $--white;
 letter-spacing: 1.6px;
 }
 }
+@mixin accent-p{
+	font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+@media screen and (min-width:768px) {
+	font-size: 28px;
+}
+}

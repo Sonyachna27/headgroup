@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 toggleMenu();
-	
+	casesSliderInit();
 });
 
 const toggleMenu = () =>{
@@ -21,5 +21,38 @@ const toggleMenu = () =>{
     });
   });
 }
+const casesSliderInit = (() => {
+  let swiperInstance = null;
+
+  return () => {
+    const casesSliderWrap = document.querySelector('.casesSlider');
+    if (!casesSliderWrap) return;
+
+    const shouldEnable = window.innerWidth > 768;
+
+    if (shouldEnable && !swiperInstance) {
+      swiperInstance = new Swiper(casesSliderWrap, {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+          el: ".cases-pagination",
+          type: "fraction",
+        },
+      });
+    }
+
+    if (!shouldEnable && swiperInstance) {
+      swiperInstance.destroy(true, false);
+      swiperInstance = null;
+    }
+  };
+})();
+
+
+
+
+window.addEventListener('resize', casesSliderInit);
+
+
 
 

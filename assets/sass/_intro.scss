@@ -1,0 +1,25 @@
+
+.intro{
+	&__container{
+		max-width: 818px;
+		width: 100%;
+		margin: 0 auto;
+		color: $--grey-3;
+		text-align: center;
+		text-wrap-style: stable;
+		display: flex;
+		flex-direction: column;
+		gap: 26px;
+		@media screen and (min-width:768px) {
+			gap: 32px;
+		}
+		p{
+			@include accent-p;
+			text-transform: uppercase;
+			span{
+				color: $--accent-color;
+				font:inherit;
+			}
+		}
+	}
+}

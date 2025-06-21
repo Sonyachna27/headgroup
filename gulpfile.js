@@ -29,7 +29,7 @@ function browsersync() {
         ghostMode: { clicks: false },
         notify: false,
         headgroup: true,
-        open: true
+        open: false,
             // tunnel: 'yousutename', // Attempt to use the URL https://yousutename.loca.lt
     })
 }
