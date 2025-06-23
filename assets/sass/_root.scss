@@ -50,8 +50,7 @@ $--accent-color:#BAF67C;
 $--white:#FFF;
 
 
-html.open-popup,
-html.open{
+html.open-popup{
 	overflow: hidden;
 }
 
@@ -81,9 +80,9 @@ body{
 
 .btn{
 	display: flex;
-	display: flex;
 	max-width: 375px;
-	padding: 14px 22px;
+	padding: 32px 22px;
+	max-height: fit-content;
 	justify-content: center;
 	align-items: center;
 	gap: 10px;
@@ -100,6 +99,7 @@ body{
 	letter-spacing: 2px;
 	text-transform: uppercase;
 	transition: .3s ease-in-out;
+	
 	&:hover{
 		border: 3px solid $--accent-color;
 	background-color: transparent;
@@ -112,7 +112,14 @@ body{
 	background-color: transparent;
 	color: $--accent-color;
 	max-width: 256px;
-	padding: 40px 50px;
+	padding: 20px 24px;
+	font-size: 12px;
+	letter-spacing: 1.2px;
+	@media screen and (min-width:768px) {
+		padding: 40px 50px;
+	font-size: 20px;
+	letter-spacing: 2px;
+	}
 	&:hover{
 		background-color: $--white;
 		color: $--primary;
@@ -132,6 +139,13 @@ body{
 		margin-bottom: 180px;
 	}
 }
+.mb-m{
+	margin-bottom: 200px;
+	@media screen and (min-width:768px) {
+		margin-bottom: 260px;
+	}
+}
+
 
 // .element::after {
 //   clip-path: url(#myClip3);

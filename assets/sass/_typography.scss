@@ -36,10 +36,6 @@ h1{
 	}
 	h2{
 		@include titleH2;
-		margin-bottom: 20px;
-		@media screen and (min-width:768px) {
-			margin-bottom: 30px;
-		}
 	}
 	h3{
 		@include titleH3;

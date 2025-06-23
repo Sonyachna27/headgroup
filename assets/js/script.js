@@ -28,7 +28,7 @@ const casesSliderInit = (() => {
     const casesSliderWrap = document.querySelector('.casesSlider');
     if (!casesSliderWrap) return;
 
-    const shouldEnable = window.innerWidth >= 1240;
+    const shouldEnable = window.innerWidth > 1240;
 
     if (shouldEnable && !swiperInstance) {
       swiperInstance = new Swiper(casesSliderWrap, {
@@ -47,8 +47,6 @@ const casesSliderInit = (() => {
     }
   };
 })();
-
-
 
 
 window.addEventListener('resize', casesSliderInit);
