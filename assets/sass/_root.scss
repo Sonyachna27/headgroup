@@ -145,33 +145,3 @@ body{
 		margin-bottom: 260px;
 	}
 }
-
-
-// .element::after {
-//   clip-path: url(#myClip3);
-//   -webkit-clip-path: url(#myClip3);
-// }
-// .element::after {
-//   clip-path: url(#myClip4);
-//   -webkit-clip-path: url(#myClip4);
-// }
-
-	// 		 background-color: $--accent-color; // Зелений фон по масці
-	// 		clip-path: url(#myClip);
-	// 		-webkit-clip-path: url(#myClip);
-	// 		overflow: hidden;
-		
-	// 	&:hover::after {
-	// 			opacity: 1;
-	// 		}
-  //  &::after {
-  //   content: '';
-  //   position: absolute;
-  //   inset: 1.5px; // Відступ від країв — створює ефект "бордера"
-  //   background-color:$--primary;
-  //   clip-path: url(#myClip);
-  //   -webkit-clip-path: url(#myClip);
-  //   transition: opacity 0.3s ease;
-  //   opacity: 0;
-  //   z-index: 1;
-  // }

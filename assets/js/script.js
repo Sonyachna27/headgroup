@@ -2,6 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 toggleMenu();
 	casesSliderInit();
+	adaptiveBackground();
 });
 
 const toggleMenu = () =>{
@@ -47,9 +48,32 @@ const casesSliderInit = (() => {
     }
   };
 })();
+const adaptiveBackground = () => {
+  const serviceItems = document.querySelectorAll('.services__item');
 
+  serviceItems.forEach((service) => {
+    const servicesWrap = service.parentElement;
+    const servicesWidth = service.offsetWidth;
+    const parentWidth = servicesWrap.offsetWidth;
 
-window.addEventListener('resize', casesSliderInit);
+    if (window.innerWidth > 1024 && servicesWidth === parentWidth) {
+      service.classList.add("clipAll");
+    } else {
+      service.classList.remove("clipAll");
+    }
+  });
+};
+
+let resizeTimeout;
+
+function onResize() {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    casesSliderInit();
+    adaptiveBackground();
+  }, 150); // или 200 мс
+}
+window.addEventListener('resize', onResize);
 
 
 
