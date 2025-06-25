@@ -56,7 +56,7 @@ const adaptiveBackground = () => {
     const servicesWidth = service.offsetWidth;
     const parentWidth = servicesWrap.offsetWidth;
 
-    if (window.innerWidth > 1024 && servicesWidth === parentWidth) {
+    if (window.innerWidth > 1240 && servicesWidth === parentWidth) {
       service.classList.add("clipAll");
     } else {
       service.classList.remove("clipAll");
