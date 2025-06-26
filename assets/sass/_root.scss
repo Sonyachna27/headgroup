@@ -150,3 +150,16 @@ body{
 		margin-bottom: 260px;
 	}
 }
+.mb-l{
+	margin-bottom: 200px;
+	@media screen and (min-width:768px) {
+		margin-bottom: 290px;
+	
+	}
+}
+.justify-title{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+}

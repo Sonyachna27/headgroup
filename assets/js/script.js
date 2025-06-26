@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 toggleMenu();
 	casesSliderInit();
 	adaptiveBackground();
+	reviewsSliderInit();
 });
 
 const toggleMenu = () =>{
@@ -63,6 +64,35 @@ const adaptiveBackground = () => {
     }
   });
 };
+const reviewsSliderInit= () =>{
+	const reviewsSliderWrap = document.querySelector('.reviewsSlider');
+	if(!reviewsSliderWrap) return;
+
+const reviewsSwiper = new Swiper(reviewsSliderWrap, {
+  // Default parameters
+  slidesPerView: 1.3,
+  spaceBetween: 20,
+  // Responsive breakpoints
+  breakpoints: {
+    
+    576: {
+      slidesPerView: 1.4,
+    },
+    1024: {
+      slidesPerView: 1.8,
+    },
+    1240: {
+      slidesPerView: 2.57,
+      spaceBetween: 40
+    },
+  },
+	navigation: {
+    nextEl: '.reviews-button-next',
+    prevEl: '.reviews-button-prev',
+  },
+
+})
+}
 
 let resizeTimeout;
 
