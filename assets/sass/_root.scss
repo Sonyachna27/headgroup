@@ -163,3 +163,17 @@ body{
 	justify-content: space-between;
 	gap: 20px;
 }
+.simple{
+				display: inline-flex;
+				padding: 10px 20px;
+				justify-content: center;
+				align-items: center;
+				gap: 10px;
+				border-radius: 80px;
+				background-color: $--primary;
+				color: $--accent-color;
+				font-size: 12px;
+				@media screen and (min-width:1024px ) {
+					font-size: 18px;
+				}
+}
