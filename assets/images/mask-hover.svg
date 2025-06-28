@@ -1,0 +1,9 @@
+<svg
+ xmlns="http://www.w3.org/2000/svg" 
+   width="100%"
+  height="auto"
+  preserveAspectRatio="none"
+  viewBox="0 0 696 378" 
+	fill="none">
+<path d="M544 228C521.909 228 504 245.909 504 268V338C504 360.091 486.091 378 464 378H40C17.9086 378 0 360.091 0 338V40C0 17.9086 17.9086 0 40 0H656C678.091 0 696 17.9086 696 40V188C696 210.091 678.091 228 656 228H544Z" fill="#242424" stroke="#BAF67C" stroke-width="2"/>
+</svg>

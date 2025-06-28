@@ -1,0 +1,343 @@
+.contacts{
+	margin-bottom: 120px;
+	&__title{
+		margin-bottom: 32px;
+		max-width: 73%;
+		@media screen and (min-width:768px) {
+			margin-bottom: 40px;
+		}
+		h2{
+			text-align: left;
+			strong{
+				color: $--accent-color;
+			}
+		}
+	}
+	&__wrap{
+		display: flex;
+		gap: 32px;
+		flex-direction: row;
+			flex-wrap: wrap;
+			position: relative;
+		&__img{
+			max-height: 488px;
+			margin-top: auto;
+			img{
+				width: 100%;
+				height: 100%;
+				margin: 0 auto;
+			}
+			@media screen and (min-width:1240px) {
+				width: 41%;
+			}
+			@media screen and (max-width:1239.9px) {
+				position: absolute;
+				top: -205px;
+				z-index: 2;
+				right: 0;
+				max-width:271px;
+				max-height: 221px;
+			}
+	}
+	}
+	&__socials{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+		width: 100%;
+		@media screen and (min-width:1240px) {
+			width: 41%;
+		}
+		@media screen and (min-width:768px) and (max-width:1239.9px) {
+			flex-direction: column;
+			text-align: center;
+		}
+		@media screen  and (max-width:429.9px) {
+			flex-direction: column;
+			text-align: center;
+		}
+		&__mail{
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			@media screen and (min-width:768px) and (max-width:1239.9px) {
+			align-items: center;
+		}
+			div{
+			color: $--white;
+			font-family: 'NauryzRedKeds';
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: normal;
+			letter-spacing: 1.4px;
+			text-transform: uppercase;
+			@media screen and (min-width:768px) {
+				font-size: 20px;
+				letter-spacing: 2px;
+			}
+			a{
+				text-align: center;
+				font-size: 12px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+				letter-spacing: 1.2px;
+				text-transform: uppercase;
+				@media screen and (min-width:768px) {
+					font-size: 16px;
+				}
+			}
+			}
+			a{
+				color: $--light-grey;
+				transition: .3s linear;
+				&:hover{
+					color: $--accent-color;
+				}
+			}
+		}
+		&__wrap{
+			display: flex;
+			align-items: center;
+			gap: 30px;
+			width: fit-content;
+			a{
+				max-width: 36px;
+				max-height: 36px;
+				min-width: 36px;
+				min-height: 36px;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				@media screen and (min-width:768px) {
+					max-width: 48px;
+				max-height: 48px;
+				min-width: 48px;
+				min-height: 48px;
+				}
+			}
+			svg{
+				max-width: 22px;
+				max-height: 22px;
+				width: 100%;
+				height: 100%;
+				@media screen and (min-width:768px) {
+					max-width: 27px;
+				max-height: 27px;
+				}
+			}
+		}
+	}
+	
+	&__form{
+		padding: 42px 22px 0 22px;
+		background-color: $--secondary;
+		border-radius: 40px;
+		position: relative;
+		width: 100%;
+		@media screen and (min-width:768px) {
+			border-radius: 80px;
+		}
+		@media screen and (max-width:368px) {
+			border-radius: 40px 40px 20px 20px;
+		}
+		&__title{
+			color: $--white;
+			font-family: 'NauryzRedKeds';
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 140%;
+			letter-spacing: 1.4px;
+			text-transform: uppercase;
+			margin-bottom: 22px;
+			@media screen and (min-width:768px) {
+				font-size: 20px;
+				letter-spacing: 2px;
+				margin-bottom: 40px;
+			}
+			strong{
+				color: $--accent-color;
+				font-weight: 700;
+			}
+		}
+		@media screen and (min-width:1240px) {
+			width: 55.75%;
+		}
+		form{
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			position: relative;
+			
+			div{
+				width: 100%;
+			}
+			input,
+			select{
+				border-radius: 100px;
+				border: 1px solid #FFF;
+				padding: 21.5px;
+				background-color: transparent;
+				outline: none;
+				width: 100%;
+				color: $--light-grey;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+				letter-spacing: 1.6px;
+				text-transform: uppercase;
+			
+			}
+			.input__wrap{
+				position: relative;
+				& input{
+					padding-left: 103px;
+				}
+				&:after{
+					content: '';
+					width: 31px;
+					height: 22px;
+					position: absolute;
+					top: 50%;
+					left: 50px;
+					transform: translateY(-50%);
+					background:url('../images/contact-img2.svg') center center / cover no-repeat  ;
+				}
+			}
+			button[type="submit"]{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				padding: 26px 83px;
+				color: $--primary;
+				font-family: 'NauryzRedKeds';
+				font-size: 12px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: normal;
+				letter-spacing: 1.2px;
+				text-transform: uppercase;
+				max-width: 328px;
+				width: 100%;
+				background-color: $--white;
+				margin: 0 auto;
+				@media screen and (min-width:768px) {
+					padding: 32px;
+					max-width: 375px;
+					font-size: 20px;
+					letter-spacing: 2px;
+				}
+			}
+			.submit__wrap{
+				position: relative;
+				padding: 9px 12px 0 12px;
+				background-color: $--primary;
+				margin: 0 auto;
+				max-width: fit-content;
+				border-radius: 50px 50px 0 0;
+				max-width: 250px;
+				margin: 0 auto;
+				@media screen and (min-width:768px) {
+						padding:20px 20px 0 20px;
+						border-radius: 80px 80px 0 0;
+						max-width: 375px;
+				}
+				&:before{
+					content: '';
+					position: absolute;
+					bottom: 0px;
+					background-color: $--primary;
+					background-color: $--secondary;
+					z-index: 1;
+					height: 81px;
+					width: 81px;
+					left: -76px;
+					border-radius: 0 0% 50% 0;
+					@media screen and (max-width:767.9px) {
+						left: -50px;
+						width: 50px;
+						height: 50px;
+						border-radius: 0 0 50% 50%;
+					}
+					@media screen and (max-width:390px) {
+						left: -30px;
+						width: 30px;
+						height: 30px;
+						border-radius: 0 0 50% 50%;
+					}
+				}
+				&:after{
+					content: '';
+					width: 50px;
+					height: 50px;
+					position: absolute;
+					right: -50px;
+					bottom: 0;
+					background-color: $--secondary;
+					z-index: 1;
+					border-radius: 0 0 0 50%;
+					width: 81px;
+					height: 81px;
+					right: -76px;
+					aspect-ratio: 1;
+				@media screen and (max-width:767.9px) {
+					width: 50px;
+						height: 50px;
+						right: -50px;
+							border-radius: 0 0 50% 50%;
+					}
+				@media screen and (max-width:390px) {
+					width: 30px;
+						height: 30px;
+						right: -30px;
+					}
+				
+				}
+				.btn{
+					position: relative;
+				&:before{
+					content: '';
+					width: 40px;
+					height: 80px;
+					position: absolute;
+					left: -51px;
+					bottom: -4px;
+					background-color: $--primary;
+					z-index: 0;
+					aspect-ratio: 1;
+						@media screen and (max-width:767.9px) {
+						width: 25px;
+						height: 25px;
+						left: -35px;
+					}
+				}
+				&:after{
+					content: '';
+					position: absolute;
+					bottom: -4px;
+					width: 41px;
+						height: 81px;
+						right: -51px;
+					background-color: $--primary;
+					z-index: 0;
+						@media screen and (max-width:768px) {
+					width: 25px;
+						height: 25px;
+						right: -35px;
+					}
+				}
+				}
+				
+			}
+			
+		}
+	}
+	
+}

@@ -57,6 +57,7 @@
 			display: flex;
 			flex-wrap: wrap;
 			min-height: 212px;
+		
 	@media screen and (min-width:1240px) {
 		width: calc(50% - 20px);
 		flex-grow:1 ;
@@ -65,59 +66,52 @@
 		min-height: 378px;
 	}	
 
-	&.clipAll{
-		&:after{
-			 clip-path: url(#myClip7);
-    -webkit-clip-path: url(#myClip7);
-		}
-		&:before{
-			 clip-path: url(#myClip7);
-    -webkit-clip-path: url(#myClip7);
-		}
-
+&:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url('../images/mask2.svg');
+	background-size: 100% auto;
+  background-repeat: no-repeat;
+	transition: .3s ease-in-out;
+	@media screen and (min-width:1024px) and (max-width:1239.9px) {
+		background-image: url('../images/mask3.svg');
 	}
-	&::after {
-    content: '';
-    position: absolute; 
-    inset: -2.5px; 
-    clip-path: url(#myClip6);
-    -webkit-clip-path: url(#myClip6);
-    transition: inset 0.3s ease;
-    opacity: 1;
-    z-index: 1;
-		background-color: $--secondary;
-		@media screen and (min-width:860px) and (max-width:1239.9px) {
-			clip-path: url(#myClip8);
-			-webkit-clip-path: url(#myClip8);
-		}	
-	
-  }
-	&::before {
-    content: '';
-    position: absolute; 
-    inset: -1.5px; 
-    clip-path: url(#myClip6);
-    -webkit-clip-path: url(#myClip6);
-    inset: -1.5px; 
-    opacity: 1;
-    z-index: 0;
-		background-color: $--secondary;
-		transition: background-color 0.3s ease;
+	z-index: 0; 
+	pointer-events: none; 
+}
 
-	@media screen and (min-width:860px) and (max-width:1239.9px) {
-		clip-path: url(#myClip8);
-    -webkit-clip-path: url(#myClip8);
-	}	
-	
-  }
+	&.clipAll{
+		min-height: 327px;
+	&:after{
+ background-image: url('../images/mask.svg');
+	}
+
+&:hover{
+		&:after{
+ background-image: url('../images/mask-bg.svg');
+	}
+}
+	}
+
 	&:hover{
-		&::after {
-				opacity: 1;
-				inset:.5px;
-			}
-		&::before {
-				background-color: $--accent-color;
-			}
+			&:after{
+		background-image: url('../images/mask-hover.svg');
+		}
+		&:after{
+
+		
+		@media screen and (min-width:1024px) and (max-width:1239.9px) {
+		background-image: url('../images/mask3-hover.svg');
+	}
+	}
+	
+
 			.services__item__link svg path:nth-of-type(1) {
   	animation: arrowIn 0.8s ease-in-out  1 normal both;
 		}
@@ -164,8 +158,11 @@
 		height: auto;
 		flex-grow: 1;
 		position: relative;
-		margin-bottom: 40px;
+		margin-bottom: 26px;
 			width: 73%;
+			@media screen and (min-width:768px) {
+				margin-bottom: 40px;
+			}
 		span{
 			display: inline-block;
 			color: $--grey;

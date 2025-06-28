@@ -10,12 +10,13 @@
 @mixin titleH2{
 color: #FFF;
 text-align: center;
-font-family: 'NauryzRedKeds', sans-serif;
+font-family: 'NauryzRedKeds';
 font-size: 28px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
 letter-spacing: 6px;
+text-transform: uppercase;
 @media screen and (min-width:768px){
 	font-size: 60px;
 }
