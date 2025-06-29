@@ -78,6 +78,8 @@ body{
 }
 
 
+
+
 .btn{
 	display: flex;
 	max-width: 375px;
@@ -101,7 +103,7 @@ body{
 	transition: .3s ease-in-out;
 	
 	&:hover{
-		border: 3px solid $--accent-color;
+		border-color:$--accent-color;
 	background-color: transparent;
 	color: $--accent-color;
 	}

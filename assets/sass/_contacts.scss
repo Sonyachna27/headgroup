@@ -181,7 +181,7 @@
 			select{
 				border-radius: 100px;
 				border: 1px solid #FFF;
-				padding: 21.5px;
+				padding: 21.5px 32px;
 				background-color: transparent;
 				outline: none;
 				width: 100%;
@@ -192,7 +192,26 @@
 				line-height: normal;
 				letter-spacing: 1.6px;
 				text-transform: uppercase;
-			
+				@media screen and (min-width:768px) {
+					padding: 32px 50px;
+				}			
+			}
+			select{
+				appearance: none;
+				padding-right: 77.5px;
+			}
+			.select__wrap{
+				position: relative;
+				&:after{
+					content: '';
+					width: 17.5px;
+					height: 8.5px;
+					background: url('../images/arrow-select.svg') center center / cover no-repeat;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					right: 50px;
+				}
 			}
 			.input__wrap{
 				position: relative;
@@ -228,6 +247,14 @@
 				width: 100%;
 				background-color: $--white;
 				margin: 0 auto;
+				transition: .3s linear;
+				border: 3px solid $--accent-color;
+				&:hover{
+					border-color:$--accent-color;
+					background-color: transparent;
+					color: $--accent-color;
+							
+				}
 				@media screen and (min-width:768px) {
 					padding: 32px;
 					max-width: 375px;

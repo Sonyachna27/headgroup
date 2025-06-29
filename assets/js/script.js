@@ -110,7 +110,11 @@ document.addEventListener("DOMContentLoaded", function () {
   casesSliderInit();
   adaptiveBackground();
   reviewsSliderInit();
+	handlePopup();
+	
 });
+
+
 
 const toggleMenu = () => {
   const htmlElement = document.querySelector("html");
@@ -180,9 +184,10 @@ const reviewsSliderInit = () => {
         slidesPerView: 1.8,
       },
       1240: {
-        slidesPerView: 2.57,
+        slidesPerView: 2.63,
         spaceBetween: 40,
       },
+    
     },
     navigation: {
       nextEl: ".reviews-button-next",
@@ -217,7 +222,44 @@ function onResize() {
   resizeTimeout = setTimeout(() => {
     casesSliderInit();
     adaptiveBackground();
+		
   }, 150);
 }
 
 window.addEventListener("resize", onResize);
+
+const handlePopup = () => {
+  const openPopup = () => {
+    document.querySelectorAll('[data-open]').forEach(element => {
+      element.addEventListener('click', () => {
+        const popupName = element.getAttribute('data-open'); 
+        const popupTarget = document.querySelector(`[data-popup="${popupName}"]`); 
+
+        if (popupTarget) {
+          document.documentElement.classList.add('open-popup');
+          popupTarget.classList.add('open-popup'); 
+        }
+      });
+    });
+  };
+
+  const closePopup = () => {
+    document.querySelectorAll('[data-close]').forEach(element => {
+      element.addEventListener('click', () => {
+        const popup = element.closest('.popup'); 
+
+        if (popup) {
+          popup.classList.remove('open-popup'); 
+        }
+
+        if (!document.querySelector('.popup.open-popup')) {
+          document.documentElement.classList.remove('open-popup');
+        }
+      });
+    });
+  };
+
+  openPopup();
+  closePopup();
+};
+

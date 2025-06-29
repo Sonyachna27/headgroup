@@ -55,6 +55,7 @@
 	div{
 		@include titleH3;
 		color: $--accent-color;
+		text-align: center;
 	}
 	p{
 		color: $--light-grey;
@@ -107,10 +108,12 @@
 }
 .popup .btn{
 	margin: auto;
-		min-width: 234px;
+	min-width: fit-content;
 	@media screen and (min-width:768px) {
 		max-width: 46%;
-	
 		width: 100%;
+	}
+	@media screen and (min-width:430px) {
+		min-width: 234px;
 	}
 }

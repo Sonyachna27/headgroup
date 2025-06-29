@@ -6,20 +6,26 @@
 		}
 		margin-bottom: 28px;
 	}
+
 	.reviewsSlider{
-		 flex-grow: 1;
-  margin-left: auto;
-  width: 100vw;
-  z-index: 1;
-	overflow: hidden;
-	padding-right: 5rem;
-	@media screen and (min-width:1024px) {
-		padding-right: 1rem;
-	}
-	@media screen and (min-width:576px)  and (max-width:1023.9px){
-		padding-right: 5rem;
-	}
-	}
+		position: relative;
+		padding-right: 0;
+		overflow: visible;
+		width: 100%;
+		&:after {
+    background-color: $--primary;
+    content: "";
+    height: 100%;
+    left: -100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+		}
+		.swiper-wrapper{
+			width: 100%;
+		}
+}
 &__arrows{
 	display: none;
 	align-items: center;
@@ -156,3 +162,6 @@ svg{
 
 	}
 }
+
+
+
