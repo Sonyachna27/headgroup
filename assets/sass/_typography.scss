@@ -47,26 +47,10 @@ h1{
 			margin-bottom: 30px;
 		}
 	}
-	// ul:not([class]){
-	// 	display: flex;
-	// 	flex-direction: column;
-	// 	gap: 10px;
-	// 	margin-bottom: 20px;
-	// 	font-style: normal;
-	// 	font-weight: 500;
-	// 	line-height: 140%; /* 22.4px */
-	// 	letter-spacing: 0.16px;
-	// 	font-size: 16px;
-	// 	@media screen and (min-width:768px) {
-	// 		margin-bottom: 30px;
-	// 		gap: 14px;
-	// 		font-size: 20px;
-	// 		letter-spacing: 0.2px;
-	// 	}
-	// }
+
 
 	a:not([class]){
-		font-weight: 500;
+		font-weight: 400;
 		transition: .3s linear;
 		color: $--accent-color;
 		text-decoration: none;

@@ -1,24 +1,32 @@
 @mixin titleH1{
-	font-size: 32px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 110%;
+	color: $--white;
+text-align: center;
+font-family: 'NauryzRedKeds', sans-serif;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 2.8px;
+text-transform: uppercase;
 	@media screen and (min-width:768px){
-		font-size: 40px;
+		font-size: 60px;
+		letter-spacing: 6px;
+
 	}
 }
 @mixin titleH2{
 color: #FFF;
 text-align: center;
-font-family: 'NauryzRedKeds';
+font-family: 'NauryzRedKeds', sans-serif;
 font-size: 28px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
-letter-spacing: 6px;
+letter-spacing: 2.8px;
 text-transform: uppercase;
 @media screen and (min-width:768px){
 	font-size: 60px;
+	letter-spacing: 6px;
 }
 
 }

@@ -12,7 +12,7 @@
 	}
 	&-slider-wrap{
 		padding-top: 117px;
-		@media screen and (max-width:1239.9px) {
+		@media screen and (max-width:1023.9px) {
 			display: flex;
 			flex-direction: column;
 			gap: 135px;
@@ -31,7 +31,7 @@
 		.swiper-pagination-total{
 			color: $--dark-grey;
 		}
-		@media screen and (max-width:1239.9px) {
+		@media screen and (max-width:1023.9px) {
 			display: none;
 		}
 	}
@@ -45,8 +45,7 @@
 				flex-direction: row;
 				gap: 40px;
 			}
-		@media screen and (max-width:768px) and (min-width:1239.9px) {
-				flex-direction: row;
+		@media screen and (min-width: 768px) and (max-width: 1239.9px) {
 				gap: 44px;
 			}
 		&__info{
@@ -127,11 +126,18 @@
 					font-size: 46px;
 				}
 			}	
-			&__name{
+			&__category{
+				display: flex;
+				flex-wrap: wrap;
+				gap: 12px;
+				justify-content: flex-end;
 				margin-left: auto;
 				width: fit-content;
 				position: relative;
 				z-index: 1;
+				max-width: 250px;
+				width: 100%;
+				span{
 				display: inline-flex;
 				padding: 10px 20px;
 				justify-content: center;
@@ -141,14 +147,17 @@
 				background-color: $--primary;
 				color: $--accent-color;
 				font-size: 12px;
+				@media screen and (min-width:1024px ) {
+					font-size: 18px;
+				}
+				}
+				
 				@media screen and (min-width:768px) and (max-width:1239.9px ) {
 					position: absolute;
 					top: 34px;
 					right: 34px;
 				}
-				@media screen and (min-width:1024px ) {
-					font-size: 18px;
-				}
+				
 			}
 			&__content{
 				position: relative;

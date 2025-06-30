@@ -1,0 +1,62 @@
+.projects{
+	&__container{
+		h1{
+			@include titleH1;
+			font-family:'NauryzRedKeds', sans-serif;
+			text-transform: uppercase;
+			text-wrap-style: balance;
+			margin-bottom: 32px;
+			@media screen and (min-width:768px) {
+				margin-bottom: 40px;
+			}
+		}
+		.load-more{
+			margin: 0 auto;
+			@media screen and (max-width:768px) {
+				max-width: 100%;
+				width: 100%;
+				padding: 16.5px;
+
+			}
+		}
+	}
+	&__list{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 20px;
+		flex-wrap: wrap;
+		margin-bottom: 69px;
+		@media screen and (min-width:768px) {
+			margin-bottom: 111px;
+		}
+		&__item{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 10px 20px;
+			border-radius: 80px;
+			border: 1px solid $--accent-color;
+			background: $--primary;
+		}
+	}
+	&__items{
+		display: flex;
+		flex-direction: column;
+		gap: 90px;
+		margin-bottom: 32px;
+		@media screen and (min-width:768px) {
+			gap: 112px;
+			margin-bottom: 60px;
+		}
+	}
+	&__item{
+		&.cases__item{
+			
+		}
+		& .cases__item__link img{
+			max-width: 100%;
+			height: calc(100% + 62px);
+		}
+	}
+}
