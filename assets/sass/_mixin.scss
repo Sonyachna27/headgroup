@@ -11,7 +11,10 @@ text-transform: uppercase;
 	@media screen and (min-width:768px){
 		font-size: 60px;
 		letter-spacing: 6px;
-
+	}
+	strong{
+		color: $--accent-color;
+		font-weight: inherit;
 	}
 }
 @mixin titleH2{
@@ -28,7 +31,13 @@ text-transform: uppercase;
 	font-size: 60px;
 	letter-spacing: 6px;
 }
+strong{
+	letter-spacing: inherit;
+	font: inherit;
+	line-height:inherit;
+	color: $--accent-color;
 
+}
 }
 
 @mixin titleH3{

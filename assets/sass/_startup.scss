@@ -1,0 +1,105 @@
+.startup{
+	margin-bottom: 200px;
+	&__container{
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+		@media screen and (min-width:768px) {
+			gap: 24px;
+		}
+		h1{
+			text-align: left;
+		}
+	}
+	&__wrap{
+		display: flex;
+		justify-content: space-between;
+		gap: 22px;
+		flex-direction: row;
+		align-items: end;
+		@media screen and (max-width:1239.9px){
+			flex-direction: column;
+			align-items: start;
+		}
+		// @media screen and (min-width:1024px) and (max-width:1239.9px) {
+		// 	align-items: center;
+		// }
+	}
+	&__info{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 40px;
+		width: 100%;
+		@media screen and (min-width:1240px) {
+			width: 33%;
+		}
+		@media screen and (min-width:1024px) and (max-width:1239.9px) {
+			width: fit-content;
+		}
+	}
+	&__promo{
+		display: flex;
+		align-items: start;
+		justify-content: space-between;
+		gap: 32px;
+		position: relative;
+		width: 100%;
+		flex-direction: column;
+		@media screen and (min-width:768px) {
+			gap: 40px;
+			
+		}
+		@media screen and (min-width:1024px) {
+			flex-direction: row;
+			align-items: center;
+		}
+		@media screen and (min-width:1240px) {
+			width: 67%;
+			justify-content: flex-end;
+		}
+		&__wrap{
+			position: relative;
+			@media screen and (max-width:1023.9px) {
+				margin: 0 auto;
+			}
+		}
+		p{
+			text-align: left;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 140%;
+			text-align: left;
+			@media screen and (min-width:1024px) {
+				text-align: right;
+			}
+			@media screen and (min-width:768px) {
+				font-size: 18px;
+			}
+		}
+		.btn{
+			max-width: 234px;
+			width: 100%;
+			position: relative;
+			z-index: 1;
+			@media screen and (min-width:768px) {
+				max-width: 375px;
+			}
+		}
+		img{
+			display: none;
+			@media screen and (min-width:1024px) {
+				display: block;
+			}
+			position: absolute;
+			right: 0;
+			top: -175px;
+			max-width: 205.369px;
+			max-height: 183.089px;
+			width: 100%;
+			z-index: 0;
+			transform:  rotate(10.462deg);
+		}
+	}
+}
