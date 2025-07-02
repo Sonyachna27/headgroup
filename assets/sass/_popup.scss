@@ -56,12 +56,13 @@
 		@include titleH3;
 		color: $--accent-color;
 		text-align: center;
+		text-transform: uppercase;
 	}
 	p{
 		color: $--light-grey;
 		font-size: 14px;
 		font-style: normal;
-		font-weight: 400;
+		font-weight: 300;
 		line-height: 140%;
 		text-transform: uppercase;
 		text-align: center;
@@ -70,7 +71,7 @@
 		}
 		strong{
 			color: $--white;
-			font-weight: 400;
+			font-weight: 300;
 		}
 	}
 	

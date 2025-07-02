@@ -9,6 +9,9 @@
 		}
 		h1{
 			text-align: left;
+			@media screen and (min-width:1024px) and (max-width:1239.9px) {
+				padding-right: 150px;
+			}
 		}
 	}
 	&__wrap{
@@ -21,9 +24,7 @@
 			flex-direction: column;
 			align-items: start;
 		}
-		// @media screen and (min-width:1024px) and (max-width:1239.9px) {
-		// 	align-items: center;
-		// }
+
 	}
 	&__info{
 		display: flex;
@@ -31,12 +32,11 @@
 		justify-content: space-between;
 		gap: 40px;
 		width: 100%;
-		@media screen and (min-width:1240px) {
-			width: 33%;
-		}
-		@media screen and (min-width:1024px) and (max-width:1239.9px) {
+		@media screen and (min-width:1024px) {
 			width: fit-content;
+			min-width: fit-content;
 		}
+	
 	}
 	&__promo{
 		display: flex;
@@ -55,7 +55,8 @@
 			align-items: center;
 		}
 		@media screen and (min-width:1240px) {
-			width: 67%;
+			width: 100%;
+			max-width: 74%;
 			justify-content: flex-end;
 		}
 		&__wrap{
@@ -73,6 +74,7 @@
 			text-align: left;
 			@media screen and (min-width:1024px) {
 				text-align: right;
+				max-width: 57%;
 			}
 			@media screen and (min-width:768px) {
 				font-size: 18px;

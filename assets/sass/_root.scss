@@ -1,7 +1,6 @@
 @font-face {
 	font-family: 'NauryzRedKeds';
 	src: url(../fonts/NAURYZREDKEDS.TTF);
-	
 }
 @font-face {
 	font-family: 'Stolzl';
@@ -10,9 +9,8 @@
 }
 @font-face {
 	font-family: 'Stolzl';
-	src: url(../fonts/STOLZL_LIGHT.OTF);
+	src: url(../fonts/STOLZL_BOOK.OTF);
 	font-weight: 300;
-
 }
 @font-face {
 	font-family: 'Stolzl';
@@ -29,15 +27,11 @@
 	src: url(../fonts/STOLZL_BOLD.OTF);
 	font-weight: 700;
 }
-@font-face {
-	font-family: 'Stolzl';
-	src: url(../fonts/STOLZL_BOOK.OTF);
-	font-weight: 900;
-}
+
 @font-face {
 	font-family: "Russo One";
 	src: url(../fonts/RussoOne-Regular.ttf);
-	font-weight: 400;
+	font-weight: 300;
 }
 
 $--primary:#151515;
@@ -72,12 +66,11 @@ body{
 	background-color: $--primary;
 	font-family: 'Stolzl', sans-serif;
 	font-size: 18px;
+	font-weight: 300;
 	font-style: normal;
 	line-height: normal;
 	color: $--white;
 }
-
-
 
 
 .btn{
@@ -96,7 +89,7 @@ body{
 	font-family: 'NauryzRedKeds';
 	font-size: 12px;
 	font-style: normal;
-	font-weight: 700;
+	font-weight: 400;
 	line-height: normal;
 	letter-spacing: 1.2px;
 	text-transform: uppercase;
@@ -123,9 +116,9 @@ body{
 	font-size: 12px;
 	letter-spacing: 1.2px;
 	@media screen and (min-width:768px) {
-		padding: 40px 50px;
-	font-size: 20px;
-	letter-spacing: 2px;
+		padding: 36px 44px;
+		font-size: 16px;
+		letter-spacing: 2px;
 	}
 	&:hover{
 		background-color: $--white;
@@ -224,13 +217,16 @@ body{
 		}
 	}
 	&-bg{
+background-color: $--secondary;
+border-radius: 40px;
 	position: relative;
 		width: 100%;
 			padding: 18px;
 			display: flex;
 			flex-wrap: wrap;
-			min-height: 212px;
-		
+			transition: .3s linear;
+			// min-height: 212px;
+		border:3px solid transparent;
 	@media screen and (min-width:1240px) {
 		width: calc(50% - 20px);
 		flex-grow:1 ;
@@ -238,79 +234,127 @@ body{
 	@media screen and (min-width:576px) {
 		min-height: 378px;
 	}	
+	@media screen and (min-width:768px) {
+		padding: 34px;
+	}	
 
-&:after {
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: auto;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-image: url('../images/mask2.svg');
-	background-size: 100% auto;
-  background-repeat: no-repeat;
-	transition: .3s ease-in-out;
-	@media screen and (min-width:1024px) and (max-width:1239.9px) {
-		background-image: url('../images/mask3.svg');
-	}
-	z-index: 0; 
-	pointer-events: none; 
-}
+// &:after {
+// 	content: '';
+// 	position: absolute;
+// 	width: 100%;
+// 	height: auto;
+// 	top: 0;
+// 	left: 0;
+// 	right: 0;
+// 	bottom: 0;
+// 	background-image: url('../images/mask2.svg');
+// 	background-size: 100% auto;
+//   background-repeat: no-repeat;
+// 	transition: .3s ease-in-out;
+// 	@media screen and (min-width:1024px) and (max-width:1239.9px) {
+// 		background-image: url('../images/mask3.svg');
+// 	}
+// 	z-index: 0; 
+// 	pointer-events: none; 
+// }
 
-	&.clipAll{
-		min-height: 327px;
-	&:after{
- background-image: url('../images/mask.svg');
-	}
+// 	&.clipAll{
+// 		min-height: 327px;
+// 	&:after{
+//  background-image: url('../images/mask.svg');
+// 	}
 
-&:hover{
-		&:after{
- background-image: url('../images/mask-bg.svg');
-	}
-}
-	}
+// &:hover{
+// 		&:after{
+//  background-image: url('../images/mask-bg.svg');
+// 	}
+// }
+// 	}
 
 	&:hover{
-			&:after{
-		background-image: url('../images/mask-hover.svg');
+	// 		&:after{
+	// 	background-image: url('../images/mask-hover.svg');
+	// 	}
+	// 	&:after{
+	// 	@media screen and (min-width:1024px) and (max-width:1239.9px) {
+	// 	background-image: url('../images/mask3-hover.svg');
+	// }
+	// }
+	border-color: $--accent-color;
+	.fancy-bg__variation{
+		@media screen and (min-width:1024px) {
+			background-image: url('../images/desk3.svg');
 		}
-		&:after{
-		@media screen and (min-width:1024px) and (max-width:1239.9px) {
-		background-image: url('../images/mask3-hover.svg');
-	}
+		background-image: url('../images/mob.svg');
 	}
 	
 	}
 	
-		&__variation{
-			position: absolute;
-			z-index: 2;
-			bottom: 18px;
-			right: 20px;
-			width: 100%;
-			height: 100%;
-			max-width: 62px;
-			max-height: 62px;
-			overflow: hidden;
-			text-align: center;
-			font-family: "Russo One";
-			font-size: 40px;
-			font-style: normal;
-			font-weight: 400;
-			line-height: normal;
-			letter-spacing: 4px;
-		@media screen and (min-width:576px) {
-			max-width: 112px;
-			max-height: 112px;
+	&__variation{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		z-index: 2;
+		bottom: -2.5px;
+		right: -2.9px;
+			background-image: url('../images/mob1.svg');
+			background-size: 100% auto;
+			background-size: 100% 109%;
+			background-repeat: no-repeat;
+			transition: .3s linear;
+		width: 62px;
+		height: 62px;
+		width: 127px;
+		height: 106px;
+		overflow: hidden;
+		text-align: center;
+		font-family: "Russo One";
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		letter-spacing: 4px;
+	@media screen and (min-width:1024px) {
+		bottom: -2.8px;
+		width: 112px;
+		height: 112px;
+		width: 232px;
+		height: 211px;
+		padding: 15px 40px 0px 36px;
+		background-image: url('../images/desktop1.svg');
+	}
+	@media screen and (min-width:768px) {
+		font-size: 80px;
+		letter-spacing: 8px;
+	}
+	text-align: right;
+	span{
+		margin-left: 33px;
+		margin-top: 32px;
+		@media screen and (min-width:1024px) {
+		margin-left: auto;
+	}
+	}
+	a,div{
+		width: 62px;
+		height: 62px;
+		border-radius:50%;
+		background-color: transparent;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 20px;
+		margin-left: 32px;
+		@media screen and (min-width:1024px) {
+			width: 112px;
+			height: 112px;
+			margin-left: 47px;
+			margin-top: 33px;
 		}
-		@media screen and (min-width:768px) {
-			right: 40px;
-			font-size: 80px;
-			letter-spacing: 8px;
-		}
-		}
+	}
+	}
 }
 &-content{
 	display: flex;
