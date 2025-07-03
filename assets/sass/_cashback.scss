@@ -12,6 +12,11 @@
 			border-radius: 80px;
 			padding-bottom: 0;
 		}
+		@media screen and (max-width:429.9px) {
+			
+			border-radius: 20px;
+			
+		}
 
 	}
 	&__hand{
@@ -115,6 +120,7 @@
 		@media screen and (min-width:1240px) {
 			width: 52%;
 			margin-bottom: 0px;
+			padding-bottom: 48px;
 		}
 		@media screen and (min-width:1240px) {
 			width: 52%;
@@ -156,87 +162,82 @@
 	}
 	&__absolute{
 		position: relative;
-		max-width: 250px;
-		margin: auto auto;
-		@media screen and (min-width:768px) {
+		margin:  0px auto;
+		@media screen and (min-width:1240px) {
+			width: 31%;
+			margin: auto  auto 0 70px;
+		}
+		@media screen and (min-width:1024px) and (max-width:1239.9) {
 			width: 42%;
-			max-width: 375px;
 		}
-		&:after{
-			content: '';
-				width: 70px;
-				height:70px;
-				position: absolute;
-				bottom: 0;
-				left: -70px;
-				border-radius: 0 0 50%;
-				background-color: $--accent-color;
-				z-index: 1;
-				
-				@media  screen and (min-width:768px) {
-					width: 130px;
-				height:128px;
-				left: -129px;
-				}
-		}
-		&::before{
-			content: '';
-				width: 70px;
-				height:70px;
-				position: absolute;
-				right: -70px;
-				bottom: 0;
-				border-radius: 0 0 0% 50%;
-				background-color: $--accent-color;
-				z-index: 1;
-				
-				@media  screen and (min-width:768px) {
-					right: -129px;
-					width: 130px;
-				height:128px;
-				}
+		@media screen  and (max-width:1023.9px) {
+			max-width: 320px;
 		}
 		&__btn{
 			background-color: $--primary;
 			border-radius: 60px 60px 0 0;
-			padding: 15px 19px 0 18px;
+			padding: 15px 19px 0 19px;
 			position: relative;
-			@media screen and (min-width:768px) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@media screen and (min-width:1024px) {
 				border-radius: 80px 80px 0 0;
 			}
-			&:after{
-				content: '';
-				width: 70px;
-				height:100%;
-				position: absolute;
-				left: -70px;
-				max-height: 70px;
-				bottom: 0;
-				background-color: $--primary;
-				@media screen and (min-width:768px) {
-					width: 130px;
-					left: -129px;
-					max-height: 128px;
-				}
+			@media screen and (max-width:767.9px) {
+				max-width: 320px;
+				width: 100%;
+				padding: 10px 10px 0 10px;
+			}
+			@media screen and (max-width:429.9px) {
+				border-radius: 40px 40px 0 0;
 			}
 			&:before{
 				content: '';
-				width: 70px;
-				height:100%;
-				max-height: 70px;
 				position: absolute;
-				right: -70px;
-				bottom: 0;
-				background-color: $--primary;
-				@media screen and (min-width:768px) {
-					width: 130px;
-					max-height: 128px;
-					right: -129px;
+				width: 40px;
+				height: 50%;
+				bottom: -3px;
+				left: -34px;
+				z-index: 1;
+				background-image: url('../images/Subtract-test.svg');
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				@media screen and (min-width:1024px) {
+					left: -39px;
+				}
+				@media screen and (max-width:429.9px) {
+					left: -30px;
+				}
+			}
+			&::after{
+				content: '';
+				position: absolute;
+				width: 40px;
+				height: 50%;
+				bottom: -3px;
+				right: -34px;
+				z-index: 1;
+				background-image: url('../images/Subtract-test-right.svg');
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				@media screen and (min-width:1024px) {
+					right: -39px;
+				}
+				@media screen and (max-width:429.9px) {
+					right: -30px;
 				}
 			}
 			.btn{
-				@media screen and (max-width:430px) and (min-width:575.9px) {
-					padding: 26px 62px;
+				padding: 26px;
+				max-width: 234px;
+				@media screen and (min-width:1024px) {
+					max-width: 375px;
+						padding: 32px;
+						width: 100%;
+				}
+				@media screen and (max-width:429.9px) {
+					padding: 22px 15px;
 				}
 				
 			}
@@ -251,16 +252,12 @@
 				max-width: 337.248px;
 			max-height: 434.197px;
 			}
-			@media screen  and (min-width:768px) and (max-width:1239.9){
+			@media screen  and (min-width:768px) and (max-width:1239.9px){
 			max-width: 202px;
 			max-height: 283px;
 
 			}
 			
-		}
-		@media screen and (min-width:1240px) {
-			width: 28%;
-			margin-left: 78px;
 		}
 	}
 }

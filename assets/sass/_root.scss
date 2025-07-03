@@ -100,7 +100,7 @@ body{
 	background-color: $--primary;
 	color: $--accent-color;
 	}
-	@media screen and (min-width:768px) {
+	@media screen and (min-width:1024px) {
 		font-size: 20px;
 		letter-spacing: 2px;
 		padding: 29.5px 20.5px;
@@ -115,9 +115,11 @@ body{
 	padding: 20px 24px;
 	font-size: 12px;
 	letter-spacing: 1.2px;
-	@media screen and (min-width:768px) {
+	@media screen and (min-width:1024px) {
 		padding: 36px 44px;
 		font-size: 16px;
+		letter-spacing: 2px;
+		font-size: 20px;
 		letter-spacing: 2px;
 	}
 	&:hover{
@@ -217,19 +219,20 @@ body{
 		}
 	}
 	&-bg{
-background-color: $--secondary;
-border-radius: 40px;
-	position: relative;
-		width: 100%;
+			background-color: $--secondary;
+			border-radius: 20px;
+			position: relative;
+			width: 100%;
 			padding: 18px;
 			display: flex;
 			flex-wrap: wrap;
 			transition: .3s linear;
-			// min-height: 212px;
+			min-height: 212px;
 		border:3px solid transparent;
 	@media screen and (min-width:1240px) {
 		width: calc(50% - 20px);
 		flex-grow:1 ;
+		border-radius: 40px;
 	}	
 	@media screen and (min-width:576px) {
 		min-height: 378px;
@@ -296,7 +299,7 @@ border-radius: 40px;
 		justify-content: center;
 		position: absolute;
 		z-index: 2;
-		bottom: -2.5px;
+		bottom: -2.4px;
 		right: -2.9px;
 			background-image: url('../images/mob1.svg');
 			background-size: 100% auto;
@@ -345,8 +348,8 @@ border-radius: 40px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin-top: 20px;
-		margin-left: 32px;
+		margin-top: 36px;
+		margin-left: 36px;
 		@media screen and (min-width:1024px) {
 			width: 112px;
 			height: 112px;
