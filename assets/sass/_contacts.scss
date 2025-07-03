@@ -161,7 +161,10 @@
 		@media screen and (min-width:768px) {
 			border-radius: 80px;
 		}
-		@media screen and (max-width:368px) {
+		@media screen and (min-width:1024px) {
+			padding: 48px 48px 0 48px;
+		}
+		@media screen and (max-width:429.9px) {
 			border-radius: 40px 40px 20px 20px;
 		}
 		&__title{
@@ -253,7 +256,7 @@
 				align-items: center;
 				justify-content: center;
 				text-align: center;
-				padding: 26px 83px;
+				padding: 20px;
 				color: $--primary;
 				font-family: 'NauryzRedKeds';
 				font-size: 12px;
@@ -262,7 +265,7 @@
 				line-height: normal;
 				letter-spacing: 1.2px;
 				text-transform: uppercase;
-				max-width: 328px;
+				max-width: 234px;
 				width: 100%;
 				background-color: $--white;
 				margin: 0 auto;
@@ -272,18 +275,22 @@
 					border-color:$--accent-color;
 					background-color: transparent;
 					color: $--accent-color;
-							
 				}
 				@media screen and (min-width:768px) {
 					padding: 32px;
 					max-width: 375px;
 					font-size: 20px;
 					letter-spacing: 2px;
+					padding: 26px 83px;
 				}
+				@media screen and (max-width:429.9px) {
+					padding: 10px;
+				}
+				
 			}
 			.submit__wrap{
 				position: relative;
-				padding: 9px 12px 0 12px;
+				padding: 12px 12px 0 12px;
 				background-color: $--primary;
 				margin: 0 auto;
 				max-width: fit-content;
@@ -295,92 +302,37 @@
 						border-radius: 80px 80px 0 0;
 						max-width: 375px;
 				}
-				&:before{
-					content: '';
-					position: absolute;
-					bottom: 0px;
-					background-color: $--primary;
-					background-color: $--secondary;
-					z-index: 1;
-					height: 81px;
-					width: 81px;
-					left: -76px;
-					border-radius: 0 0% 50% 0;
-					@media screen and (max-width:767.9px) {
-						left: -50px;
-						width: 50px;
-						height: 50px;
-						border-radius: 0 0 50% 50%;
-					}
-					@media screen and (max-width:390px) {
-						left: -30px;
-						width: 30px;
-						height: 30px;
-						border-radius: 0 0 50% 50%;
-					}
+					@media screen and (max-width:429.9px) {
+					border-radius: 30px 30px 0 0;
 				}
+				&:before,
 				&:after{
-					content: '';
-					width: 50px;
-					height: 50px;
-					position: absolute;
-					right: -50px;
-					bottom: 0;
-					background-color: $--secondary;
-					z-index: 1;
-					border-radius: 0 0 0 50%;
-					width: 81px;
-					height: 81px;
-					right: -76px;
-					aspect-ratio: 1;
-				@media screen and (max-width:767.9px) {
-					width: 50px;
-						height: 50px;
-						right: -50px;
-							border-radius: 0 0 50% 50%;
-					}
-				@media screen and (max-width:390px) {
-					width: 30px;
-						height: 30px;
-						right: -30px;
-					}
-				
+				content: '';
+				position: absolute;
+				width: 20px;
+				height: 50%;
+				bottom: -3px;				
+				z-index: 1;
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				@media  screen and (min-width:430px)  and (max-width:767.9px){
+					width: 24px;
 				}
-				.btn{
-					position: relative;
-				&:before{
-					content: '';
+				@media  screen and (min-width:768px){
 					width: 40px;
-					height: 80px;
-					position: absolute;
-					left: -51px;
-					bottom: -4px;
-					background-color: $--primary;
-					z-index: 0;
-					aspect-ratio: 1;
-						@media screen and (max-width:767.9px) {
-						width: 25px;
-						height: 25px;
-						left: -35px;
-					}
-				}
-				&:after{
-					content: '';
-					position: absolute;
-					bottom: -4px;
-					width: 41px;
-						height: 81px;
-						right: -51px;
-					background-color: $--primary;
-					z-index: 0;
-						@media screen and (max-width:768px) {
-					width: 25px;
-						height: 25px;
-						right: -35px;
-					}
 				}
 				}
+				&:before{		
+				left: 2px;	
+				transform: translateX(-100%);		
+				background-image: url('../images/Subtract-test.svg');				
+				}
+				&::after{
+				right: 2px;				
+				transform: translateX(100%);
+				background-image: url('../images/Subtract-test-right.svg');
 				
+			}
 			}
 			
 		}
