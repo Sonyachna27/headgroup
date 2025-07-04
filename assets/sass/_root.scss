@@ -241,48 +241,10 @@ body{
 		padding: 34px;
 	}	
 
-// &:after {
-// 	content: '';
-// 	position: absolute;
-// 	width: 100%;
-// 	height: auto;
-// 	top: 0;
-// 	left: 0;
-// 	right: 0;
-// 	bottom: 0;
-// 	background-image: url('../images/mask2.svg');
-// 	background-size: 100% auto;
-//   background-repeat: no-repeat;
-// 	transition: .3s ease-in-out;
-// 	@media screen and (min-width:1024px) and (max-width:1239.9px) {
-// 		background-image: url('../images/mask3.svg');
-// 	}
-// 	z-index: 0; 
-// 	pointer-events: none; 
-// }
 
-// 	&.clipAll{
-// 		min-height: 327px;
-// 	&:after{
-//  background-image: url('../images/mask.svg');
-// 	}
-
-// &:hover{
-// 		&:after{
-//  background-image: url('../images/mask-bg.svg');
-// 	}
-// }
-// 	}
 
 	&:hover{
-	// 		&:after{
-	// 	background-image: url('../images/mask-hover.svg');
-	// 	}
-	// 	&:after{
-	// 	@media screen and (min-width:1024px) and (max-width:1239.9px) {
-	// 	background-image: url('../images/mask3-hover.svg');
-	// }
-	// }
+
 	border-color: $--accent-color;
 	.fancy-bg__variation{
 		@media screen and (min-width:1024px) {
@@ -299,8 +261,8 @@ body{
 		justify-content: center;
 		position: absolute;
 		z-index: 2;
-		bottom: -2.4px;
-		right: -2.9px;
+		bottom: -3px;
+		right: -3px;
 			background-image: url('../images/mob1.svg');
 			background-size: 100% auto;
 			background-size: 100% 109%;
@@ -319,7 +281,7 @@ body{
 		line-height: normal;
 		letter-spacing: 4px;
 	@media screen and (min-width:1024px) {
-		bottom: -2.8px;
+		bottom: -3px;
 		width: 112px;
 		height: 112px;
 		width: 232px;
