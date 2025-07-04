@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   reviewsSliderInit();
 	handlePopup();
 	accordionFunction();
+	addAnimationInit();
 });
 
 
@@ -113,8 +114,7 @@ function onResize() {
   clearTimeout(resizeTimeout);
   resizeTimeout = setTimeout(() => {
     casesSliderInit();
-    adaptiveBackground();
-		
+   
   }, 150);
 }
 
@@ -165,3 +165,32 @@ const accordionFunction = () => {
 		}
   });
 };
+const addAnimationInit = () => {
+
+	const scrollers = document.querySelectorAll('.marquee');
+	if(!window.matchMedia("(prefers-reduced-motion:reduce)").matches){
+		addAnimation();
+	}
+	function addAnimation(){
+		scrollers.forEach((scroller) =>{
+			scroller.setAttribute("data-animate", true);
+			const scrollerInner = scroller.querySelector('.marquee__wrap');
+			const scrollerContent = Array.from(scrollerInner.children);
+			scrollerContent.forEach(item =>{
+				const duplicatedItem = item.cloneNode(true);
+				duplicatedItem.setAttribute('aria-hidden', true);
+				scrollerInner.appendChild(duplicatedItem);
+			});
+			
+		});
+	}
+}
+// const stopAnimation = () =>{
+// 	const wrapper = document.querySelector('.parnters__marquee__wrap');
+// 		wrapper.addEventListener('mouseover', () => {
+// 			wrapper.style.animationPlayState = 'paused';
+// 		});
+// 		wrapper.addEventListener('mouseout', () => {
+// 			wrapper.style.animationPlayState = 'running';
+// 		})
+// }
