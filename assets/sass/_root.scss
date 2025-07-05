@@ -271,7 +271,7 @@ body{
 		position: absolute;
 		z-index: 2;
 		bottom: -3.1px;
-		right: -3.1px;
+		right: -3.2px;
 		background-image: url('../images/mob1.svg');
 		background-size: 100% auto;
 		background-size: 100% 109%;
@@ -470,4 +470,89 @@ body{
 	}
 	
 }
+}
+.fancy__list{
+	&__items{
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+	}
+	&__item{
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		@media screen and (min-width:768px) {
+			gap: 32px;
+		}
+		&__top{
+			display: flex;
+			gap: 12px;
+			flex-direction: column;
+			@media screen and (min-width:768px) {
+				flex-direction: row;
+				align-items: center;
+				gap: 32px;
+			}
+			
+		}
+		&__count{
+			display: flex;
+			align-items: center;
+			max-width: 130px;
+			width: 100%;
+			span{
+				background-color: $--accent-color;
+				color: #000;
+				position: relative;
+				z-index: 0;
+				border-radius: 50%;
+				text-align: center;
+				font-family: "Russo One";
+				font-size: 18px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+				letter-spacing: 1.8px;
+				min-width: 54px;
+				min-height: 54px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+			}
+			img{
+				margin-left: -20px;
+				width: 82px;
+				height: 82px;
+				position: relative;
+				z-index: 1;
+			}
+		}
+		&__promo{
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 140%; /* 19.6px */
+			letter-spacing: 1.4px;
+			text-transform: uppercase;
+			font-family: 'NauryzRedKeds', sans-serif;
+			@media screen and (min-width:768px) {
+				font-size: 20px;
+				letter-spacing: 2px;
+			}
+			strong{
+				color: $--accent-color;
+			}
+		}
+		&__bottom{
+			color: $--light-grey;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 140%;
+			@media screen and (min-width:768px) {
+				font-size: 18px
+			}
+		}
+	}
 }

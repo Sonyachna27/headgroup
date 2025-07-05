@@ -1,0 +1,108 @@
+.get{
+	&__title{
+		h2{
+text-align: left;
+		}
+		
+		margin-bottom: 28px;
+		@media screen and (min-width:768px) {
+			margin-bottom: 50px;
+		}
+	}
+	&__img{
+		position: relative;
+		border-radius: 20px;
+		width: 100%;
+		height:auto;
+		@media screen and (min-width:768px) {			
+			width: 40.5%;
+		}
+		&:before{
+			content: '';
+			display: block;
+			width: 100%;
+			height: calc(100% - 35px);
+			background-color: $--accent-color;
+			border-radius:20px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: -35px;
+			right: 0;
+			z-index: -1;
+			@media screen and (min-width:1024px) {
+				bottom: -50px;
+				height: calc(100% - 50px);
+			}
+		}
+		img{
+			max-width: 100%;
+			max-height: 100%;
+			width: 100%;
+			height: 100%;
+			aspect-ratio: 579 / 394;
+			@media screen and (max-width:1023.9px) {
+				max-height: 265px;
+				aspect-ratio: 390 / 265;
+			}
+		}
+			
+	}
+	&__content{
+		display: flex;
+		gap: 34px;
+		flex-direction: column;
+		height: fit-content;
+		@media screen and (min-width:768px) {
+			gap: 31px;
+			flex-direction: row;
+		}
+		&__info{
+			@media screen and (min-width:768px) {
+		
+			width: 57%;
+		}
+						ul{
+				display: flex;
+				flex-direction: column;
+				gap: 24px;
+				@media screen and (min-width:1024px) and (max-width:1240px) {
+					gap: 18px;
+				}
+
+				li{
+					padding-left: 61px;
+					position: relative;
+					font-size: 16px;
+					font-style: normal;
+					font-weight: 200;
+					line-height: 140%; /* 22.4px */
+					letter-spacing: 1.6px;
+					text-transform: uppercase;
+					color: $--white;
+					@media screen and (min-width:1024px) {
+					
+						font-size: 20px;
+						letter-spacing: 2px;
+						padding: 16px 0 16px 84px;
+					}
+					&:before{
+						content: '';
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						left: 0;
+						width: 43px;
+						height: 43px;
+						background: url('../images/check-mark-icon-in-a-rounded-square\ 5.png') center center / cover no-repeat;
+						@media screen and (min-width:1024px) {
+						width: 60px;
+						height: 60px;
+					}
+					}
+				}
+			}
+		}
+	}
+	
+}
