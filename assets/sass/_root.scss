@@ -159,6 +159,7 @@ body{
 	align-items: center;
 	justify-content: space-between;
 	gap: 20px;
+	text-align: left;
 }
 .simple{
 	display: inline-flex;
@@ -277,6 +278,7 @@ body{
 		background-size: 100% 109%;
 		background-repeat: no-repeat;
 		transition: .3s linear;
+		will-change: background-image;
 		width: 62px;
 		height: 62px;
 		width: 127px;
@@ -401,9 +403,9 @@ body{
 			counter-reset: count;
 			font-family: sans-serif;
 			width: fit-content;
-		@media screen and (min-width:768px) {
-			gap: 12px;
-		}
+				@media screen and (min-width:768px) {
+					gap: 16px;
+				}
 			.clipAll & {
 				width: 100%;
 				justify-content: space-between;

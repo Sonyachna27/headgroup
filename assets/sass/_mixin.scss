@@ -1,6 +1,5 @@
 @mixin titleH1{
 	color: $--white;
-text-align: center;
 font-family: 'NauryzRedKeds', sans-serif;
 font-size: 22px;
 font-style: normal;
@@ -22,7 +21,6 @@ text-transform: uppercase;
 }
 @mixin titleH2{
 color: #FFF;
-text-align: center;
 font-family: 'NauryzRedKeds', sans-serif;
 font-size: 22px;
 font-style: normal;

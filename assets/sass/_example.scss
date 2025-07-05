@@ -1,0 +1,155 @@
+.example{
+	&__title{
+		margin-bottom: 28px;
+		flex-wrap: wrap;
+		gap:16px;
+		@media screen and (min-width:768px) {
+			margin-bottom: 40px;
+		}
+		h2{
+@media screen and (min-width:1024px) {
+				width: 39%;
+			}
+		}
+		p{
+			
+			color: $--light-grey;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 140%;
+			@media screen and (min-width:768px) {
+				font-size: 18px;
+			}
+			@media screen and (min-width:1240px) {
+				width: 58%;
+			}
+
+		}
+	}
+	&__content{
+		display: flex;
+		gap: 35px;
+		flex-direction: column;
+		@media screen and (min-width:1024px) {
+			gap: 40px;
+			flex-direction: row;
+		}
+		@media screen and (min-width:1024px) and (max-width:1239.9px) {
+			gap: 32px;
+		}
+
+	}
+	&__img{
+		background-color: $--secondary;
+		border-radius: 20px;
+		aspect-ratio: 370 / 245;
+		height: fit-content;
+		@media screen and (min-width:1240px) {
+			width: 40%;
+		
+		}
+		@media screen and (min-width:1024px) {
+			border-radius: 40px;
+				aspect-ratio: 579 / 364;
+		}
+			@media screen and (min-width:1024px) and (max-width:1239.9px) {
+				width: 47%;
+				}
+		img{
+			max-width: 100%;
+			max-height: 100%;
+			aspect-ratio: 370 / 245;
+			border-radius: 20px;
+			@media screen and (min-width:768px) {
+				aspect-ratio: 579 / 364;
+				border-radius: 40px;
+			}
+		}
+	}
+	&__info{
+		@media screen and (min-width:768px) {
+			width: 59%;
+		}
+		@media screen and (min-width:1024px) and (max-width:1239.9px) {
+				width: 54.5%;
+				}
+		div{
+			margin-bottom: 32px;
+			color: #FFF;
+			font-family: 'NauryzRedKeds', sans-serif;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 140%; /* 22.4px */
+			letter-spacing: 1.6px;
+			text-transform: uppercase;
+			@media screen and (min-width:768px) {
+			font-size: 20px;
+			letter-spacing: 2px;
+			}
+		}
+		
+		ol, ul{
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+			list-style: none;
+  		counter-reset: my-awesome-counter;
+			padding: 0;
+			@media screen and (min-width:1240px) {
+				gap: 44px;
+			}
+
+			li{
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 300;
+				line-height: 140%; /* 28px */
+				letter-spacing: 1.6px;
+				text-transform: uppercase;	
+				counter-increment: my-awesome-counter;
+			position: relative;
+			padding-left: 48px;
+				@media screen and (min-width:1024px) and (max-width:1239.9px) {
+				padding-left: 68px;
+				font-size: 18px;
+				letter-spacing: 1.8px;
+				}
+				@media screen and (min-width:1240px) {
+				font-size: 20px;
+				letter-spacing: 2px;
+				padding-left: 81px;
+				}
+				&:nth-child(n+10)::before {
+						content: counter(my-awesome-counter);
+					}
+				&::before {
+					content:"0" counter(my-awesome-counter);
+					font-family: "Russo One";
+					font-size: 20px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: normal;
+					letter-spacing: 2px;
+					color: $--white;
+					position: absolute;
+					left: 0;
+					top: 50%;
+					transform: translateY(-50%);
+					width: 48px;
+					max-height: 48px;
+					
+					@media screen and (min-width:768px) {
+						font-size: 40px;
+						letter-spacing: 4px;
+					}
+					@media screen and (min-width:1024px) and (max-width:1239.9px) {
+					font-size: 32px;
+					letter-spacing: 3.2px;
+					}
+			}
+		}
+	}
+}
+}

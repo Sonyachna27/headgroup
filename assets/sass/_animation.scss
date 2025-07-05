@@ -22,6 +22,11 @@
 				animation-play-state: paused;
 			}
 		}
+		.cases &{
+			gap: 10px;
+			animation: marqueeCases var(--_animation-duration, 80s) var(--_animation-direction, normal) linear infinite;
+			
+		}
 	}
 	span{
 
@@ -66,5 +71,10 @@
 @keyframes marqueeLineLarge {
   to {
     transform: translate(calc(-50% - 80px)); 
+  }
+}
+@keyframes marqueeCases {
+  to {
+    transform: translate(calc(-50% - 5px)); 
   }
 }
