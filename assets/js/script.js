@@ -262,17 +262,15 @@ const triggerScrollInit = () => {
   window.listGsapTimeInit = true;
 
   document.querySelectorAll(".solutions").forEach((block, index) => {
-    const horizontalScrollWrapper = block.querySelector(".solutions__wrap");
+    const horizontalScrollWrapper = document.querySelector(".solutions__wrap");
     const horizontalScrollItems = horizontalScrollWrapper.querySelector(".solutions__items");
     const scrollItems = Array.from(horizontalScrollItems.querySelectorAll(".solutions__item"));
     if (scrollItems.length === 0) return;
 
     const x = () => {
-      const scrollItemWidth = scrollItems[0].scrollWidth / 3;
-			
+      const scrollItemWidth = scrollItems[0].scrollWidth / 5;			
       const totalScroll = horizontalScrollItems.scrollWidth - window.innerWidth;
       const leftOffset = horizontalScrollItems.getBoundingClientRect().left + window.scrollX;
-			console.log(leftOffset);
       return scrollItemWidth + totalScroll + leftOffset;
     };
 
@@ -283,109 +281,60 @@ const triggerScrollInit = () => {
         x: () => -x(),
         scrollTrigger: {
           trigger: horizontalScrollWrapper,
-          // start: "center bottom",
           start: "center center",
           pin: block,
           invalidateOnRefresh: true,
           anticipatePin: 1,
           scrub: 1,
-          end: () => "+=" + x(),
-          markers: false
+          // end: () => "+=" + x(),
+          end:"bottom 40%",
+          markers: true,
+					pinSpacing: "margin"
         },
        
       }
     );
-  });
+  }
+);
 }
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const container = document.querySelector(".solutions__items");
-//   const section = document.querySelector(".solutions");
+// const triggerScrollInit = () => {
+// 	gsap.registerPlugin(ScrollTrigger);
 
-//   let isLocked = false;
-//   let scrollAmount = 0;
-// 	const percent = 30;
-// const scrollStep = (container.scrollWidth * percent) / 100;
-//   // const scrollStep = 100;
-//   let scrolling = false;
+// const block = document.querySelector('.solutions');
+// const scrollWrapper = block.querySelector('.solutions__wrap');
+// const scrollItemsContainer = scrollWrapper.querySelector('.solutions__items');
+// const scrollItems = scrollItemsContainer.querySelectorAll('.solutions__item');
 
-//   const lockScroll = () => (document.body.style.overflow = "hidden");
-//   const unlockScroll = () => (document.body.style.overflow = "");
+// if (block && scrollItems.length > 0) {
+//   // Розрахунок позицій і довжини прокрутки
+//   // let r = -window.innerHeight / 2 + 220;
+//   let r = -window.innerHeight / 2 + 500;
+//   let i = -1 * (scrollWrapper.scrollWidth - window.innerWidth + 20 * scrollItems.length);
+//   let s = scrollWrapper.scrollWidth - window.innerWidth + 160;
 
-//   const getMaxScroll = () => container.scrollWidth - container.clientWidth;
+//   if (window.innerWidth < 640) {
+//     i = -1 * (scrollWrapper.scrollWidth - window.innerWidth + 10 * scrollItems.length);
+// 		// r = -window.innerHeight / 2 + 240;
+// 		r = -window.innerHeight / 2 + 700;
+// 		s = scrollWrapper.scrollWidth - window.innerWidth + 100;
+//   }
 
-//   const smoothScroll = (direction) => {
-//     if (scrolling) return;
-
-//     scrolling = true;
-//     const distance = direction === "next" ? scrollStep : -scrollStep;
-
-//     container.scrollBy({
-//       left: distance,
-//       behavior: "smooth",
-//     });
-
-//     setTimeout(() => {
-//       scrolling = false;
-//       checkScrollEnd();
-//     }, 300); // час повинен відповідати scroll-behavior
-//   };
-
-//   const handleScrollControl = (e) => {
-//     if (!isLocked) return;
-
-//     e.preventDefault();
-
-//     const delta = e.deltaY || -e.wheelDelta;
-
-//     if (delta > 0) {
-//       smoothScroll("next");
-//     } else {
-//       smoothScroll("prev");
+//   // Створення анімації скролу
+//   gsap.to(scrollItems, {
+//     x: () => i,
+//     ease: "none",
+//     scrollTrigger: {
+//       trigger: scrollWrapper,
+//       pin: true,
+//       start: `${r} center`,
+//       scrub: 1,
+//       end: () => `+=${s}`,
+// 			pinSpacing: true,
+// 			// pinSpacing: "margin"
+//       markers: true // можеш увімкнути для дебагу
 //     }
-//   };
+//   });
+// }
 
-//   const handleKey = (e) => {
-//     if (!isLocked) return;
-
-//     if (e.key === "ArrowRight" || e.key === "ArrowDown") {
-//       smoothScroll("next");
-//       e.preventDefault();
-//     } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
-//       smoothScroll("prev");
-//       e.preventDefault();
-//     }
-//   };
-
-//   const checkScrollEnd = () => {
-//     const scrollLeft = container.scrollLeft;
-//     const maxScroll = getMaxScroll();
-
-//     if (scrollLeft >= maxScroll - 5 || scrollLeft <= 5) {
-//       unlockScroll();
-//       isLocked = false;
-//     }
-//   };
-
-//   const activateScrollLock = () => {
-//     lockScroll();
-//     isLocked = true;
-//   };
-
-//   const observer = new IntersectionObserver(
-//     (entries) => {
-//       entries.forEach((entry) => {
-//         if (entry.isIntersecting && !isLocked) {
-//           activateScrollLock();
-//         }
-//       });
-//     },
-//     { threshold: 0.5 }
-//   );
-
-//   observer.observe(section);
-
-//   // Події
-//   window.addEventListener("wheel", handleScrollControl, { passive: false });
-//   window.addEventListener("keydown", handleKey);
-// });
+// }
