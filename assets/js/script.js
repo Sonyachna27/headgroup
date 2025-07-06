@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	handlePopup();
 	accordionFunction();
 	addAnimationInit();
+	horizontalScroll();
 });
 
 
@@ -194,3 +195,102 @@ const addAnimationInit = () => {
 // 			wrapper.style.animationPlayState = 'running';
 // 		})
 // }
+
+// const horizontalScroll = () => {
+//   const process = document.querySelector('.solutions__wrap');
+//   if (process) {
+//     gsap.registerPlugin(ScrollTrigger);
+
+//     let sections = gsap.utils.toArray('.solutions__item');
+// 		const slidesPerRow = 2.5;
+// 		const sectionsCount = sections.length;
+//     if (sections.length > 3) {
+//       ScrollTrigger.matchMedia({
+//         "(min-width: 1024px)": function() {
+         
+// 					process.style.width = `calc(100% * ${sectionsCount})`;
+//           sections.forEach(item => item.style.maxWidth = `500px`);
+          
+//           gsap.to(sections, {
+//             xPercent: -100 * (sectionsCount - slidesPerRow),
+//             ease: "none",
+//             scrollTrigger: {
+//               trigger: process,
+//               scrub: 1,
+//               pin: true,
+//               end: () => `+=${(sectionsCount - slidesPerRow) * window.innerWidth / slidesPerRow}`,
+//             }
+//           });
+//         },
+//         "(max-width: 1023.9px)": function() {
+// 					process.style.width = `calc(100% * ${sectionsCount})`;
+//           sections.forEach(item => item.style.width = `100%`);
+//           gsap.to(sections, {
+//             xPercent: -100 * (sections.length - 1),
+//             ease: "none",
+//             scrollTrigger: {
+//               trigger: process,
+//               scrub: 1,
+//               pin: true,
+//               end: () => "+=" + process.offsetWidth,
+//             }
+//           });
+//         }
+//       });
+//     }
+//   }
+// };
+
+const horizontalScroll = () => {
+  const process = document.querySelector(".solutions__items");
+  const container = document.querySelector(".solutions");
+
+  if (process && container) {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const sections = gsap.utils.toArray(".solutions__item");
+    const slidesPerRow = 2.5;
+    const sectionsCount = sections.length;
+
+    if (sectionsCount > 3) {
+      ScrollTrigger.matchMedia({
+        "(min-width: 1024px)": function () {
+          // Установка ширини блоку, що рухається
+          process.style.width = `calc(${sectionsCount} * 500px + ${(sectionsCount - 1) * 40}px)`;
+
+          // Запуск анімації
+          gsap.to(process, {
+            x: () => `-${(sectionsCount - slidesPerRow) * (500 + 40)}px`,
+            ease: "none",
+            scrollTrigger: {
+              trigger: container,
+              scrub: 1,
+              pin: true,
+              pinSpacing: false, // Не залишає зайвий простір знизу
+              end: () => `+=${(sectionsCount - slidesPerRow) * (500 + 40)}`,
+            },
+          });
+
+          // Додаємо фейковий spacer після блоку, щоб уникнути наїзду контенту
+          const fakeSpacer = document.createElement("div");
+          fakeSpacer.style.height = `${(sectionsCount - slidesPerRow) * (500 + 40)}px`;
+          container.appendChild(fakeSpacer);
+        },
+
+        "(max-width: 1023.9px)": function () {
+          process.style.width = `calc(${sectionsCount} * 100%)`;
+          gsap.to(process, {
+            xPercent: -100 * (sectionsCount - 1),
+            ease: "none",
+            scrollTrigger: {
+              trigger: container,
+              scrub: 1,
+              pin: true,
+              end: () => `+=${container.offsetWidth}`,
+            },
+          });
+        },
+      });
+    }
+  }
+};

@@ -1,29 +1,29 @@
 @font-face {
-	font-family: 'NauryzRedKeds';
+	font-family: "NauryzRedKeds";
 	src: url(../fonts/NAURYZREDKEDS.TTF);
 }
 @font-face {
-	font-family: 'Stolzl';
+	font-family: "Stolzl";
 	src: url(../fonts/STOLZL_THIN.OTF);
 	font-weight: 100;
 }
 @font-face {
-	font-family: 'Stolzl';
+	font-family: "Stolzl";
 	src: url(../fonts/STOLZL_BOOK.OTF);
 	font-weight: 300;
 }
 @font-face {
-	font-family: 'Stolzl';
+	font-family: "Stolzl";
 	src: url(../fonts/STOLZL_REGULAR.OTF);
 	font-weight: 400;
 }
 @font-face {
-	font-family: 'Stolzl';
+	font-family: "Stolzl";
 	src: url(../fonts/STOLZL_MEDIUM.OTF);
 	font-weight: 500;
 }
 @font-face {
-	font-family: 'Stolzl';
+	font-family: "Stolzl";
 	src: url(../fonts/STOLZL_BOLD.OTF);
 	font-weight: 700;
 }
@@ -64,7 +64,7 @@ html.open-popup{
 }
 body{
 	background-color: $--primary;
-	font-family: 'Stolzl', sans-serif;
+	font-family: "Stolzl", sans-serif;
 	font-size: 18px;
 	font-weight: 300;
 	font-style: normal;
@@ -86,7 +86,7 @@ body{
 	background-color: #FFF;
 	color: $--primary;
 	text-align: center;
-	font-family: 'NauryzRedKeds';
+	font-family: "NauryzRedKeds";
 	font-size: 12px;
 	font-style: normal;
 	font-weight: 400;
