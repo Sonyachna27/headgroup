@@ -286,12 +286,11 @@ const triggerScrollInit = () => {
           invalidateOnRefresh: true,
           anticipatePin: 1,
           scrub: 1,
-          // end: () => "+=" + x(),
-          end:"bottom 40%",
+          end: () => "+=" + x(),
           markers: true,
-					pinSpacing: "margin"
+					// pinSpacing: "margin"
         },
-       
+
       }
     );
   }

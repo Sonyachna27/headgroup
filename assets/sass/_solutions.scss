@@ -1,17 +1,16 @@
 .solutions{
 	overflow: hidden;
-	padding-bottom: 140px;
+	// padding-bottom: 140px;
   position: relative;
 height: auto;
-margin-bottom: 140px;
+// margin-bottom: 140px;
 
-	@media screen and (min-width:1024px) {
-		padding-bottom: 180px;
-	}
+	// @media screen and (min-width:1024px) {
+	// 	padding-bottom: 180px;
+	// }
 			position: relative;
 	&__wrap{
 position: relative;
-// height: 640px;
 	}
 	&__items{
 		display: flex;
