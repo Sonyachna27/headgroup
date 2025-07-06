@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	handlePopup();
 	accordionFunction();
 	addAnimationInit();
-	// horizontalScroll();
 	triggerScrollInit();
 });
 
@@ -256,7 +255,7 @@ const addAnimationInit = () => {
 // };
 
 
-function triggerScrollInit() {
+const triggerScrollInit = () => {
   if (window.listGsapTimeInit === true) return;
 
   window.listGsapTimeline = [];
@@ -270,13 +269,13 @@ function triggerScrollInit() {
 
     const x = () => {
       const scrollItemWidth = scrollItems[0].scrollWidth / 3;
+			
       const totalScroll = horizontalScrollItems.scrollWidth - window.innerWidth;
       const leftOffset = horizontalScrollItems.getBoundingClientRect().left + window.scrollX;
+			console.log(leftOffset);
       return scrollItemWidth + totalScroll + leftOffset;
     };
 
-    const nameID = "triggerScroll" + index;
-   
     gsap.timeline().fromTo(
       scrollItems,
       { x: 0 },
@@ -284,6 +283,7 @@ function triggerScrollInit() {
         x: () => -x(),
         scrollTrigger: {
           trigger: horizontalScrollWrapper,
+          // start: "center bottom",
           start: "center center",
           pin: block,
           invalidateOnRefresh: true,
@@ -297,3 +297,95 @@ function triggerScrollInit() {
     );
   });
 }
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const container = document.querySelector(".solutions__items");
+//   const section = document.querySelector(".solutions");
+
+//   let isLocked = false;
+//   let scrollAmount = 0;
+// 	const percent = 30;
+// const scrollStep = (container.scrollWidth * percent) / 100;
+//   // const scrollStep = 100;
+//   let scrolling = false;
+
+//   const lockScroll = () => (document.body.style.overflow = "hidden");
+//   const unlockScroll = () => (document.body.style.overflow = "");
+
+//   const getMaxScroll = () => container.scrollWidth - container.clientWidth;
+
+//   const smoothScroll = (direction) => {
+//     if (scrolling) return;
+
+//     scrolling = true;
+//     const distance = direction === "next" ? scrollStep : -scrollStep;
+
+//     container.scrollBy({
+//       left: distance,
+//       behavior: "smooth",
+//     });
+
+//     setTimeout(() => {
+//       scrolling = false;
+//       checkScrollEnd();
+//     }, 300); // час повинен відповідати scroll-behavior
+//   };
+
+//   const handleScrollControl = (e) => {
+//     if (!isLocked) return;
+
+//     e.preventDefault();
+
+//     const delta = e.deltaY || -e.wheelDelta;
+
+//     if (delta > 0) {
+//       smoothScroll("next");
+//     } else {
+//       smoothScroll("prev");
+//     }
+//   };
+
+//   const handleKey = (e) => {
+//     if (!isLocked) return;
+
+//     if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+//       smoothScroll("next");
+//       e.preventDefault();
+//     } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+//       smoothScroll("prev");
+//       e.preventDefault();
+//     }
+//   };
+
+//   const checkScrollEnd = () => {
+//     const scrollLeft = container.scrollLeft;
+//     const maxScroll = getMaxScroll();
+
+//     if (scrollLeft >= maxScroll - 5 || scrollLeft <= 5) {
+//       unlockScroll();
+//       isLocked = false;
+//     }
+//   };
+
+//   const activateScrollLock = () => {
+//     lockScroll();
+//     isLocked = true;
+//   };
+
+//   const observer = new IntersectionObserver(
+//     (entries) => {
+//       entries.forEach((entry) => {
+//         if (entry.isIntersecting && !isLocked) {
+//           activateScrollLock();
+//         }
+//       });
+//     },
+//     { threshold: 0.5 }
+//   );
+
+//   observer.observe(section);
+
+//   // Події
+//   window.addEventListener("wheel", handleScrollControl, { passive: false });
+//   window.addEventListener("keydown", handleKey);
+// });
