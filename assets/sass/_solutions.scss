@@ -1,6 +1,8 @@
 .solutions{
 	overflow: hidden;
 	padding-bottom: 140px;
+	overflow: hidden;
+  position: relative;
 	@media screen and (min-width:1024px) {
 		padding-bottom: 180px;
 	}
@@ -16,7 +18,7 @@
     z-index: 1;
 }
 	&__wrap{
-
+position: relative;
 	}
 	&__items{
 		display: flex;
@@ -29,6 +31,8 @@
 
 	}
 	&__item{
+		min-width: 500px;
+		flex-shrink: 1;
 		max-width: 300px;
 		max-height: 300px;
 		width: 100%;

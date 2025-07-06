@@ -6,7 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	handlePopup();
 	accordionFunction();
 	addAnimationInit();
-	horizontalScroll();
+	// horizontalScroll();
+	triggerScrollInit();
 });
 
 
@@ -196,101 +197,103 @@ const addAnimationInit = () => {
 // 		})
 // }
 
-const horizontalScroll = () => {
-  const process = document.querySelector('.solutions__wrap');
-  if (process) {
-    gsap.registerPlugin(ScrollTrigger);
-
-    let sections = gsap.utils.toArray('.solutions__item');
-		const slidesPerRow = 2.5;
-		const sectionsCount = sections.length;
-    if (sections.length > 3) {
-      ScrollTrigger.matchMedia({
-        "(min-width: 1024px)": function() {
-         
-					process.style.width = `calc(100% * ${sectionsCount})`;
-          sections.forEach(item => item.style.maxWidth = `500px`);
-          
-          gsap.to(sections, {
-            xPercent: -100 * (sectionsCount - slidesPerRow),
-            ease: "none",
-            scrollTrigger: {
-              trigger: process,
-              scrub: 1,
-              pin: true,
-              end: () => `+=${(sectionsCount - slidesPerRow) * window.innerWidth / slidesPerRow}`,
-            }
-          });
-        },
-        "(max-width: 1023.9px)": function() {
-					process.style.width = `calc(100% * ${sectionsCount})`;
-          sections.forEach(item => item.style.width = `100%`);
-          gsap.to(sections, {
-            xPercent: -100 * (sections.length - 1),
-            ease: "none",
-            scrollTrigger: {
-              trigger: process,
-              scrub: 1,
-              pin: true,
-              end: () => "+=" + process.offsetWidth,
-            }
-          });
-        }
-      });
-    }
-  }
-};
-
 // const horizontalScroll = () => {
-//   const process = document.querySelector(".solutions__items");
-//   const container = document.querySelector(".solutions");
-
-//   if (process && container) {
+//   const process = document.querySelector('.solutions__wrap');
+//   if (process) {
 //     gsap.registerPlugin(ScrollTrigger);
 
-//     const sections = gsap.utils.toArray(".solutions__item");
-//     const slidesPerRow = 2.5;
-//     const sectionsCount = sections.length;
-
-//     if (sectionsCount > 3) {
+//     let sections = gsap.utils.toArray('.solutions__item');
+// 		const slidesPerRow = 2.5;
+// 		const sectionsCount = sections.length;
+//     if (sections.length > 3) {
 //       ScrollTrigger.matchMedia({
-//         "(min-width: 1024px)": function () {
-//           // Установка ширини блоку, що рухається
-//           process.style.width = `calc(${sectionsCount} * 500px + ${(sectionsCount - 1) * 40}px)`;
-
-//           // Запуск анімації
-//           gsap.to(process, {
-//             x: () => `-${(sectionsCount - slidesPerRow) * (500 + 40)}px`,
+//         "(min-width: 1024px)": function() {
+         
+// 					process.style.width = `calc(100% * ${sectionsCount})`;
+//           sections.forEach(item => item.style.maxWidth = `500px`);
+          
+//           gsap.to(sections, {
+//             xPercent: -100 * (sectionsCount - slidesPerRow),
 //             ease: "none",
 //             scrollTrigger: {
-//               trigger: container,
+//               trigger: process,
 //               scrub: 1,
 //               pin: true,
-//               pinSpacing: false, // Не залишає зайвий простір знизу
-//               end: () => `+=${(sectionsCount - slidesPerRow) * (500 + 40)}`,
-//             },
+//     					markers: true,
+// 							start: "top top",
+// 							 end: () =>
+// 								"+=" +
+// 								(document.querySelector(".solutions__wrap").offsetWidth -
+// 									document.documentElement.clientWidth),
+// 							invalidateOnRefresh: true
+//               // end: () => `+=${(sectionsCount - slidesPerRow) * window.innerWidth / slidesPerRow}`,
+//             }
 //           });
-
-//           // Додаємо фейковий spacer після блоку, щоб уникнути наїзду контенту
-//           const fakeSpacer = document.createElement("div");
-//           fakeSpacer.style.height = `${(sectionsCount - slidesPerRow) * (500 + 40)}px`;
-//           container.appendChild(fakeSpacer);
 //         },
-
-//         "(max-width: 1023.9px)": function () {
-//           process.style.width = `calc(${sectionsCount} * 100%)`;
-//           gsap.to(process, {
-//             xPercent: -100 * (sectionsCount - 1),
+//         "(max-width: 1023.9px)": function() {
+// 					process.style.width = `calc(100% * ${sectionsCount})`;
+//           sections.forEach(item => item.style.width = `100%`);
+//           gsap.to(sections, {
+//             xPercent: -100 * (sections.length - 1),
 //             ease: "none",
 //             scrollTrigger: {
-//               trigger: container,
+//               trigger: process,
 //               scrub: 1,
 //               pin: true,
-//               end: () => `+=${container.offsetWidth}`,
-//             },
+// 							start: "top top",
+// 							 end: () =>
+// 								"+=" +
+// 								(document.querySelector(".solutions__wrap").offsetWidth -
+// 									document.documentElement.clientWidth),
+// 							invalidateOnRefresh: true
+//               // end: () => "+=" + process.offsetWidth,
+//             }
 //           });
-//         },
+//         }
 //       });
 //     }
 //   }
 // };
+
+
+function triggerScrollInit() {
+  if (window.listGsapTimeInit === true) return;
+
+  window.listGsapTimeline = [];
+  window.listGsapTimeInit = true;
+
+  document.querySelectorAll(".solutions").forEach((block, index) => {
+    const horizontalScrollWrapper = block.querySelector(".solutions__wrap");
+    const horizontalScrollItems = horizontalScrollWrapper.querySelector(".solutions__items");
+    const scrollItems = Array.from(horizontalScrollItems.querySelectorAll(".solutions__item"));
+    if (scrollItems.length === 0) return;
+
+    const x = () => {
+      const scrollItemWidth = scrollItems[0].scrollWidth / 3;
+      const totalScroll = horizontalScrollItems.scrollWidth - window.innerWidth;
+      const leftOffset = horizontalScrollItems.getBoundingClientRect().left + window.scrollX;
+      return scrollItemWidth + totalScroll + leftOffset;
+    };
+
+    const nameID = "triggerScroll" + index;
+   
+    gsap.timeline().fromTo(
+      scrollItems,
+      { x: 0 },
+      {
+        x: () => -x(),
+        scrollTrigger: {
+          trigger: horizontalScrollWrapper,
+          start: "center center",
+          pin: block,
+          invalidateOnRefresh: true,
+          anticipatePin: 1,
+          scrub: 1,
+          end: () => "+=" + x(),
+          markers: false
+        },
+       
+      }
+    );
+  });
+}
