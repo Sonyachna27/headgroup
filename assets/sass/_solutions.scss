@@ -1,5 +1,5 @@
 .solutions{
-	
+	overflow: hidden;
 	padding-bottom: 140px;
 	@media screen and (min-width:1024px) {
 		padding-bottom: 180px;
@@ -16,7 +16,7 @@
     z-index: 1;
 }
 	&__wrap{
-overflow: hidden;
+
 	}
 	&__items{
 		display: flex;
