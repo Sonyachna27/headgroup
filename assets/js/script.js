@@ -273,7 +273,7 @@ const triggerScrollInit = () => {
       const leftOffset = horizontalScrollItems.getBoundingClientRect().left + window.scrollX;
       return scrollItemWidth + totalScroll + leftOffset;
     };
-
+		
     gsap.timeline().fromTo(
       scrollItems,
       { x: 0 },
@@ -288,7 +288,6 @@ const triggerScrollInit = () => {
           scrub: 1,
           end: () => "+=" + x(),
           markers: true,
-					// pinSpacing: "margin"
         },
 
       }
