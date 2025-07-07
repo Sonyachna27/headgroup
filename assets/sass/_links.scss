@@ -1,0 +1,130 @@
+.links{
+	&__container{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	}
+
+	&__item{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 12px;
+		color: #FFF;
+		font-family: 'NauryzRedKeds';
+		font-size: 10px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		@media screen and (min-width:768px) {
+			gap: 33px;
+			font-size: 20px;
+			letter-spacing: 2px;
+		}
+		span{
+			width: min-content;
+		};
+		&.link__left{
+			svg{				
+				path {
+						&:nth-of-type(1) {
+						transform: translate(0%, 0%);
+						}
+						&:nth-of-type(2) {
+							transform: translate(45%, 45%); 
+						}
+					}
+			}
+			&:hover{
+				svg path:nth-of-type(1) {
+  	animation: arrowInLeft 0.8s ease-in-out  1 normal both;
+		}
+		 svg path:nth-of-type(2) {
+			animation: arrowOutLeft 0.8s ease-in-out 0.2s 1 normal both;
+		}
+		}
+		}
+		&.link__right {
+  svg {
+    path {
+      &:nth-of-type(1) {
+        transform: translate(0%, 0%);
+      }
+      &:nth-of-type(2) {
+        transform: translate(-45%, 45%);
+      }
+    }
+  }
+
+  &:hover {
+    svg path:nth-of-type(1) {
+      animation: arrowInRight 0.8s ease-in-out 1 normal both;
+    }
+
+    svg path:nth-of-type(2) {
+      animation: arrowOutRight 0.8s ease-in-out 0.2s 1 normal both;
+    }
+  }
+}
+		div{
+			overflow: hidden;
+			border-radius: 50%;
+			max-width: 62.759px;
+			max-height: 62.759px;
+			width: 100%;
+			height: 100%;
+			@media screen and (min-width:768px) {
+				width: 112px;
+			height: 112px;
+			}
+			
+			svg{
+				width: 100%;
+				height: 100%;				
+				path {
+					transition:transform 1s ease-in-out;						
+					}
+			}
+
+		}
+		
+	}
+}
+@keyframes arrowOutLeft {
+	0% {
+    transform: translate(45%, 45%);
+}
+
+100% {
+    transform: translate(0, 0);
+}
+}
+@keyframes arrowInLeft {
+0% {
+    transform: translate(0px, 0px);
+}
+100% {
+    transform: translate(-45%, -45%);
+}
+}
+@keyframes arrowOutRight {
+  0% {
+    transform: translate(-45%, 45%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+
+@keyframes arrowInRight {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  100% {
+    transform: translate(45%, -45%);
+  }
+}
+

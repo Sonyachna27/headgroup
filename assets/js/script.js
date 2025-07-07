@@ -280,14 +280,14 @@ const triggerScrollInit = () => {
       {
         x: () => -x(),
         scrollTrigger: {
-          trigger: horizontalScrollWrapper,
+          trigger: horizontalScrollItems,
           start: "center center",
-          pin: block,
+          pin: horizontalScrollWrapper,
           invalidateOnRefresh: true,
           anticipatePin: 1,
           scrub: 1,
           end: () => "+=" + x(),
-          markers: true,
+					// end: "+=" + scrollItems.length * 50 + "%",
         },
 
       }
