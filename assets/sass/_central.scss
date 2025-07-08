@@ -1,8 +1,7 @@
 .central{
 	margin-bottom: 100px;
 		@media screen and (min-width:1240px) {
-		margin-bottom: 160px;
-		
+		margin-bottom: 160px;		
 	}
 	@media screen and (min-width:1024px) and (max-width:1239.9px) {
 margin-bottom: 180px;
@@ -12,8 +11,12 @@ margin-bottom: 180px;
 	border-radius: 40px;
 	padding: 22px 22px 0 22px;
 	color: $--primary;
-	@media screen and (min-width:768px) {		
+		overflow: hidden;
+	@media screen and (min-width:1240px) {		
 		padding: 48px 48px 0 48px;
+	}
+	@media screen and (min-width:1024px) and (max-width:1239.9px) {		
+		padding: 32px 32px 0 32px;
 	}
 
 	@media screen and (min-width:1024px) {
@@ -43,34 +46,101 @@ margin-bottom: 180px;
 		}
 		&__right{
 			display: flex;
-			align-items: center;
+			flex-direction: column;
+			gap: 20px;
+			@media screen and (min-width:1024px) {
+				align-items: center;
 			justify-content: flex-end;
 			flex-wrap: wrap;
-			gap: 20px;
-
+			flex-direction: row;
+			}
+			.simple{
+				max-width: fit-content;
+			}
 		}
 	}
 	&__middle{
 		display: flex;
-		flex-direction: column;
+		flex-wrap: wrap;		
 		position: relative;
-		padding: 70px 0 100px;
+		padding: 70px 50px 50px 89px;
+		width: 100%;
+		margin-left: auto;
+	
+		@media screen and (max-width:1239.9px) {
+			padding: 114px 0px 100px 0px;
+		}
+		@media screen and (max-width:767.9px) {
+			padding: 147px 0px 37px 0px;
+		}
+		@media screen and (max-width:1023.9px) {
+			flex-direction: column;
+		}
 		&__left{
-			max-width:439px;
+			max-width:481px;
 			width: 100%;
+			height: fit-content;
+			width: 45%;
+			position: relative;
+		z-index: 1;
+	@media screen and (min-width:768px) {
+				width: 40%;
+			}
 		}
 		&__right{
 			max-width:569px;
-			width: 100%;
-			margin-left: auto;
+			width: 100%;			
+			height: fit-content;
+			margin-top: 88px;		
+			width: 50%;
+			margin-left: 14%;
+			margin-top: -33px;
+			position: relative;
+			z-index: 1;
+			@media screen and (min-width:1024px) {
+				margin-top: 88px;	
+				margin-left: auto;
+			}
+			@media screen and (min-width:768px) {
+				width: 47%;
+			}
+			@media screen and (max-width:767.9px) {
+				margin-left: 11%;
+    		margin-top: -19px;
+			}
+			
 		}
 		.head{
 			position: absolute;
-			top: 0;
-			left: 50%;
-			width: 283px;
-			height: 443px;
-			transform: translateX(-50%);
+			bottom: -13px;
+			
+			max-width: 481px;
+			max-height: 512px;
+			// width: 100%;
+			// height: 100%;
+			
+			// width: 40%;
+			aspect-ratio: 481 / 512;
+			@media screen and (min-width:1240px) {
+					bottom: 43px;
+			}
+			@media screen and (max-width:1239.9px) {
+					bottom: -13px;
+					left: 48%;
+			}
+			@media screen and (min-width:1024px) {
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			@media screen and (max-width:1023.9px) {
+					bottom: -13px;
+					left: inherit;
+					right: -80px;
+			}
+			@media screen and (max-width:767.9px) {
+					max-width:385px;
+			max-height:410px;
+			}
 		}
 	}
 	&__bottom{
@@ -78,8 +148,10 @@ margin-bottom: 180px;
 		align-items: center;
 		justify-content: space-between;
 		flex-direction: column;
+		gap: 20px;
 		@media screen and (min-width:1024px) {
 			flex-direction: row;
+			
 		}
 		&__socials{
 			display: flex;
@@ -142,14 +214,14 @@ margin-bottom: 180px;
 				position: absolute;
 				width: 40px;
 				height: 50%;
-				bottom: -3px;
+				bottom: -4px;
 				left: -34px;
 				z-index: 1;
 				background-image: url('../images/Subtract-test.svg');
 				background-size: 100% 100%;
 				background-repeat: no-repeat;
 				@media screen and (min-width:1024px) {
-					left: -39px;
+					left: -38px;
 				}
 				@media screen and (max-width:429.9px) {
 					left: -30px;
@@ -160,14 +232,14 @@ margin-bottom: 180px;
 				position: absolute;
 				width: 40px;
 				height: 50%;
-				bottom: -3px;
+				bottom: -4px;
 				right: -34px;
 				z-index: 1;
 				background-image: url('../images/Subtract-test-right.svg');
 				background-size: 100% 100%;
 				background-repeat: no-repeat;
 				@media screen and (min-width:1024px) {
-					right: -39px;
+					right: -38px;
 				}
 				@media screen and (max-width:429.9px) {
 					right: -30px;
@@ -180,6 +252,9 @@ margin-bottom: 180px;
 					max-width: 375px;
 						padding: 32px;
 						width: 100%;
+				}
+				@media screen and (min-width:768px) {
+					max-width: 375px;
 				}
 				@media screen and (max-width:429.9px) {
 					padding: 22px 15px;

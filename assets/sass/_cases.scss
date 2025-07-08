@@ -17,6 +17,7 @@
 	}
 	&-slider-wrap{
 		padding-top: 117px;
+		padding-top: 62px;
 		@media screen and (max-width:1023.9px) {
 			display: flex;
 			flex-direction: column;
@@ -63,6 +64,7 @@
 			padding: 17px;
 			position: relative;
 			gap: 50px;
+			flex-grow: 1;
 			@media screen and (min-width:1240px) {
 				width: 41%;
 			}
@@ -213,9 +215,9 @@
 				position: absolute;
 				bottom: 0;
 				right: 0;
-				height: calc(100% + 117px);
+				height: calc(100% + 62px);
 				width: 100%;
-				max-width: 68%;
+				max-width: 100%;
 				border-radius: 0 0 40px 0;
 			}
 		}
