@@ -1,3 +1,8 @@
+@property --hue {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 180deg;
+}
 .contacts{
 	margin-bottom: 120px;
 	&__title{
@@ -221,20 +226,110 @@
 			select{
 				appearance: none;
 				padding-right: 77.5px;
-			}
-			.select__wrap{
 				position: relative;
-				&:after{
-					content: '';
-					width: 17.5px;
-					height: 8.5px;
-					background: url('../images/arrow-select.svg') center center / cover no-repeat;
-					position: absolute;
-					top: 50%;
-					transform: translateY(-50%);
-					right: 50px;
+				&::-ms-expand { display: none; } 
+			@supports (appearance: base-select) {
+					&,
+					&::picker(select) {
+						appearance: base-select;
+						animation: rotateHue 10s infinite;
+						animation-play-state: paused;
+					}
+					&:open {
+						animation-play-state: running;
+						@media (prefers-reduced-motion) {
+							animation-play-state: paused;
+						}
+					}
 				}
+				@supports (appearance: base-select) {
+    padding-inline: 20px;
+    background-image: none;
+    img {
+      width: 30px;
+      line-height: 1;
+    }
+    &::picker-icon {
+      content: "";
+      width: 17.5px;
+			height: 8.5px;
+			position: absolute;
+			right: 30px;
+			top: 50%;
+			translate: -50%;
+			background: url('../images/arrow-select.svg') center center / cover no-repeat;
+      transition: rotate 0.2s ease-out;
+			@media screen and (min-width:768px) {
+				right: 50px;
 			}
+    }
+    &:open::picker-icon {
+      rotate: 180deg;
+    }
+    &::picker(select) {
+      padding: 0;
+      margin-top: 5px;
+			border: 1px solid $--accent-color;
+      background:$--secondary;
+      border-radius: 20px;
+      font-weight: 400;
+			color: $--white;
+      opacity: 0;
+      height: 0;
+      overflow: clip;
+      transition: height 0.5s ease-out, opacity 0.5s ease-out, overlay 0.5s,
+        display 0.5s;
+      transition-behavior: allow-discrete;
+    }
+    &:open::picker(select) {
+      opacity: 1;
+      height: calc-size(auto, size);
+      overflow: auto;
+      @starting-style {
+        opacity: 0;
+        height: 0;
+      }
+    }
+	}
+				& option{
+						 display: flex;
+      align-items: center;
+      padding: 10px;
+      gap: 10px;
+      cursor: pointer;
+      transition-property: color, background;
+      transition-duration: 0.2s;
+      transition-timing-function: ease-out;
+      &:where(:hover, :focus, :active) {
+        background: $--accent-color;
+        color: $--primary;
+      }
+      &:checked {
+        background: $--accent-color;
+        color: $--primary;
+      }
+      &::checkmark {
+        display: none;
+      }
+      &:first-child {
+        border: 0;
+      }
+				}
+
+			}
+			// .select__wrap{
+			// 	position: relative;
+			// 	&:after{
+			// 		content: '';
+			// 		width: 17.5px;
+			// 		height: 8.5px;
+			// 		background: url('../images/arrow-select.svg') center center / cover no-repeat;
+			// 		position: absolute;
+			// 		top: 50%;
+			// 		transform: translateY(-50%);
+			// 		right: 50px;
+			// 	}
+			// }
 			.input__wrap{
 				position: relative;
 				& input{
@@ -338,4 +433,17 @@
 		}
 	}
 	
+}
+
+
+@keyframes rotateHue {
+  0% {
+    --hue: 180deg;
+  }
+  25% {
+    --hue: 360deg;
+  }
+  100% {
+    --hue: 180deg;
+  }
 }
