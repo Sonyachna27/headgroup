@@ -9,9 +9,20 @@
 		margin-bottom: 32px;
 		max-width: 100%;
 		width: 100%;
-		@media screen and (min-width:1024px) {
+		@media screen and (min-width:1024px)  {
 			margin-bottom: 40px;
 			max-width: 73%;
+			margin-bottom: 0;
+		}
+		@media screen and (min-width:1024px)  {
+			
+			max-width: 73%;
+		}
+		@media screen and (min-width:1024px) and (max-width:1239.9px) {
+			margin-bottom: 40px;
+		}
+		@media screen and (min-width:1240px) {
+			margin-bottom: 0;
 		}
 
 		h2{
@@ -37,16 +48,24 @@
 		flex-direction: row;
 			flex-wrap: wrap;
 			position: relative;
+			@media screen and (min-width:1240px) {
+				margin-top: -48px;
+				column-gap: 32px;
+				row-gap: 0;
+			}
 		&__img{
 			max-height: 488px;
-			margin-top: auto;
+			
 			img{
 				width: 100%;
 				height: 100%;
 				margin: 0 auto;
+				object-fit: cover;
 			}
 			@media screen and (min-width:1240px) {
-				width: 41%;
+				width: 41.5%;
+				margin-bottom: 58px;
+				margin-top: 57px;
 			}
 			@media screen and (max-width:1239.9px) {
 				position: absolute;
@@ -73,6 +92,7 @@
 		width: 100%;
 		@media screen and (min-width:1240px) {
 			width: 41%;
+			margin-top: -52px;
 		}
 		@media screen and (min-width:768px) and (max-width:1239.9px) {
 			flex-direction: column;
@@ -137,6 +157,10 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				transition: .3s ease-in-out;
+				&:hover{
+					transform: scale(1.1);
+				}
 				@media screen and (min-width:768px) {
 					max-width: 48px;
 				max-height: 48px;
@@ -218,7 +242,7 @@
 				letter-spacing: 1.4px;
 				text-transform: uppercase;
 				@media screen and (min-width:768px) {
-					padding: 32px 50px;
+					padding: 30px 50px;
 					font-size: 16px;
 					letter-spacing: 1.6px;
 				}			
@@ -227,6 +251,9 @@
 				appearance: none;
 				padding-right: 77.5px;
 				position: relative;
+				@media screen and (min-width:768px) {
+					padding: 22px 50px;
+				}	
 				&::-ms-expand { display: none; } 
 			@supports (appearance: base-select) {
 					&,
@@ -243,7 +270,7 @@
 					}
 				}
 				@supports (appearance: base-select) {
-    padding-inline: 20px;
+    // padding-inline: 20px;
     background-image: none;
     img {
       width: 30px;

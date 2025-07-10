@@ -84,8 +84,12 @@
 		line-height: 140%;
 		text-transform: uppercase;
 		text-align: center;
+		
 		@media screen and (min-width:768px) {
-			font-size: 20px;
+			font-size: 20px;			
+		}
+		@media screen and (min-width:430px) {
+			max-width: 75%;
 		}
 		strong{
 			color: $--white;
@@ -144,7 +148,6 @@
 	}
 	@media screen and (min-width:430px) and (max-width:575.9px) {
 		min-width: 234px;
-		// max-width: 234px;
 	}
 	@media screen and (max-width:429.9px) {
 		max-width: 65%;
@@ -153,5 +156,8 @@
 		max-width: 65%;
 	}
 	margin: 0 auto;
-	
+	&:hover{
+		background-color: $--secondary;
+		color: $--accent-color;
+	}
 }

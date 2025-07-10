@@ -29,7 +29,7 @@ margin-bottom: 180px;
 		flex-direction: column;
 		@media screen and (min-width:1024px) {
 			flex-direction: row;
-			align-items: center;
+			align-items: baseline;
 			justify-content: space-between;
 		}
 		p{
@@ -49,7 +49,7 @@ margin-bottom: 180px;
 			flex-direction: column;
 			gap: 20px;
 			@media screen and (min-width:1024px) {
-				align-items: center;
+			
 			justify-content: flex-end;
 			flex-wrap: wrap;
 			flex-direction: row;
@@ -163,9 +163,13 @@ margin-bottom: 180px;
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				transition: .3s ease-in-out;
 				@media screen and (min-width:768px) {
 					max-width: 48px;
 					max-height: 48px;
+				}
+				&:hover{
+					transform: scale(1.1);
 				}
 				svg{
 					width: 22px;

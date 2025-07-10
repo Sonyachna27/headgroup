@@ -74,7 +74,7 @@
 			text-align: left;
 			@media screen and (min-width:1024px) {
 				text-align: right;
-				max-width: 57%;
+				max-width: 52.76%;
 			}
 			@media screen and (min-width:768px) {
 				font-size: 18px;
@@ -85,6 +85,8 @@
 			width: 100%;
 			position: relative;
 			z-index: 1;
+			// font-family: "Narnoor-Bold", sans-serif;
+			// font-weight: 700;
 			@media screen and (min-width:768px) {
 				max-width: 375px;
 			}

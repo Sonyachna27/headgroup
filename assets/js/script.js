@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	accordionFunction();
 	addAnimationInit();
 	triggerScrollInit();
+
 });
 
 
@@ -108,7 +109,7 @@ const adaptiveBackground = () => {
   });
 };
 
-// === Debounced resize ===
+
 let resizeTimeout;
 
 function onResize() {
@@ -186,15 +187,6 @@ const addAnimationInit = () => {
 		});
 	}
 }
-// const stopAnimation = () =>{
-// 	const wrapper = document.querySelector('.parnters__marquee__wrap');
-// 		wrapper.addEventListener('mouseover', () => {
-// 			wrapper.style.animationPlayState = 'paused';
-// 		});
-// 		wrapper.addEventListener('mouseout', () => {
-// 			wrapper.style.animationPlayState = 'running';
-// 		})
-// }
 
 // const horizontalScroll = () => {
 //   const process = document.querySelector('.solutions__wrap');

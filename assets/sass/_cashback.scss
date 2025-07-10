@@ -27,15 +27,19 @@
 			max-height: 118px;
 			width: 100%;
 			aspect-ratio: 1;
-				transform: rotate(25deg);
+				transform: rotate(-125deg);
 				z-index: 1;
 			@media screen and (min-width:1024px) {
 				max-width: 240px;
 					max-height: 240px;
-    			top: -23px;
+    			top: -54px;
+    			transform: rotate(355deg);
 			}
-			@media screen and (max-width:1024px) {
-				transform: rotate(25deg);
+			@media screen and (max-width:1023.9px) {
+				transform: rotate(337deg);
+			}
+			@media screen and (max-width:767.9px) {
+				transform: rotate(329deg);
 			}
 
  			border-radius: 0 40px 0 0;
@@ -44,15 +48,18 @@
 	&__title{
 		display: flex;
 		justify-content: space-between;
-		gap: 40px;
+		gap: 20px;
 		position: relative;
 		flex-direction: column;
 		margin-bottom: 40px;
 		@media screen and (min-width:1240px) {
 			flex-direction: row;
-			gap: 20px;
+			
 			align-items: center;
 			margin-bottom: 30px;
+		}
+		@media screen and (min-width:1240px) {
+		gap: 40px;
 		}
 		h2{
 			text-align: left;
@@ -64,6 +71,9 @@
 			}
 			@media screen and (max-width:1023.9px) {
 				padding-right: 156px;
+			}
+			@media screen and (max-width:767.9px) {
+				padding-right: 92px;
 			}
 		}
 		&__coupon{

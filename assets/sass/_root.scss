@@ -1,6 +1,12 @@
 @font-face {
 	font-family: "NauryzRedKeds";
 	src: url(../fonts/NAURYZREDKEDS.TTF);
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Narnoor-Bold";
+	src: url(../fonts/Narnoor-Bold.ttf);
+	font-weight: 700;
 }
 @font-face {
 	font-family: "Stolzl";
@@ -82,14 +88,14 @@ body{
 	align-items: center;
 	gap: 10px;
 	border-radius: 80px;
-	border: 3px solid transparent;
+	border: 2px solid transparent;
 	background-color: #FFF;
 	color: $--primary;
 	text-align: center;
-	font-family: "NauryzRedKeds";
+	font-family: "NauryzRedKeds", sans-serif;
 	font-size: 12px;
 	font-style: normal;
-	font-weight: 400;
+	font-weight: 300;
 	line-height: normal;
 	letter-spacing: 1.2px;
 	text-transform: uppercase;
@@ -110,11 +116,12 @@ body{
 	border-radius: 100px;
 	border: 3px solid $--accent-color;
 	background-color: transparent;
-	color: $--accent-color;
+	color: $--white;
 	max-width: 256px;
 	padding: 20px 24px;
 	font-size: 12px;
 	letter-spacing: 1.2px;
+	font-weight: 300;
 	@media screen and (min-width:1024px) {
 		padding: 36px 44px;
 		font-size: 16px;
@@ -245,6 +252,11 @@ body{
 			@media screen and (min-width:576px) {
 				min-height: 298px;
 			}	
+			}
+			&.clipAll{
+				@media screen and (min-width:1240px) {
+				min-height: 327px;
+			}
 			}
 			h3{
 				strong{
