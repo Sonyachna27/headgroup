@@ -150,18 +150,18 @@
 			</div>
 		</div>
 	</section>
-	<section class="cases mb-m">
+	<section class="cases main__cases">
 		<div class="container">
+			<div class="cases__wrap">
 			<div class="cases__title">
 				<h2>КЕЙСИ</h2>
 				<div class="cases__count">
 					<div class="cases-pagination"></div>
 				</div>
 			</div>
-			<div class="cases__slider">
-				<div class="swiper casesSlider">
-					<div class="swiper-wrapper cases-slider-wrap">
-						<div class="swiper-slide cases__item">
+			
+				<div class="cases__items"> 
+			<div class="cases__item">
 							<div class="cases__item__info">
 								<div class="cases__item__info__count">01</div>
 								<div class="cases__item__info__category">
@@ -179,7 +179,7 @@
 								<a href="./single-case.html" class="btn btn-secondary">детальніше про кейс</a>
 							</div>
 						</div>
-					<div class="swiper-slide cases__item"> 
+					<div class="cases__item"> 
 							<div class="cases__item__info">
 								<div class="cases__item__info__count">02</div>
 								<div class="cases__item__info__category">
@@ -197,7 +197,7 @@
 								<a href="./single-case.html" class="btn btn-secondary">детальніше про кейс</a>
 							</div>
 						</div>
-						<div class="swiper-slide cases__item">
+						<div class="cases__item">
 							<div class="cases__item__info">
 								<div class="cases__item__info__count">03</div>
 							<div class="cases__item__info__category">
@@ -214,9 +214,8 @@
 								<img src="./assets/images/cases-img3.png" alt="Інноваційна платформа">
 								<a href="./single-case.html" class="btn btn-secondary">детальніше про кейс</a>
 							</div>
+						</div>
 						</div> 
-					</div>
-				</div>
 			</div>
 		</div>
 	</section>
@@ -608,6 +607,14 @@
 </div>
  </footer>
  <script src="./assets/js/swiper.js"></script>
- <script src="./assets/js/script.js"></script>  
+ <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<!-- ScrollSmoother requires ScrollTrigger -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/TextPlugin.min.js"></script>
+ <script src="./assets/js/script.js"></script> 
 </body>
 </html>

@@ -10,43 +10,51 @@
 		}
 
  	}
-	.casesSlider{
-		@media screen and (min-width:1240px) {
-			margin-top: -120px;
-		}
+			overflow: hidden;
+			height: auto;
+			position: relative;
+			margin-bottom: 200px;
+			@media screen and (min-width:768px) {
+				margin-bottom: 260px;
+			}
+	&__wrap{
+		position: relative;
+			
 	}
-	&-slider-wrap{
-		padding-top: 117px;
-		padding-top: 62px;
-		@media screen and (max-width:1023.9px) {
-			display: flex;
-			flex-direction: column;
-			gap: 135px;
-		}
+	&__items{
+		display: flex;
+		-ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+	gap: 25px;
+	 height: 100%;
+	 position: relative;
+	 &:before{
+			background-color: #151515;
+				content: "";
+				height: calc(100% + 62px);
+				left: -100%;
+				position: absolute;
+				top: 0;
+				width: 100%;
+				z-index: 1;		
+			}
+	@media screen and (min-width:1024px) {
+		gap: 40px;
 	}
-	&-pagination{
-		font-family: "Russo One";
-		font-size: 40px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: normal;
-		letter-spacing: 4px;
-		.swiper-pagination-current{
-			color: $--white;
-		}
-		.swiper-pagination-total{
-			color: $--dark-grey;
-		}
-		@media screen and (max-width:1023.9px) {
-			display: none;
-		}
 	}
+
+
 	&__item{
 		display: flex;
 		gap: 20px;
 		flex-direction: column-reverse;
 		height: auto;
 		max-width: 100%;
+		max-width: 100%;
+		max-height: 507;
+		width: 100%;
+		flex-grow: 1;
+		flex: 0 0 auto;
 		@media screen and (min-width:1240px) {
 				flex-direction: row;
 				gap: 40px;
