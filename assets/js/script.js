@@ -49,6 +49,7 @@ const casesSliderInit = () => {
       pagination: {
         el: ".cases-pagination",
         type: "fraction",
+				clickable:true,
       },
     });
   }
