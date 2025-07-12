@@ -1,4 +1,11 @@
 .cases{
+	overflow: hidden;
+			height: auto;
+			position: relative;
+			margin-bottom: 200px;
+			@media screen and (min-width:768px) {
+				margin-bottom: 260px;
+			}
 	&__title{
 		display: flex;
 		align-items: center;
@@ -10,13 +17,21 @@
 		}
 
  	}
-			overflow: hidden;
-			height: auto;
-			position: relative;
-			margin-bottom: 200px;
-			@media screen and (min-width:768px) {
-				margin-bottom: 260px;
-			}
+	&-pagination{
+		color: $--light-grey;
+		text-align: center;
+		font-family: "Russo One", sans-serif;
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		letter-spacing: 4px;
+		display: flex;
+	text-transform: uppercase;
+		& .current-slide{
+			color: $--white;
+		}
+	}
 	&__wrap{
 		position: relative;
 			
