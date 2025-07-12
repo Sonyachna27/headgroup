@@ -7,9 +7,16 @@ document.addEventListener("DOMContentLoaded", function () {
 	addAnimationInit();	
 	triggerScrollInit();
 	triggerCasesInit();
+	replaceInDocument();
 });
-
-
+const replaceInDocument = () => {
+  // const regex = /( в| і| у| з| до| на| та| а| о| й| від| із| при| про| за| що| але)\s+/g; 
+  const regex = /(?:\s|&nbsp;)(в|і|у|з|до|на|та|а|о|й|від|із|при|про|за|що|але)\s+/gi;
+  const elements = document.querySelectorAll("p, li, h1, h2, h3, h4, h5");
+  elements.forEach((el) => {
+    el.innerHTML = el.innerHTML.replace(regex, " $1&nbsp;");
+  });
+};
 
 
 const toggleMenu = () => {
@@ -197,17 +204,57 @@ window.solutionsScrollInit = true;
   }
 );
 }
+// const triggerCasesInit = () => {
+// 	const casesElements = document.querySelectorAll(".cases.main__cases");
+// 	if (window.casesScrollInit === true) return;
+// 	window.casesScrollInit = true;
+//     window.listGsapTimeline = [];
+//   window.listGsapTimeInit = true;
+
+//   casesElements.forEach((block, index) => {
+//     const horizontalScrollWrapper = block.querySelector(".cases__wrap");
+//     const horizontalScrollItems = horizontalScrollWrapper.querySelector(".cases__items");
+//     const scrollItems = Array.from(horizontalScrollItems.querySelectorAll(".cases__item"));
+//     if (scrollItems.length === 0) return;
+
+//     const x = () => {
+//       const scrollItemWidth = scrollItems[0].scrollWidth / 5;			
+//       const totalScroll = horizontalScrollItems.scrollWidth - window.innerWidth;
+//       const leftOffset = horizontalScrollItems.getBoundingClientRect().left + window.scrollX;
+//       return scrollItemWidth + totalScroll + leftOffset;
+//     };
+
+//     gsap.timeline().fromTo(
+//       scrollItems,
+//       { x: 0 },
+//       {
+//         x: () => -x(),
+//         scrollTrigger: {
+//           trigger: horizontalScrollItems,
+//           start: "center center",
+//           pin: horizontalScrollWrapper,
+//           invalidateOnRefresh: true,
+//           anticipatePin: 1,
+//           scrub: 1,
+//           end: () => "+=" + x(),
+//         },
+//       }
+//     );
+//   });
+// };
 const triggerCasesInit = () => {
-	const casesElements = document.querySelectorAll(".cases.main__cases");
-	if (window.casesScrollInit === true) return;
-	window.casesScrollInit = true;
-    window.listGsapTimeline = [];
-  window.listGsapTimeInit = true;
+  const casesElements = document.querySelectorAll(".cases.main__cases");
+
+  if (casesElements.length === 0) return;
+
+  // 🔁 Очищаємо всі попередні тригери (важливо для SPA або повторного виклику)
+  ScrollTrigger.getAll().forEach(trigger => trigger.kill());
 
   casesElements.forEach((block, index) => {
     const horizontalScrollWrapper = block.querySelector(".cases__wrap");
     const horizontalScrollItems = horizontalScrollWrapper.querySelector(".cases__items");
     const scrollItems = Array.from(horizontalScrollItems.querySelectorAll(".cases__item"));
+
     if (scrollItems.length === 0) return;
 
     const x = () => {
@@ -226,10 +273,11 @@ const triggerCasesInit = () => {
           trigger: horizontalScrollItems,
           start: "center center",
           pin: horizontalScrollWrapper,
-          invalidateOnRefresh: true,
-          anticipatePin: 1,
           scrub: 1,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
           end: () => "+=" + x(),
+          pinSpacing: true, // 👈 обовʼязково
         },
       }
     );

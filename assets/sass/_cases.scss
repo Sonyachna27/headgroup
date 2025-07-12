@@ -26,23 +26,11 @@
 		-ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
 	gap: 25px;
-	 height: 100%;
 	 position: relative;
-	 &:before{
-			background-color: #151515;
-				content: "";
-				height: calc(100% + 62px);
-				left: -100%;
-				position: absolute;
-				top: 0;
-				width: 100%;
-				z-index: 1;		
-			}
 	@media screen and (min-width:1024px) {
 		gap: 40px;
 	}
 	}
-
 
 	&__item{
 		display: flex;
@@ -201,8 +189,8 @@
 				width: 59%;
 			}
 			@media screen and (min-width:768px) and (max-width:1239.9px) {
-			
 				padding:364px 34px 34px 34px;
+				padding:275px 34px 34px 34px;
 			}
 			.btn{
 				margin-top: auto;
