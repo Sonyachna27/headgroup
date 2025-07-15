@@ -159,55 +159,54 @@ const addAnimationInit = () => {
 		});
 	}
 }
-
-
 const triggerScrollInit = () => {
-	const scrollSolutions = document.querySelectorAll(".solutions");
-	if(!scrollSolutions) return;
-  if (window.solutionsScrollInit === true) return;
-window.solutionsScrollInit = true;
+  // 💥 Видаляємо тільки scrollTrigger-и для .solutions__items
+  ScrollTrigger.getAll().forEach(trigger => {
+    if (trigger.trigger && trigger.trigger.classList.contains("solutions__items")) {
+      trigger.kill();
+    }
+  });
 
-  window.listGsapTimeline = [];
-  window.listGsapTimeInit = true;
+  const scrollSolutions = document.querySelectorAll(".solutions");
+  if (!scrollSolutions.length) return;
 
-  scrollSolutions.forEach((block, index) => {
+  scrollSolutions.forEach((block) => {
     const horizontalScrollWrapper = block.querySelector(".solutions__wrap");
     const horizontalScrollItems = horizontalScrollWrapper.querySelector(".solutions__items");
     const scrollItems = Array.from(horizontalScrollItems.querySelectorAll(".solutions__item"));
     if (scrollItems.length === 0) return;
 
     const x = () => {
-      const scrollItemWidth = scrollItems[0].scrollWidth / 5;			
+      const scrollItemWidth = scrollItems[0].scrollWidth / 5;
       const totalScroll = horizontalScrollItems.scrollWidth - window.innerWidth;
       const leftOffset = horizontalScrollItems.getBoundingClientRect().left + window.scrollX;
       return scrollItemWidth + totalScroll + leftOffset;
     };
-		
-    gsap.timeline().fromTo(
+
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: horizontalScrollItems,
+        start: "center center",
+        pin: horizontalScrollWrapper,
+        invalidateOnRefresh: true,
+        anticipatePin: 1,
+        scrub: 1,
+        end: () => "+=" + x(),
+      }
+    }).fromTo(
       scrollItems,
       { x: 0 },
-      {
-        x: () => -x(),
-        scrollTrigger: {
-          trigger: horizontalScrollItems,
-          start: "center center",
-          pin: horizontalScrollWrapper,
-          invalidateOnRefresh: true,
-          anticipatePin: 1,
-          scrub: 1,
-          end: () => "+=" + x(),
-					// end: "+=" + scrollItems.length * 50 + "%",
-        },
-
-      }
+      { x: () => -x() }
     );
-  }
-);
-}
+  });
+};
 
 const triggerCasesInit = () => {
-  
-  ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+  ScrollTrigger.getAll().forEach(trigger => {
+    if (trigger.trigger && trigger.trigger.classList.contains("cases__items")) {
+      trigger.kill();
+    }
+  });
 
   if (window.innerWidth <= 1024) return;
 
@@ -269,7 +268,6 @@ const triggerCasesInit = () => {
     );
   });
 };
-
 
 let resizeTimeout;
 window.addEventListener("resize", () => {
