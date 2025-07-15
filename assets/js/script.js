@@ -205,74 +205,14 @@ window.solutionsScrollInit = true;
 );
 }
 
-// const triggerCasesInit = () => {
-//   const casesElements = document.querySelectorAll(".cases.main__cases");
-//   if (casesElements.length === 0) return;
-
-//   ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-
-//   casesElements.forEach((block, index) => {
-//     const horizontalScrollWrapper = block.querySelector(".cases__wrap");
-//     const horizontalScrollItems = horizontalScrollWrapper.querySelector(".cases__items");
-//     const scrollItems = Array.from(horizontalScrollItems.querySelectorAll(".cases__item"));
-//     const paginationContainer = block.querySelector(".cases-pagination");
-
-//     if (scrollItems.length === 0) return;
-
-    
-//     const totalSlides = scrollItems.length;
-//     const currentSlideEl = document.createElement("span");
-//     const separatorEl = document.createElement("span");
-//     const totalEl = document.createElement("span");
-
-//     currentSlideEl.classList.add("current-slide");
-//     separatorEl.textContent = "/";
-//     totalEl.textContent = totalSlides;
-
-//     currentSlideEl.textContent = "1";
-//     paginationContainer.innerHTML = "";
-//     paginationContainer.append(currentSlideEl, separatorEl, totalEl);
-
-//     // 🔁 обчислюємо відстань для скролу
-//     const x = () => {
-//       const scrollItemWidth = scrollItems[0].scrollWidth / 5;
-//       const totalScroll = horizontalScrollItems.scrollWidth - window.innerWidth;
-//       const leftOffset = horizontalScrollItems.getBoundingClientRect().left + window.scrollX;
-//       return scrollItemWidth + totalScroll + leftOffset;
-//     };
-
-//     // 🧭 Створюємо GSAP таймлайн
-//     const timeline = gsap.timeline({
-//       scrollTrigger: {
-//         trigger: horizontalScrollItems,
-//         start: "center center",
-//         pin: horizontalScrollWrapper,
-//         scrub: 1,
-//         anticipatePin: 1,
-//         invalidateOnRefresh: true,
-//         end: () => "+=" + x(),
-//         pinSpacing: true,
-//         onUpdate: (self) => {
-//           // 🔄 Оновлюємо пагінацію
-//           const progress = self.progress; // від 0 до 1
-//           const slideIndex = Math.round(progress * (totalSlides - 1)) + 1;
-//           currentSlideEl.textContent = slideIndex;
-//         },
-//       },
-//     });
-
-//     timeline.fromTo(
-//       scrollItems,
-//       { x: 0 },
-//       { x: () => -x() }
-//     );
-//   });
-// };
 const triggerCasesInit = () => {
+  
+  ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+
+  if (window.innerWidth <= 1024) return;
+
   const casesElements = document.querySelectorAll(".cases.main__cases");
   if (casesElements.length === 0) return;
-
-  ScrollTrigger.getAll().forEach(trigger => trigger.kill());
 
   casesElements.forEach((block, index) => {
     const horizontalScrollWrapper = block.querySelector(".cases__wrap");
@@ -282,26 +222,21 @@ const triggerCasesInit = () => {
 
     if (scrollItems.length === 0) return;
 
-    const isMobileOrTablet = window.innerWidth >= 1024;
+    const totalSlides = scrollItems.length;
+    const currentSlideEl = document.createElement("span");
+    const separatorEl = document.createElement("span");
+    const totalEl = document.createElement("span");
 
-    // 🔢 Створюємо пагінацію лише для моб/планшетів
-    let currentSlideEl = null;
-    if (isMobileOrTablet && paginationContainer) {
-      const totalSlides = scrollItems.length;
-      currentSlideEl = document.createElement("span");
-      const separatorEl = document.createElement("span");
-      const totalEl = document.createElement("span");
+    currentSlideEl.classList.add("current-slide");
+    separatorEl.textContent = "/";
+    totalEl.textContent = totalSlides;
+    currentSlideEl.textContent = "1";
 
-      currentSlideEl.classList.add("current-slide");
-      separatorEl.textContent = "/";
-      totalEl.textContent = totalSlides;
-
-      currentSlideEl.textContent = "1";
+    if (paginationContainer) {
       paginationContainer.innerHTML = "";
       paginationContainer.append(currentSlideEl, separatorEl, totalEl);
     }
 
-    // 🔁 Обчислюємо відстань скролу
     const x = () => {
       const scrollItemWidth = scrollItems[0].scrollWidth / 5;
       const totalScroll = horizontalScrollItems.scrollWidth - window.innerWidth;
@@ -309,7 +244,6 @@ const triggerCasesInit = () => {
       return scrollItemWidth + totalScroll + leftOffset;
     };
 
-    // 🧭 GSAP timeline
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: horizontalScrollItems,
@@ -321,11 +255,9 @@ const triggerCasesInit = () => {
         end: () => "+=" + x(),
         pinSpacing: true,
         onUpdate: (self) => {
-          if (isMobileOrTablet && currentSlideEl) {
-            const progress = self.progress;
-            const slideIndex = Math.round(progress * (scrollItems.length - 1)) + 1;
-            currentSlideEl.textContent = slideIndex;
-          }
+          const progress = self.progress;
+          const slideIndex = Math.round(progress * (totalSlides - 1)) + 1;
+          currentSlideEl.textContent = slideIndex;
         },
       },
     });
@@ -337,3 +269,14 @@ const triggerCasesInit = () => {
     );
   });
 };
+
+
+let resizeTimeout;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    triggerCasesInit();
+  }, 300); // debounce
+});
+
+

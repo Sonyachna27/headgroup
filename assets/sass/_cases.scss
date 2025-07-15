@@ -1,5 +1,5 @@
 .cases{
-	overflow: hidden;
+			overflow: hidden;
 			height: auto;
 			position: relative;
 			margin-bottom: 200px;
@@ -12,10 +12,11 @@
 		justify-content: space-between;
 		gap: 40px;
 		margin-bottom: 28px;
+	
 		@media screen and (min-width:1024px) {
 			margin-bottom: 80px;
+			padding-top: 40px;
 		}
-
  	}
 	&-pagination{
 		color: $--light-grey;
@@ -34,17 +35,22 @@
 	}
 	&__wrap{
 		position: relative;
+		@media screen and (min-width:1024px) {
 			
+			padding-top: 40px;
+		}	
 	}
 	&__items{
 		display: flex;
-		-ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-	gap: 25px;
-	 position: relative;
-	@media screen and (min-width:1024px) {
-		gap: 40px;
-	}
+		flex-direction: column;
+		gap: 75px;
+		position: relative;
+		@media screen and (min-width:1024px) {
+			gap: 40px;
+			-ms-flex-wrap: nowrap;
+			flex-wrap: nowrap;
+			flex-direction: row;
+		}
 	}
 
 	&__item{
@@ -204,7 +210,6 @@
 				width: 59%;
 			}
 			@media screen and (min-width:768px) and (max-width:1239.9px) {
-				padding:364px 34px 34px 34px;
 				padding:275px 34px 34px 34px;
 			}
 			.btn{
