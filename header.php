@@ -28,11 +28,7 @@ include HEADGROUP_REQUIRE_DIRECTORY . '/template-parts/content-variables.php';?>
 					
 					</div>
 					<div class="switcher">
-						<?php
-							if (defined('ICL_SITEPRESS_VERSION')) {
-								do_action('wpml_language_switcher');
-							}
-						?>
+
 					</div>
 					<div class="burgerBtn">
 						<span></span>
@@ -109,7 +105,6 @@ include HEADGROUP_REQUIRE_DIRECTORY . '/template-parts/content-variables.php';?>
 			
 			</div>
 			<div class="header__top__nav">
-				<?= HEADGROUP_wpml_language_switcher(); ?>
 				<nav>
 					<ul>
 						<li><a href="#">Доставка и оплата</a>
@@ -567,3 +562,4 @@ include HEADGROUP_REQUIRE_DIRECTORY . '/template-parts/content-variables.php';?>
 	</div>
 </div>
 	</header>
+	  <canvas id="three-canvas"></canvas>

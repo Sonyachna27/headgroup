@@ -149,7 +149,6 @@ include HEADGROUP_REQUIRE_DIRECTORY . '/template-parts/content-variables.php';
 							<?= $main_city ?>
 				</button>
 				<?php endif; ?>
-				<?= HEADGROUP_wpml_language_switcher(); ?>
 			</div>
 			<div class="footer__addons">
 				<nav>

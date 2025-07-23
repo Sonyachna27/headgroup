@@ -2,7 +2,7 @@
 
 if (!function_exists('add_popup_local')) {
     function add_popup_local() {
-        include MEBELKA_REQUIRE_DIRECTORY . '/template-parts/content-variables.php';
+        include HEADGROUP_REQUIRE_DIRECTORY . '/template-parts/content-variables.php';
         ?>
         <div class="popup popup__local" data-popup="popup__local">
             <div class="popup-bg" data-close="close"></div>
