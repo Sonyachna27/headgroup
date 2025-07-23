@@ -45,9 +45,8 @@ if (class_exists('Kirki')) {
 
     // Определение социальных сетей с соответствующими Dashicons
     $social_networks = [
-        'vk'   => ['label' => 'vk', 'icon' => 'dashicons-share'],
+        'youtube'   => ['label' => 'Youtube', 'icon' => 'dashicons-youtube'],
         'instagram' => ['label' => 'Instagram', 'icon' => 'dashicons-camera'],
-        'facebook'  => ['label' => 'Facebook', 'icon' => 'dashicons-facebook-alt'],
         'telegram'  => ['label' => 'Telegram', 'icon' => 'dashicons-paperclip'],
     ];
 
