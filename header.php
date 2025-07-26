@@ -91,4 +91,4 @@ include HEADGROUP_REQUIRE_DIRECTORY . '/template-parts/content-variables.php';?>
 	</div>
 </div>
 </header>
-<canvas id="three-canvas"></canvas>
+<!-- <canvas id="three-canvas"></canvas> -->

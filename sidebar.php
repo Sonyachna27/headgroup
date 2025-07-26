@@ -1,6 +1,5 @@
 <aside class="aside">
     <div class="aside__content">
-        <div><?= __('Каталог меблей' , 'mebelka') ?></div>
         <nav class="aside-nav">
             <ul class="aside-nav-list top-menu">
             <?php if ( has_nav_menu( 'aside-menu' ) ) : ?>
