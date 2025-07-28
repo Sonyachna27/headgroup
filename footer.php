@@ -13,7 +13,7 @@
  */
 include HEADGROUP_REQUIRE_DIRECTORY . '/template-parts/content-variables.php';
 ?>
-
+<?= get_template_part('template-parts/section' , 'contacts') ?>
  <footer class="footer">
 <div class="container">
 	<div class="footer__container">
