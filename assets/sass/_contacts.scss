@@ -205,11 +205,11 @@
 			line-height: 140%;
 			letter-spacing: 1.4px;
 			text-transform: uppercase;
-			margin-bottom: 22px;
+			margin-bottom: 2px;
 			@media screen and (min-width:768px) {
 				font-size: 20px;
 				letter-spacing: 2px;
-				margin-bottom: 40px;
+				margin-bottom: 20px;
 			}
 			strong{
 				color: $--accent-color;
@@ -473,4 +473,12 @@
   100% {
     --hue: 180deg;
   }
+}
+.contacts__form form .wpcf7-not-valid {
+	border: 1px solid red;
+}
+.wpcf7-not-valid-tip,
+.wpcf7-response-output,
+.spinner {
+	display: none;
 }

@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   toggleMenu();
+  succesfulForm();
   adaptiveBackground();
   reviewsSliderInit();
 	handlePopup();
@@ -277,3 +278,17 @@ window.addEventListener("resize", () => {
   }, 300); // debounce
 });
 
+
+const succesfulForm = () => {
+  document.addEventListener('wpcf7mailsent', function(event) {
+    document.documentElement.classList.add('open-popup');
+  }, false);
+
+  document.addEventListener('wpcf7invalid', function(event) {
+    const invalidTip = document.querySelector('.wpcf7-not-valid-tip');
+    if (invalidTip) {
+      const input = invalidTip.closest('.wpcf7-form-control-wrap').querySelector('input, textarea, select');
+      if (input) input.focus();
+    }
+  }, false);
+};

@@ -19,7 +19,8 @@
 						<img  src="<?= HEADGROUP_THEME_DIRECTORY ?>assets/images/central-head.png" alt="Head">
 						</div>
 						<div class="head">
-							<img src="<?= HEADGROUP_THEME_DIRECTORY ?>assets/images/central-head-head.png" alt="Head modal">
+							<canvas id="three-canvas"></canvas>
+							<!-- <img src="<?= HEADGROUP_THEME_DIRECTORY ?>assets/images/central-head-head.png" alt="Head modal"> -->
 						</div>
 						<img class="central__middle__right" src="<?= HEADGROUP_THEME_DIRECTORY ?>assets/images/central-group.png" alt="group24">
 					</div>
