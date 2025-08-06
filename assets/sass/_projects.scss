@@ -44,6 +44,7 @@
 			border: 1px solid $--accent-color;
 			background: $--primary;
 			transition: .3s linear;
+			cursor: pointer;
 			font-weight: 400;
 			&:hover{
 				background-color: $--white;

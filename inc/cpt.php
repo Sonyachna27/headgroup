@@ -41,11 +41,11 @@ function register_cases_post_type() {
       'menu_name'          => 'Кейсы',
     ],
     'public'             => true,
-    'has_archive'        => true,
+    'has_archive'        => false,
     'rewrite'            => ['slug' => 'cases'],
     'supports'           => ['title', 'editor', 'thumbnail', 'excerpt'],
     'menu_icon'          => 'dashicons-portfolio', 
-    'show_in_rest'       => true, 
+    'show_in_rest'       => false, 
   ]);
 }
 add_action('init', 'register_cases_post_type');

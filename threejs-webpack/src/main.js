@@ -4,7 +4,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(50, window.innerWidth/window.innerHeight, 0.1, 1000);
 camera.position.set(0, 1.5, 6);
-
+if(document.getElementById('three-canvas')) {
 const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('three-canvas'), alpha: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 
@@ -72,3 +72,4 @@ function animate() {
 }
 animate();
 
+}

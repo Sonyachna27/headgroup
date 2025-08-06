@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	triggerCasesInit();
 	replaceInDocument();
   scrollBottom();
+  loadMoreCases();
 });
 const replaceInDocument = () => {
   // const regex = /( в| і| у| з| до| на| та| а| о| й| від| із| при| про| за| що| але)\s+/g; 
@@ -300,4 +301,69 @@ const scrollBottom = () => {
     window.scrollBy({ top: window.innerHeight * .9 , behavior: 'smooth' })
   )
 );
+}
+
+const loadMoreCases = () => {
+  const tabs = document.querySelectorAll(".projects__list__item");
+  const casesContainer = document.getElementById("cases-container");
+  const loadMoreBtn = document.getElementById("load-more-cases");
+
+  let currentService = "all";
+  let offset = 5;
+
+  const fetchCases = (service = "all", append = false, customOffset = 0) => {
+    const formData = new FormData();
+    formData.append("action", "load_cases_by_service");
+    formData.append("service", service);
+    formData.append("offset", customOffset);
+
+    fetch(script_js.ajax_url, {
+      method: "POST",
+      body: formData,
+    })
+      .then(res => res.text())
+      .then(data => {
+        const match = data.match(/<!--total_cases:(\d+)-->/);
+        totalCases = match ? parseInt(match[1]) : 0;
+
+        const cleanHTML = data.replace(/<!--total_cases:\d+-->/, '');
+
+        if (append) {
+          casesContainer.insertAdjacentHTML("beforeend", data);
+        } else {
+          casesContainer.innerHTML = data;
+        }
+        
+  offset = customOffset + 5;
+
+        if (offset >= totalCases) {
+          loadMoreBtn.style.display = "none";
+        } else {
+          loadMoreBtn.style.display = "flex";
+        }
+
+        loadMoreBtn.dataset.offset = offset;
+      });
+  };
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+
+      currentService = tab.dataset.service;
+      offset = 5;
+
+      fetchCases(currentService, false, 0);
+      loadMoreBtn.dataset.offset = offset;
+    });
+  });
+
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener("click", () => {
+      fetchCases(currentService, true, offset);
+      offset += 5;
+      loadMoreBtn.dataset.offset = offset;
+    });
+  }
 }
