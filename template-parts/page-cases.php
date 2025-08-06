@@ -64,7 +64,7 @@ $cases_query = new WP_Query($cases_args);
 
       <div class="projects__wrap">
         <div class="projects__list">
-          <div class="projects__list__item active" data-service="all"><?= __('всі' , 'headgroup') ?></div>
+          <div class="projects__list__item active" data-service="all"><?= __('ВСI' , 'headgroup') ?></div>
           <?php foreach($services as $service): ?>
             <div class="projects__list__item" data-service="<?= $service->ID ?>">
               <?= esc_html($service->post_title) ?>

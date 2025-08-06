@@ -334,15 +334,17 @@ const loadMoreCases = () => {
           casesContainer.innerHTML = data;
         }
         
-  offset = customOffset + 5;
+        offset = customOffset + 5;
 
-        if (offset >= totalCases) {
-          loadMoreBtn.style.display = "none";
-        } else {
-          loadMoreBtn.style.display = "flex";
+        if (loadMoreBtn) {
+          if (offset >= totalCases) {
+            loadMoreBtn.style.display = "none";
+          } else {
+            loadMoreBtn.style.display = "flex";
+          }
+
+          loadMoreBtn.dataset.offset = offset;
         }
-
-        loadMoreBtn.dataset.offset = offset;
       });
   };
 
@@ -355,7 +357,9 @@ const loadMoreCases = () => {
       offset = 5;
 
       fetchCases(currentService, false, 0);
-      loadMoreBtn.dataset.offset = offset;
+      if (loadMoreBtn) {
+        loadMoreBtn.dataset.offset = offset;
+      }
     });
   });
 
