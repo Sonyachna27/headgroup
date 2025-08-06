@@ -1,33 +1,17 @@
 <?php include HEADGROUP_REQUIRE_DIRECTORY . '/template-parts/content-variables.php'; ?>
-<section class="contacts">
+<section id="contacts" class="contacts">
     <div class="container">
         <div class="contacts__container">
             <div class="contacts__title">
-                <h2>Давайте <strong> створимо</strong> щось <strong>неймовірне</strong> разом</h2>
+                <h2><?= __('Давайте <strong> створимо</strong> щось <strong>неймовірне</strong> разом' , 'headgroup') ?></h2>
             </div>
             <div class="contacts__wrap">
                 <div class="contacts__wrap__img">
                 <img src="<?= HEADGROUP_THEME_DIRECTORY ?>assets/images/contact-img1.png" alt="Давайте створимощось неймовірнеразом">
                 </div>
             <div class="contacts__form">
-                <!-- <div class="contacts__form__title"><strong> Заповніть коротку форму</strong> — усе інше зробимо ми.</div> -->
                 <?= do_shortcode('[contact-form-7 id="aff037f" title="Контактная форма"]') ?>
-                <form action="">
-                    <!-- <input type="text" name="contact_name" placeholder="Ім'я">
-                    <div class="input__wrap">
-                        <input type="tel" name="contact_phone" id="" placeholder="050 123 4567">
-                    </div>
-                    <input type="text" name="contact_nick" id="" placeholder="Ваш нік в телеграм">
-                    <div class="select__wrap">
-                        <select name="contact__select" >
-                            <option value="1">ОБЕРІТЬ ПОСЛУГУ</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                    </div>
-                    <div class="submit__wrap"> 
-                        <button class="btn" type="submit">відправити заявку</button>
-                </div> -->
+               
                 </form>
             </div>
             <div class="contacts__socials">
