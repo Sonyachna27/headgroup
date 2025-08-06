@@ -60,7 +60,7 @@
                     <a href="#" class="btn">ЗАМОВИТИ КОНСУЛЬТАЦІЮ</a>
                 </div>
                 <div class="central__bottom__link">
-                <a href="#" >
+                <a aria-label="scroll bottom" class="scroll_bottom">
                     <svg width="112" height="112" viewBox="0 0 112 112" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="1.5" y="1.5" width="109" height="109" rx="54.5" stroke="#151515" stroke-width="3"/>
                     <path d="M64 48L48 64M48 64V48M48 64H64" stroke="#151515" stroke-width="3"/>

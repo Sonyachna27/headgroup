@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	triggerScrollInit();
 	triggerCasesInit();
 	replaceInDocument();
+  scrollBottom();
 });
 const replaceInDocument = () => {
   // const regex = /( в| і| у| з| до| на| та| а| о| й| від| із| при| про| за| що| але)\s+/g; 
@@ -292,3 +293,11 @@ const succesfulForm = () => {
     }
   }, false);
 };
+
+const scrollBottom = () => {
+  document.querySelectorAll('.scroll_bottom').forEach(btn =>
+  btn.addEventListener('click', () =>
+    window.scrollBy({ top: window.innerHeight * .9 , behavior: 'smooth' })
+  )
+);
+}
