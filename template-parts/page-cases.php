@@ -60,7 +60,7 @@ $cases_query = new WP_Query($cases_args);
 <section class="projects mb-m">
   <div class="container">
     <div class="projects__container">
-      <h1><?= __('Кейси, якими ми пишаємося' , 'headgroup') ?></h1>
+      <h1><?= get_the_title(); ?></h1>
 
       <div class="projects__wrap">
         <div class="projects__list">

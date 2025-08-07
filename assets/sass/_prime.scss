@@ -123,7 +123,7 @@
 		flex-direction: row;
 		width: 100%;
 		@media screen and (min-width:1240px) {
-			width: 30%;
+			width: 40%;
 			gap: 40px;
 			flex-direction: row;
 		}
@@ -137,6 +137,9 @@
 		}
 		@media screen and (max-width:1023.9px) {
 			order: 2;
+		}
+		@media screen and (max-width: 370px) {
+			flex-wrap: wrap;
 		}
 		&__item{
 			display: flex;
@@ -154,6 +157,9 @@
 				@media screen and (min-width:768px) {
 					font-size: 24px;
 				}
+			}
+			& .simple {
+				text-transform: lowercase;
 			}
 		}
 	}
