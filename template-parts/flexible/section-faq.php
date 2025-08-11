@@ -36,7 +36,7 @@ if (have_rows('faq')) :
                     </div>
                     <div class="faq__item-bottom accord-item-bottom" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                         <div class="faq__item-bottom-wrap">
-                            <p itemprop="text"><?= esc_html($faq_answer); ?></p>
+                            <p itemprop="text"><?= $faq_answer; ?></p>
                         </div>
                     </div>
                 </div>

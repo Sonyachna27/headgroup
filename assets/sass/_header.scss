@@ -64,6 +64,7 @@
 				}
 				li{
 					position: relative;
+					z-index: 4;
 					&:not(.sub-menu li){
 						@media screen and (min-width:768px) {
 							padding: 20px 0;

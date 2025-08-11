@@ -20,7 +20,19 @@ let eyeBones = [];
 loader.load('/wp-content/themes/headgroup/assets/models/head.glb', (gltf) => {
   const model = gltf.scene;
 
-  model.scale.set(8, 8, 8);
+function updateModelScale() {
+    if (window.innerWidth <= 767) {
+        model.scale.set(6, 6, 6);
+    } else {
+        model.scale.set(8, 8, 8);
+    }
+}
+
+updateModelScale();
+
+window.addEventListener('resize', updateModelScale);
+
+  // model.scale.set(8, 8, 8);
 
   const box = new THREE.Box3().setFromObject(model);
   const center = box.getCenter(new THREE.Vector3());

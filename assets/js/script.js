@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   toggleMenu();
+  behaviorScroll();
   succesfulForm();
   adaptiveBackground();
   reviewsSliderInit();
@@ -219,6 +220,7 @@ const triggerCasesInit = () => {
   casesElements.forEach((block, index) => {
     const horizontalScrollWrapper = block.querySelector(".cases__wrap");
     const horizontalScrollItems = horizontalScrollWrapper.querySelector(".cases__items");
+    if(!horizontalScrollItems) return;
     const scrollItems = Array.from(horizontalScrollItems.querySelectorAll(".cases__item"));
     const paginationContainer = block.querySelector(".cases-pagination");
 
@@ -370,4 +372,21 @@ const loadMoreCases = () => {
       loadMoreBtn.dataset.offset = offset;
     });
   }
+}
+
+const behaviorScroll = () => {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  });
+});
 }
